@@ -10,6 +10,8 @@ What your stack actually costs as you grow. Real numbers from real pricing pages
 
 The dangerous category is **per-user costs**. They can grow faster than your revenue.
 
+> **ARPU assumption:** All payment processing estimates below assume **$10/mo average revenue per user**, which is typical for B2C SaaS. If you're building B2B at $50-200/mo ARPU, multiply the Stripe/Lemon Squeezy rows by 5-20x. The infrastructure rows stay the same.
+
 ---
 
 ## Stack A: The $0 MVP (Supabase + Vercel + Stripe)

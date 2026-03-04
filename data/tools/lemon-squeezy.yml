@@ -17,8 +17,8 @@ cost_at_scale:
   100000_users: "$55,000"
 
 gotchas:
-  - "Acquired by Stripe in July 2024. Long-term roadmap uncertain."
-  - "Post-acquisition quality issues reported: bugs, slower support response times"
+  - "Acquired by Stripe in July 2024. Still operating independently as of March 2026, but no major feature updates since acquisition. Widely expected to be folded into Stripe's own MoR offering."
+  - "Post-acquisition quality reports are mixed: some users report bugs and slower support, others say it's been stable. YMMV."
   - "5% + $0.50 is nearly double Stripe's 2.9% + $0.30 at high volume"
   - "Less API flexibility than Stripe. Fewer integrations."
   - "The upside is real though: zero thinking about VAT, sales tax, or compliance"

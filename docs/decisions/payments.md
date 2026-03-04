@@ -55,12 +55,13 @@ If you're pre-revenue and selling globally, the 5% MoR fee is an insurance polic
 
 ## The Lemon Squeezy Situation
 
-Stripe acquired Lemon Squeezy in July 2024. Since then:
-- Quality issues have been reported (bugs, slower support)
-- Long-term roadmap is uncertain
-- Stripe is rumored to be building its own MoR solution (expected ~3.5% additional fee)
+Stripe acquired Lemon Squeezy in July 2024. As of March 2026:
+- Still operating independently, but no major feature updates since the acquisition
+- Quality reports are mixed: some users report bugs and slower support, others say it's stable
+- Widely expected to be folded into Stripe's own MoR offering (rumored ~3.5% additional fee)
+- No shutdown announced, but the lack of roadmap communication is a concern
 
-Lemon Squeezy still works and is still the easiest MoR for indie hackers. But keep an eye on Paddle as an alternative if quality continues to decline.
+Lemon Squeezy still works and is still the easiest MoR for indie hackers. But if you're starting fresh today, Paddle is the safer long-term MoR bet. If Stripe launches its own MoR, that will likely become the default recommendation.
 
 ## Our Recommendation
 
