@@ -1,0 +1,44 @@
+name: Report Outdated Pricing
+description: Let us know when pricing data is wrong or out of date
+title: "[Pricing] "
+labels: ["outdated-pricing"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Accurate pricing is the whole point. Thanks for helping us stay honest.
+  - type: input
+    id: tool-name
+    attributes:
+      label: Tool Name
+      placeholder: e.g., Clerk
+    validations:
+      required: true
+  - type: input
+    id: current-listed
+    attributes:
+      label: What we currently list
+      placeholder: e.g., $0.02/MAU after 10K
+    validations:
+      required: true
+  - type: input
+    id: actual-price
+    attributes:
+      label: What the actual current price is
+      placeholder: e.g., $0.03/MAU after 50K MRU
+    validations:
+      required: true
+  - type: input
+    id: source-url
+    attributes:
+      label: Source URL (pricing page)
+      placeholder: https://
+    validations:
+      required: true
+  - type: input
+    id: date-verified
+    attributes:
+      label: Date you verified this
+      placeholder: YYYY-MM-DD
+    validations:
+      required: true

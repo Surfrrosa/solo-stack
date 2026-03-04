@@ -1,0 +1,46 @@
+name: Share a Graduation Story
+description: Tell us about migrating from one tool to another
+title: "[Graduation] "
+labels: ["graduation-story"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Real migration stories help everyone plan better. Share yours.
+  - type: input
+    id: from-tool
+    attributes:
+      label: What tool did you leave?
+      placeholder: e.g., Clerk
+    validations:
+      required: true
+  - type: input
+    id: to-tool
+    attributes:
+      label: What did you switch to?
+      placeholder: e.g., Auth.js
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why did you switch?
+      description: What was the trigger? Cost? Features? Frustration?
+    validations:
+      required: true
+  - type: textarea
+    id: how
+    attributes:
+      label: How did the migration go?
+      description: How long did it take? What was harder than expected? What went smoothly?
+    validations:
+      required: true
+  - type: textarea
+    id: advice
+    attributes:
+      label: What advice would you give someone making this same switch?
+  - type: input
+    id: user-count
+    attributes:
+      label: Approximate user count at time of migration
+      placeholder: e.g., ~5,000 users

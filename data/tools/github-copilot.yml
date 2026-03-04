@@ -1,0 +1,26 @@
+name: "GitHub Copilot"
+url: "https://github.com/features/copilot"
+category: "ai-tools"
+description: "AI pair programmer from GitHub. Best-in-class inline completions and chat, deeply integrated with VS Code and GitHub ecosystem."
+
+free_tier: "Free plan with 2K completions + 50 chat messages/mo"
+solo_price: "$10/mo (Pro, 300 premium requests)"
+pricing_url: "https://github.com/features/copilot#pricing"
+
+scale_ceiling: "Premium request limits for advanced models. Free and Pro tiers have monthly caps."
+graduation_to: "Cursor or Claude Code for heavier agentic refactoring work"
+
+cost_at_scale:
+  100_users: "$10/mo (per-developer tool, not per-user)"
+  1000_users: "$10/mo"
+  10000_users: "$10/mo"
+  100000_users: "$10/mo"
+
+gotchas:
+  - "Best for completions and inline suggestions. Less capable for large refactors than Cursor or Claude Code."
+  - "Business plan at $19/mo/seat adds org-level policy controls and audit logs."
+  - "Premium request limits gate access to more capable models like Claude and GPT-4o."
+  - "Free tier is generous for light usage but chat limit of 50 messages/mo is tight."
+  - "Per-developer cost. Scales with your team, not your product's user base."
+
+last_verified: "2026-03-04"

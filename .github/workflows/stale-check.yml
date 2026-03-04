@@ -1,0 +1,43 @@
+name: Stale Data Check
+
+on:
+  schedule:
+    - cron: "0 9 1 * *" # First of every month at 9am UTC
+  workflow_dispatch: # Manual trigger
+
+jobs:
+  check-stale:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Check for stale data
+        id: check
+        run: node scripts/check-stale.js
+
+      - name: Create issue for stale tools
+        if: steps.check.outputs.stale == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const stale = JSON.parse('${{ steps.check.outputs.stale_tools }}');
+            const toolList = stale.map(t => {
+              const url = t.pricing_url || '#';
+              return `- **${t.name}** (${t.file}): ${t.days_old} days since last verification -- [pricing page](${url})`;
+            }).join('\n');
+            const today = new Date().toISOString().split('T')[0];
+
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `[Stale] ${stale.length} tool(s) need pricing verification (${today})`,
+              labels: ['outdated-pricing', 'good first issue'],
+              body: `## Tools with stale pricing data\n\nThe following tools haven't been verified in over 90 days:\n\n${toolList}\n\n**How to help:** Pick a tool, visit its pricing page, verify the numbers match our YAML file, and submit a PR updating the \`last_verified\` date. Even if nothing changed, updating the date confirms it's still accurate.\n\nThis is a great first contribution!\n\n*This issue was created automatically by the stale data checker.*`
+            });

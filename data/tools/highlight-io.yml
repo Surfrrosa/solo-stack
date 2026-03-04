@@ -1,0 +1,23 @@
+name: "Highlight.io"
+url: "https://highlight.io"
+category: "monitoring"
+description: "Open source session replay + error tracking + logging. Self-hostable alternative to Sentry + PostHog combo."
+
+free_tier: "500 sessions/mo, 1K errors/mo, 1M logs/mo"
+solo_price: "$150/mo (Essentials: 10K sessions, unlimited errors/logs)"
+pricing_url: "https://highlight.io/pricing"
+
+scale_ceiling: "Free tier is tight. Jumps to $150/mo which is steep for solo founders."
+graduation_to: "Self-hosted Highlight (open source)"
+
+cost_at_scale:
+  100_users: "$0"
+  1000_users: "$0-150"
+  10000_users: "$150"
+  100000_users: "$150+"
+
+gotchas:
+  - "Free tier is very limited (500 sessions). Price jump from free to paid is steep."
+  - "Best value if you self-host."
+
+last_verified: "2026-03-04"

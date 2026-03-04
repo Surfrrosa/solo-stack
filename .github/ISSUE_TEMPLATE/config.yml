@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Ask a Question
+    url: https://github.com/Surfrrosa/solo-stack/discussions
+    about: Use Discussions for questions, stack advice, or general chat
+  - name: Share Your Stack
+    url: https://github.com/Surfrrosa/solo-stack/discussions
+    about: Tell us what you're using and what it costs

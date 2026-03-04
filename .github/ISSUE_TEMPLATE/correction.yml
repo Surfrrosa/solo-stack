@@ -1,0 +1,30 @@
+name: Report an Error
+description: Something in the guide is wrong or misleading
+title: "[Correction] "
+labels: ["correction"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        We'd rather be corrected than wrong. Thanks for keeping us honest.
+  - type: input
+    id: section
+    attributes:
+      label: Which section or file?
+      placeholder: e.g., README.md > Authentication table, or docs/decisions/payments.md
+    validations:
+      required: true
+  - type: textarea
+    id: whats-wrong
+    attributes:
+      label: What's wrong?
+      description: Quote the incorrect text if possible.
+    validations:
+      required: true
+  - type: textarea
+    id: whats-correct
+    attributes:
+      label: What's correct?
+      description: Include a source if you have one.
+    validations:
+      required: true

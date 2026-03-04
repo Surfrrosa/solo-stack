@@ -150,6 +150,12 @@ Clerk vs Supabase Auth vs Auth.js. Speed vs cost vs lock-in. The 20x price diffe
 ### [Where to Host (and When to Migrate)](docs/decisions/hosting.md)
 Vercel's free tier ceiling, Railway's sweet spot, and when self-hosting saves you thousands.
 
+### [How to Handle AI Tools (and What They Actually Cost)](docs/decisions/ai-tools.md)
+AI coding assistants vs LLM APIs in your product. What Cursor, Copilot, and Claude Code actually cost. How to estimate your AI feature bill at 1K, 10K, and 100K users.
+
+### [How to Pick a Database](docs/decisions/database.md)
+Supabase (platform) vs Neon (serverless) vs PocketBase (simple) vs just Postgres. When SQLite is enough and when it isn't.
+
 ---
 
 ## Cost Calculator
@@ -274,6 +280,54 @@ Every tool listed here has been used by real solo founders in production. Entrie
 | [PostHog](https://posthog.com) | 1M events/mo, 5K replays | Usage-based after | Full product analytics suite | Complex for simple website analytics. |
 | [Plausible](https://plausible.io) | None | $9/mo | Simple, privacy-first | No product analytics (funnels, cohorts). Website traffic only. |
 | [Umami](https://umami.is) | 100K events/mo | $9/mo | Plausible alternative with free tier | Smaller ecosystem. |
+
+</details>
+
+<details>
+<summary><strong>AI / LLM Tools</strong> -- Cursor, GitHub Copilot, Claude Code, OpenAI API, Anthropic API</summary>
+
+**For building faster (AI coding assistants):**
+
+| Tool | Free Tier | Solo Price | Best For | Gotchas |
+|---|---|---|---|---|
+| [GitHub Copilot](https://github.com/features/copilot) | 2K completions + 50 chats/mo | $10/mo (Pro) | Inline completions, lowest cost | Less capable for large refactors. |
+| [Cursor](https://cursor.com) | Limited (Hobby plan) | $20/mo (Pro) | Multi-file editing, codebase-aware | 500 premium requests/mo burn fast on complex tasks. |
+| [Claude Code](https://claude.ai/code) | Included with Claude Pro ($20/mo) | $20/mo or API billing | Agentic multi-step tasks, terminal-native | API billing can spike during heavy sessions. Pro has daily caps. |
+
+**For your product's AI features (LLM APIs):**
+
+| Provider | Cheapest Model | Mid-Tier Model | Cost at 1K Users | Cost at 100K Users |
+|---|---|---|---|---|
+| [OpenAI](https://openai.com/api) | GPT-4o-mini ($0.15/1M in) | GPT-4o ($2.50/1M in) | ~$50-200/mo | ~$5K-20K/mo |
+| [Anthropic](https://anthropic.com/api) | Claude Haiku ($0.80/1M in) | Claude Sonnet ($3/1M in) | ~$50-200/mo | ~$5K-20K/mo |
+
+> **The meta-recommendation:** Use the smallest model that works. GPT-4o-mini and Claude Haiku handle 80% of use cases at 1/20th the cost of frontier models. See the [full AI tools decision guide](docs/decisions/ai-tools.md) for cost estimation formulas.
+
+</details>
+
+<details>
+<summary><strong>Monitoring / Error Tracking</strong> -- Sentry, BetterStack, Highlight.io</summary>
+
+| Tool | Free Tier | Solo Price | Scale Ceiling | Gotchas |
+|---|---|---|---|---|
+| [Sentry](https://sentry.io) | 5K errors/mo | $29/mo (Team) | Free tier covers most solo products | Free tier has 24-hour data retention. |
+| [BetterStack](https://betterstack.com) | 10 monitors, 1-min checks | $29/mo (with logging) | Free tier handles basic uptime | Logging requires paid plan. |
+| [Highlight.io](https://highlight.io) | 500 sessions/mo | $150/mo (Essentials) | Self-hostable (open source) | Steep jump from free to paid. Best value self-hosted. |
+
+> **When do you need monitoring?** The moment you have paying customers, set up Sentry (free, 30 minutes). Add uptime monitoring (BetterStack free tier) when you hit 100 customers. That's it for most solo products.
+
+</details>
+
+<details>
+<summary><strong>Background Jobs / Cron</strong> -- Inngest, Trigger.dev, QStash</summary>
+
+| Tool | Free Tier | Solo Price | Scale Ceiling | Gotchas |
+|---|---|---|---|---|
+| [Inngest](https://inngest.com) | 25K runs/mo | $50/mo (100K runs) | Generous free tier | Vendor lock-in to Inngest's event model. |
+| [Trigger.dev](https://trigger.dev) | 50K runs/mo | $50/mo (500K runs) | Open source, self-hostable | Free tier has 30-second duration limit. |
+| [QStash](https://upstash.com/docs/qstash) | 500 messages/day | ~$1/100K messages | Serverless, works everywhere | 500 messages/day is tight for active products. |
+
+> **Why this matters:** Vercel has no native support for long-running tasks. The moment you need a background job, cron, or anything that runs longer than 10 seconds, you need one of these. If you're on Railway or Hetzner, you can also just use BullMQ + Redis.
 
 </details>
 

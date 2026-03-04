@@ -1,0 +1,26 @@
+name: "OpenAI API"
+url: "https://openai.com/api"
+category: "ai-tools"
+description: "OpenAI's API for embedding AI features in your product. GPT-4o for quality, GPT-4o-mini for cost-efficient volume."
+
+free_tier: "None (pay per token)"
+solo_price: "GPT-4o ~$2.50/1M input, $10/1M output; GPT-4o-mini ~$0.15/1M input, $0.60/1M output"
+pricing_url: "https://openai.com/api/pricing"
+
+scale_ceiling: "Rate limits increase with usage tier. Tier upgrades are automatic based on spend history."
+graduation_to: "Optimize with prompt caching, fine-tuning, or self-hosted open-source models for high-volume features"
+
+cost_at_scale:
+  100_users: "$5-20/mo"
+  1000_users: "$50-200/mo"
+  10000_users: "$500-2,000/mo"
+  100000_users: "$5,000-20,000/mo"
+
+gotchas:
+  - "Costs hard to predict without knowing your token usage patterns. Prototype first, then estimate."
+  - "Rate limits can block burst traffic. Plan for queuing or retries in your architecture."
+  - "No fixed monthly pricing. Your bill scales directly with user activity."
+  - "GPT-4o-mini is 15-20x cheaper than GPT-4o. Use the cheapest model that meets your quality bar."
+  - "Output tokens cost 4x more than input tokens. Keep responses concise to control costs."
+
+last_verified: "2026-03-04"

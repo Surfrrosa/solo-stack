@@ -1,0 +1,26 @@
+name: "Cursor"
+url: "https://cursor.com"
+category: "ai-tools"
+description: "AI-native code editor built as a VS Code fork. Inline completions, chat, and agentic coding in one IDE."
+
+free_tier: "Limited (Hobby plan with basic features)"
+solo_price: "$20/mo (Pro, 500 premium requests/mo)"
+pricing_url: "https://cursor.com/pricing"
+
+scale_ceiling: "Premium request limits. Heavy agentic usage can burn through 500 requests fast."
+graduation_to: "Claude Code for deeper agentic work, or API-based coding agents for unlimited usage"
+
+cost_at_scale:
+  100_users: "$20/mo (per-developer tool, not per-user)"
+  1000_users: "$20/mo"
+  10000_users: "$20/mo"
+  100000_users: "$20/mo"
+
+gotchas:
+  - "Premium request limits reset monthly. No rollover, no burst capacity."
+  - "Background agent uses premium requests quickly. A single complex task can eat dozens of requests."
+  - "VS Code fork means some extensions may not work or may lag behind upstream updates."
+  - "Business plan at $40/mo/seat adds admin controls but same core limits."
+  - "Per-developer cost, not per-user. Scales with team size, not product usage."
+
+last_verified: "2026-03-04"

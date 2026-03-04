@@ -1,0 +1,78 @@
+name: Suggest a Tool
+description: Recommend a tool we should add to the guide
+title: "[Tool] "
+labels: ["tool-suggestion"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a tool! We include tools that are genuinely useful to solo founders in production.
+  - type: input
+    id: tool-name
+    attributes:
+      label: Tool Name
+      placeholder: e.g., Clerk
+    validations:
+      required: true
+  - type: input
+    id: tool-url
+    attributes:
+      label: Tool URL
+      placeholder: https://
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - Payments
+        - Authentication
+        - Hosting
+        - Database
+        - Email
+        - Analytics
+        - AI / LLM Tools
+        - Monitoring / Error Tracking
+        - Background Jobs / Cron
+        - Boilerplates
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: free-tier
+    attributes:
+      label: Free Tier Details
+      description: What does the free tier include? Be specific (e.g., "10K MAU" not "generous free tier").
+      placeholder: |
+        e.g., 10K monthly active users, 100 organizations, unlimited social/email providers
+    validations:
+      required: true
+  - type: input
+    id: solo-price
+    attributes:
+      label: Paid Pricing (solo founder tier)
+      placeholder: e.g., $25/mo for Pro plan
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why should we include this?
+      description: What makes this tool useful for solo founders specifically? Have you used it in production?
+    validations:
+      required: true
+  - type: textarea
+    id: gotchas
+    attributes:
+      label: Gotchas or trade-offs
+      description: What should people know before committing? Be honest.
+  - type: checkboxes
+    id: affiliate
+    attributes:
+      label: Disclosure
+      options:
+        - label: I have no affiliate relationship with this tool
+          required: true
+        - label: I have used this tool in production
+          required: false

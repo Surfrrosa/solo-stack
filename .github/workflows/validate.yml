@@ -1,0 +1,29 @@
+name: Validate YAML
+
+on:
+  pull_request:
+    paths:
+      - "data/**/*.yml"
+      - "data/**/*.yaml"
+      - "scripts/validate-yaml.js"
+  push:
+    branches: [main]
+    paths:
+      - "data/**/*.yml"
+      - "data/**/*.yaml"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Validate YAML files
+        run: node scripts/validate-yaml.js

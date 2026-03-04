@@ -1,0 +1,18 @@
+{
+  "name": "solo-stack",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Opinionated stack guide for solo founders",
+  "scripts": {
+    "validate": "node scripts/validate-yaml.js",
+    "check:stale": "node scripts/check-stale.js",
+    "check:pricing": "node scripts/check-pricing.js",
+    "check:community": "node scripts/check-community.js"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.0"
+  },
+  "devDependencies": {
+    "playwright": "^1.50.0"
+  }
+}

@@ -56,8 +56,10 @@ verified_by: "github-username"  # Optional but appreciated
 | `database` | Databases, BaaS, ORMs (only if they include hosting) |
 | `email` | Transactional email, marketing email for developers |
 | `analytics` | Web analytics, product analytics, session replay |
+| `ai-tools` | AI coding assistants, LLM APIs for product features |
 | `boilerplate` | SaaS starter kits, templates, scaffolding tools |
 | `monitoring` | Error tracking, uptime monitoring, logging |
+| `background-jobs` | Job queues, cron, task scheduling, workflow engines |
 
 ## How to Update Pricing
 

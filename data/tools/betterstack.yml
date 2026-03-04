@@ -1,0 +1,23 @@
+name: "BetterStack"
+url: "https://betterstack.com"
+category: "monitoring"
+description: "Uptime monitoring + logging in one platform. Formerly Better Uptime + Logtail."
+
+free_tier: "10 monitors, 1-minute checks, 3 status pages"
+solo_price: "$29/mo (logging + more monitors)"
+pricing_url: "https://betterstack.com/pricing"
+
+scale_ceiling: "Free tier handles basic uptime monitoring. Pay when you need logging."
+graduation_to: "Datadog or self-hosted Grafana stack"
+
+cost_at_scale:
+  100_users: "$0"
+  1000_users: "$0"
+  10000_users: "$29"
+  100000_users: "$29-85"
+
+gotchas:
+  - "Free tier is uptime-only. Logging requires paid plan."
+  - "Incident management features limited on free tier."
+
+last_verified: "2026-03-04"

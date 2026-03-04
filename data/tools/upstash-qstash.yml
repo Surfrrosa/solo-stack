@@ -1,0 +1,24 @@
+name: "QStash (Upstash)"
+url: "https://upstash.com/docs/qstash"
+category: "background-jobs"
+description: "Serverless message queue and task scheduler. Perfect for Vercel where you can't run persistent workers."
+
+free_tier: "500 messages/day"
+solo_price: "$1/100K messages"
+pricing_url: "https://upstash.com/pricing/qstash"
+
+scale_ceiling: "Usage-based pricing stays cheap. No per-seat costs."
+graduation_to: "BullMQ + Redis on Railway/Hetzner"
+
+cost_at_scale:
+  100_users: "$0"
+  1000_users: "$0-1"
+  10000_users: "$1-10"
+  100000_users: "$10-50"
+
+gotchas:
+  - "500 messages/day on free tier is tight for active products."
+  - "Serverless model means no persistent connections."
+  - "Best paired with Upstash Redis for state."
+
+last_verified: "2026-03-04"

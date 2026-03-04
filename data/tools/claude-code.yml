@@ -1,0 +1,26 @@
+name: "Claude Code"
+url: "https://claude.ai/code"
+category: "ai-tools"
+description: "Anthropic's agentic CLI for coding. Terminal-based, reads your entire codebase, and executes multi-step tasks autonomously."
+
+free_tier: "Included with Claude Pro ($20/mo) with usage limits"
+solo_price: "$20/mo (Pro plan) or pay-per-token via API (~$3-15/day for heavy agentic usage)"
+pricing_url: "https://www.anthropic.com/pricing"
+
+scale_ceiling: "None on API billing. Usage caps on Pro plan reset daily."
+graduation_to: "API billing for unlimited agentic usage (no hard caps, just cost)"
+
+cost_at_scale:
+  100_users: "$20/mo Pro or variable API costs (per-developer tool)"
+  1000_users: "$20/mo"
+  10000_users: "$20/mo"
+  100000_users: "$20/mo"
+
+gotchas:
+  - "API billing can spike during heavy agentic sessions. A single complex task can cost $5-10 in tokens."
+  - "Pro plan has daily usage limits that reset. You will hit them during intense coding days."
+  - "Terminal-based with no GUI IDE. You need to be comfortable in the terminal."
+  - "Max mode uses more expensive models and burns through limits faster."
+  - "Per-developer tool. Cost scales with how hard you push it, not with your product's users."
+
+last_verified: "2026-03-04"
