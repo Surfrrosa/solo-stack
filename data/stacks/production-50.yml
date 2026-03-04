@@ -1,0 +1,50 @@
+name: "The ~$50/month Production Stack"
+description: "For launched products with paying customers. Optimized for solo founders making $500-5K MRR."
+total_cost: "~$50-60/mo"
+when_to_use: "You have paying customers. You need reliability, better support, and room to grow."
+when_to_graduate: "When you need advanced auth features (SSO, org management), your infrastructure costs exceed $150/mo, or you want to own your hosting."
+
+components:
+  framework:
+    tool: "Next.js + TypeScript + Tailwind + shadcn/ui"
+    cost: "$0 (open source)"
+    why: "Same framework. Don't change what works."
+
+  database:
+    tool: "Supabase"
+    plan: "Pro"
+    cost: "$25/mo"
+    limits: "8GB DB, 100GB storage, daily backups"
+    why: "Pro plan removes the inactivity pause and adds daily backups. Essential for paying customers."
+
+  auth:
+    tool: "Supabase Auth"
+    plan: "Included with Supabase Pro"
+    cost: "$0 (included)"
+    limits: "Unlimited MAU on Pro (you pay for Supabase, auth is included)"
+    why: "Still the cheapest path. Auth is free as long as you're on Supabase."
+
+  payments:
+    tool: "Lemon Squeezy"
+    cost: "5% + $0.50 per transaction"
+    why: "Handles all global tax compliance. At <$50K MRR, the fee premium over Stripe is worth the peace of mind."
+
+  hosting:
+    tool: "Railway"
+    cost: "~$5-15/mo"
+    limits: "Usage-based, predictable"
+    why: "Frontend + backend + database + workers in one place. No per-seat pricing surprises."
+
+  email:
+    tool: "Resend"
+    plan: "Pro"
+    cost: "$20/mo"
+    limits: "50K emails/month"
+    why: "Upgraded for higher volume. Still great DX."
+
+  analytics:
+    tool: "PostHog"
+    plan: "Free"
+    cost: "$0"
+    limits: "1M events/month"
+    why: "Free tier still covers most solo products at this stage."

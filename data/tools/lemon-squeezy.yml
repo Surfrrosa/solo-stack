@@ -1,0 +1,26 @@
+name: "Lemon Squeezy"
+url: "https://lemonsqueezy.com"
+category: "payments"
+description: "Merchant of Record. Handles all global tax compliance so you don't have to. Best for digital products sold globally."
+
+free_tier: "No monthly fee"
+solo_price: "5% + $0.50 per transaction"
+pricing_url: "https://lemonsqueezy.com/pricing"
+
+scale_ceiling: "~$50K MRR before the fee premium over Stripe becomes significant"
+graduation_to: "Stripe + Stripe Tax when the 2% fee difference matters"
+
+cost_at_scale:
+  100_users: "$55 (assuming $10 avg transaction)"
+  1000_users: "$550"
+  10000_users: "$5,500"
+  100000_users: "$55,000"
+
+gotchas:
+  - "Acquired by Stripe in July 2024. Long-term roadmap uncertain."
+  - "Post-acquisition quality issues reported: bugs, slower support response times"
+  - "5% + $0.50 is nearly double Stripe's 2.9% + $0.30 at high volume"
+  - "Less API flexibility than Stripe. Fewer integrations."
+  - "The upside is real though: zero thinking about VAT, sales tax, or compliance"
+
+last_verified: "2026-03-04"

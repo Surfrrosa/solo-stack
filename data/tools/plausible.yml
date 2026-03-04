@@ -1,0 +1,27 @@
+name: "Plausible"
+url: "https://plausible.io"
+category: "analytics"
+description: "Simple, privacy-first web analytics. One dashboard, no complexity. The anti-Google Analytics."
+
+free_tier: "None (30-day trial)"
+solo_price: "$9/mo (10K pageviews)"
+pricing_url: "https://plausible.io/pricing"
+
+scale_ceiling: "Scales fine. Pricing grows with pageviews."
+graduation_to: "Add PostHog when you need product analytics (funnels, cohorts, session replay)"
+
+cost_at_scale:
+  100_users: "$9/mo"
+  1000_users: "$9/mo"
+  10000_users: "$19/mo"
+  100000_users: "$69/mo"
+
+gotchas:
+  - "No free tier. You pay from day one."
+  - "Website analytics only. No product analytics (funnels, cohorts, user paths)."
+  - "If you need to understand user behavior inside your app, you need PostHog too."
+  - "The simplicity is the feature. One-minute setup, sub-500ms dashboard loads."
+  - "GDPR-compliant without cookie banners. EU-hosted option available."
+  - "Self-hosted option available (free, open source)"
+
+last_verified: "2026-03-04"

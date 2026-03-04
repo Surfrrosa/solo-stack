@@ -1,0 +1,40 @@
+name: Link Check
+
+on:
+  schedule:
+    - cron: "0 9 * * 1" # Every Monday at 9 AM UTC
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  link-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check links in Markdown files
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >
+            --verbose
+            --no-progress
+            --accept 200,204,301,302,307,308
+            --timeout 30
+            --max-retries 3
+            --exclude-mail
+            '**/*.md'
+          fail: true
+
+      - name: Check links in YAML files
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >
+            --verbose
+            --no-progress
+            --accept 200,204,301,302,307,308
+            --timeout 30
+            --max-retries 3
+            --exclude-mail
+            '**/*.yml'
+          fail: true

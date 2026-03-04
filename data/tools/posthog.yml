@@ -1,0 +1,26 @@
+name: "PostHog"
+url: "https://posthog.com"
+category: "analytics"
+description: "Full product analytics suite. Analytics, session replay, feature flags, A/B tests, and surveys in one platform. Absurdly generous free tier."
+
+free_tier: "1M events/mo, 5K session replays, 1M feature flag requests"
+solo_price: "Usage-based after free tier"
+pricing_url: "https://posthog.com/pricing"
+
+scale_ceiling: "None. Scales to enterprise."
+graduation_to: "N/A. PostHog replaces what would cost $300+/mo on Mixpanel or Amplitude."
+
+cost_at_scale:
+  100_users: "$0"
+  1000_users: "$0"
+  10000_users: "$0"
+  100000_users: "~$50/mo"
+
+gotchas:
+  - "Overkill for simple website analytics. If you just want pageview counts, use Plausible."
+  - "The dashboard can feel overwhelming at first. There's a lot of product in here."
+  - "Self-hosted option available for privacy-sensitive deployments"
+  - "1M free events/mo means most solo SaaS products never pay"
+  - "The combination of analytics + session replay + feature flags is genuinely unique at this price"
+
+last_verified: "2026-03-04"

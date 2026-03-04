@@ -1,0 +1,25 @@
+name: "Umami"
+url: "https://umami.is"
+category: "analytics"
+description: "Privacy-first web analytics with a free tier. Like Plausible but with a free option."
+
+free_tier: "100K events/mo"
+solo_price: "$9/mo (1M events)"
+pricing_url: "https://umami.is/pricing"
+
+scale_ceiling: "Scales fine. Similar trajectory to Plausible."
+graduation_to: "Add PostHog for product analytics if needed"
+
+cost_at_scale:
+  100_users: "$0"
+  1000_users: "$0"
+  10000_users: "$0-9/mo"
+  100000_users: "$19/mo"
+
+gotchas:
+  - "Smaller ecosystem and community than Plausible or PostHog"
+  - "100K free events/mo is generous for early-stage products"
+  - "Self-hosted option available (open source)"
+  - "A solid choice if you want Plausible-style simplicity with a free tier"
+
+last_verified: "2026-03-04"

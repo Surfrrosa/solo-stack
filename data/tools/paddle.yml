@@ -1,0 +1,26 @@
+name: "Paddle"
+url: "https://paddle.com"
+category: "payments"
+description: "Merchant of Record with broader global tax coverage. More enterprise-oriented than Lemon Squeezy."
+
+free_tier: "No monthly fee"
+solo_price: "5% + $0.50 per transaction"
+pricing_url: "https://paddle.com/pricing"
+
+scale_ceiling: "Enterprise-ready. No practical ceiling."
+graduation_to: "N/A. Paddle scales up. Some switch to Stripe for lower fees at high volume."
+
+cost_at_scale:
+  100_users: "$55 (assuming $10 avg transaction)"
+  1000_users: "$550"
+  10000_users: "$5,500"
+  100000_users: "$55,000"
+
+gotchas:
+  - "Same 5% + $0.50 fee structure as Lemon Squeezy"
+  - "Less indie-focused than Lemon Squeezy. Dashboard and DX feel more enterprise."
+  - "Chargeback dispute handling has been criticized by indie founders"
+  - "Broader global tax coverage than Lemon Squeezy"
+  - "Paddle Billing (subscription management) is solid but opinionated"
+
+last_verified: "2026-03-04"

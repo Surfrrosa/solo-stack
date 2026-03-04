@@ -1,0 +1,26 @@
+name: "Railway"
+url: "https://railway.app"
+category: "hosting"
+description: "Full-stack hosting in one place. Frontend, backend, database, and workers with predictable usage-based pricing."
+
+free_tier: "$5 credit/mo (no credit card required)"
+solo_price: "~$5-15/mo for a typical Next.js app"
+pricing_url: "https://railway.app/pricing"
+
+scale_ceiling: "Scales well. No per-seat pricing gotchas."
+graduation_to: "Hetzner + Coolify for maximum cost control"
+
+cost_at_scale:
+  100_users: "$5/mo"
+  1000_users: "$8-15/mo"
+  10000_users: "$15-30/mo"
+  100000_users: "$50-100/mo"
+
+gotchas:
+  - "Less edge optimization than Vercel. If you need global edge, Vercel or Cloudflare is better."
+  - "Usage-based pricing means costs are predictable but not fixed"
+  - "Smaller community than Vercel. Fewer tutorials and guides."
+  - "Git push deploy, preview URLs, and managed databases all work well"
+  - "Teams report 50-70% savings compared to Vercel at scale"
+
+last_verified: "2026-03-04"

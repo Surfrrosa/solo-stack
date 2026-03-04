@@ -1,0 +1,54 @@
+name: "The ~$100/month Scale Stack"
+description: "For products with 10K+ users approaching product-market fit. Optimized for cost control and zero per-user cliffs."
+total_cost: "~$50-110/mo (depending on usage)"
+when_to_use: "You have product-market fit. You want to own your infrastructure and eliminate per-user pricing that scales against you."
+when_to_graduate: "You probably don't need to. This stack handles most solo SaaS products through $50K+ MRR."
+
+components:
+  framework:
+    tool: "Next.js + TypeScript + Tailwind + shadcn/ui"
+    cost: "$0 (open source)"
+    why: "Same framework. Consistency is a feature."
+
+  database:
+    tool: "Supabase"
+    plan: "Pro"
+    cost: "$25/mo"
+    limits: "8GB DB, 100GB storage"
+    why: "Supabase Pro handles most solo SaaS workloads. Switch to dedicated Postgres only if you hit real limits."
+
+  auth:
+    tool: "Auth.js (self-managed)"
+    cost: "$0"
+    limits: "Unlimited"
+    why: "Self-managed auth costs $0 forever. At 100K users, this saves $1,800/mo vs Clerk. The migration takes effort but eliminates the biggest cost cliff in the stack."
+
+  payments:
+    tool: "Stripe + Stripe Tax"
+    cost: "2.9% + $0.30 + 0.5% tax automation"
+    why: "At $50K+ MRR, the 2% savings over Lemon Squeezy covers the Stripe Tax cost and then some."
+
+  hosting:
+    tool: "Hetzner VPS + Coolify"
+    cost: "~$10-20/mo"
+    limits: "You control the ceiling"
+    why: "Vercel-like DX on infrastructure you own. 50-70% cheaper than managed platforms."
+
+  email:
+    tool: "Postmark"
+    cost: "$15/mo"
+    limits: "10K emails/month"
+    why: "Best deliverability. When your customers are paying, their emails must arrive."
+
+  analytics:
+    tool: "PostHog"
+    plan: "Free or usage-based"
+    cost: "$0-50/mo"
+    limits: "1M events free, then usage-based"
+    why: "Still the best value. Session replay alone is worth it for debugging customer issues."
+
+  monitoring:
+    tool: "Sentry"
+    cost: "$0"
+    limits: "5K errors/month, 10K replays"
+    why: "Error tracking for production. Free tier is enough for most solo products."

@@ -1,0 +1,51 @@
+name: "The $0/month MVP Stack"
+description: "Ship your first version without spending a dollar. Every component has a free tier generous enough for your first 100 users."
+total_cost: "$0/mo"
+when_to_use: "Validating an idea. Pre-revenue. Getting your first 100 users. You have more time than money."
+when_to_graduate: "When you hit Vercel's 100GB bandwidth cap (~33K pageviews/mo with images), need team features, or want better support SLAs."
+
+components:
+  framework:
+    tool: "Next.js + TypeScript + Tailwind + shadcn/ui"
+    cost: "$0 (open source)"
+    why: "Most AI training data, largest ecosystem, one language front-to-back"
+
+  database:
+    tool: "Supabase"
+    plan: "Free"
+    cost: "$0"
+    limits: "500MB DB, 1GB storage, 50K auth MAUs"
+    why: "Postgres + Auth + Storage + Realtime in one platform. Free tier covers most MVPs."
+
+  auth:
+    tool: "Supabase Auth"
+    plan: "Free (included with Supabase)"
+    cost: "$0"
+    limits: "50K MAU"
+    why: "Already included. No additional service to manage."
+
+  payments:
+    tool: "Stripe"
+    cost: "2.9% + $0.30 per transaction (no monthly fee)"
+    why: "Industry standard. At low volume, the fee difference vs MoR platforms is negligible."
+
+  hosting:
+    tool: "Vercel"
+    plan: "Hobby"
+    cost: "$0"
+    limits: "100GB bandwidth, 100 deployments/day"
+    why: "Best Next.js DX. Git push to deploy."
+
+  email:
+    tool: "Resend"
+    plan: "Free"
+    cost: "$0"
+    limits: "3,000 emails/month, 1 domain"
+    why: "Clean API, React Email integration. 3K emails is enough for early stage."
+
+  analytics:
+    tool: "PostHog"
+    plan: "Free"
+    cost: "$0"
+    limits: "1M events/month, 5K session replays"
+    why: "Product analytics + session replay + feature flags. All free. Overkill in the best way."

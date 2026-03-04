@@ -1,0 +1,25 @@
+name: "Better-Auth"
+url: "https://better-auth.com"
+category: "authentication"
+description: "Open-source, self-hosted auth library. Growing fast as the modern alternative to Auth.js."
+
+free_tier: "Unlimited (self-hosted, open source)"
+solo_price: "$0"
+pricing_url: "https://better-auth.com"
+
+scale_ceiling: "None. Self-hosted scales with your infrastructure."
+graduation_to: "N/A. Self-hosted auth is the endgame."
+
+cost_at_scale:
+  100_users: "$0"
+  1000_users: "$0"
+  10000_users: "$0"
+  100000_users: "$0"
+
+gotchas:
+  - "Newer project with a smaller community than Auth.js"
+  - "Less battle-tested in production at large scale"
+  - "Growing rapidly. Worth watching."
+  - "More modern API design than Auth.js"
+
+last_verified: "2026-03-04"

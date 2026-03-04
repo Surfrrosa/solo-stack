@@ -1,0 +1,26 @@
+name: "Hetzner + Coolify"
+url: "https://coolify.io"
+category: "hosting"
+description: "Self-hosted PaaS on cheap European VPS. Vercel-like DX (git push deploy, preview URLs, auto SSL) on infrastructure you own."
+
+free_tier: "None (Hetzner starts at 3.49 EUR/mo)"
+solo_price: "$4-10/mo"
+pricing_url: "https://www.hetzner.com/cloud/"
+
+scale_ceiling: "You control the ceiling. Add more servers as needed."
+graduation_to: "N/A. Self-hosted is the endgame."
+
+cost_at_scale:
+  100_users: "$4-6/mo"
+  1000_users: "$4-10/mo"
+  10000_users: "$10-20/mo"
+  100000_users: "$30-80/mo"
+
+gotchas:
+  - "You manage the server. Coolify handles most DevOps but you're still responsible for uptime."
+  - "Hetzner datacenters are in Europe and US. Latency to Asia/Australia is higher."
+  - "Initial setup takes 1-2 hours vs 5 minutes on Vercel"
+  - "No edge network. Static assets should go through a CDN (Cloudflare free tier)."
+  - "The cost savings are dramatic: teams report 50-70% less than Vercel/Railway"
+
+last_verified: "2026-03-04"

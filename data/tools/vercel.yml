@@ -1,0 +1,27 @@
+name: "Vercel"
+url: "https://vercel.com"
+category: "hosting"
+description: "Best-in-class Next.js hosting. Incredible DX with preview deploys and edge functions. Free tier has a bandwidth ceiling."
+
+free_tier: "100GB bandwidth, 100 deployments/day"
+solo_price: "$20/mo (Pro)"
+pricing_url: "https://vercel.com/pricing"
+
+scale_ceiling: "~33K pageviews/mo with images on free tier (100GB bandwidth). Pro adds more but per-seat pricing hurts teams."
+graduation_to: "Railway (managed) or Hetzner + Coolify (self-hosted)"
+
+cost_at_scale:
+  100_users: "$0"
+  1000_users: "$0"
+  10000_users: "$20/mo"
+  100000_users: "$150+/mo (bandwidth overage)"
+
+gotchas:
+  - "100GB bandwidth sounds like a lot until you serve images. A 3MB page load burns through it at ~33K views."
+  - "Each team member costs $20/mo on Pro. A team of 3 is $60/mo before bandwidth."
+  - "Serverless function cold starts can affect API response times"
+  - "No built-in support for long-running background jobs"
+  - "Vendor-specific features (Edge Config, KV) create soft lock-in"
+  - "The DX is genuinely best-in-class. Hard to leave once you're used to it."
+
+last_verified: "2026-03-04"

@@ -1,0 +1,26 @@
+name: "Supabase Auth"
+url: "https://supabase.com/auth"
+category: "authentication"
+description: "Auth included with Supabase. Postgres-backed. Cheapest per-user auth if you're already using Supabase."
+
+free_tier: "50K MAU"
+solo_price: "$0.00325/MAU (included in Supabase Pro at $25/mo)"
+pricing_url: "https://supabase.com/pricing"
+
+scale_ceiling: "Feature-limited. No SSO, basic MFA, limited customization compared to Clerk."
+graduation_to: "Clerk (if you need features) or Auth.js (if you need control)"
+
+cost_at_scale:
+  100_users: "$0"
+  1000_users: "$0"
+  10000_users: "$0 (within free tier)"
+  100000_users: "$25/mo (Supabase Pro covers it)"
+
+gotchas:
+  - "Tied to the Supabase ecosystem. If you leave Supabase DB, you likely leave Supabase Auth."
+  - "Auth UI components are less polished than Clerk's pre-built components"
+  - "50K free MAU is extremely generous. Most solo SaaS never exceeds this."
+  - "RLS (Row Level Security) integration is powerful but has a learning curve"
+  - "At 100K users, this costs $25/mo while Clerk costs $1,800/mo. That's not a typo."
+
+last_verified: "2026-03-04"

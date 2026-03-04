@@ -1,0 +1,26 @@
+name: "Open SaaS (Wasp)"
+url: "https://opensaas.sh"
+category: "boilerplate"
+description: "Free, open-source SaaS starter. No paid third-party dependencies. Full ownership from day one."
+
+free_tier: "Free and open source"
+solo_price: "$0"
+pricing_url: "https://opensaas.sh"
+
+scale_ceiling: "N/A. It's a starting point."
+graduation_to: "N/A. You own the code."
+
+cost_at_scale:
+  100_users: "N/A (free)"
+  1000_users: "N/A"
+  10000_users: "N/A"
+  100000_users: "N/A"
+
+gotchas:
+  - "Requires learning the Wasp framework (a DSL on top of React + Node)"
+  - "Smaller community than ShipFast or Supastarter"
+  - "10K+ GitHub stars suggest real adoption"
+  - "The 'no vendor dependencies' philosophy means more DIY but total ownership"
+  - "Good choice if you're philosophically opposed to paying for boilerplate"
+
+last_verified: "2026-03-04"

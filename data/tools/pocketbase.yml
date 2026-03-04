@@ -1,0 +1,26 @@
+name: "PocketBase"
+url: "https://pocketbase.io"
+category: "database"
+description: "Single-binary backend with SQLite, auth, file storage, and admin UI. Self-hosted. Zero external dependencies."
+
+free_tier: "Unlimited (self-hosted, open source)"
+solo_price: "$0 + VPS cost (~$4-6/mo)"
+pricing_url: "https://pocketbase.io"
+
+scale_ceiling: "~10K concurrent users. SQLite is the constraint."
+graduation_to: "Supabase or dedicated Postgres when you need more concurrency"
+
+cost_at_scale:
+  100_users: "$4-6/mo (VPS only)"
+  1000_users: "$4-6/mo"
+  10000_users: "$10-20/mo"
+  100000_users: "Not recommended at this scale"
+
+gotchas:
+  - "SQLite-based. Single writer. Concurrent writes are the bottleneck."
+  - "No managed cloud option. You host it yourself."
+  - "Beloved by the 'own everything' crowd. One Go binary, zero dependencies."
+  - "Built-in admin UI is surprisingly good"
+  - "Data migration to Postgres requires effort if you outgrow it"
+
+last_verified: "2026-03-04"

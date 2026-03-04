@@ -1,0 +1,26 @@
+name: "Clerk"
+url: "https://clerk.com"
+category: "authentication"
+description: "Drop-in auth with pre-built UI components. Fastest integration for Next.js. Beautiful out of the box."
+
+free_tier: "10K MAU"
+solo_price: "$0.02/MAU after 10K"
+pricing_url: "https://clerk.com/pricing"
+
+scale_ceiling: "~50K MAU before costs become significant relative to typical solo SaaS revenue"
+graduation_to: "Auth.js or Better-Auth (self-hosted, $0 forever)"
+
+cost_at_scale:
+  100_users: "$0"
+  1000_users: "$0"
+  10000_users: "$0"
+  100000_users: "$1,800/mo"
+
+gotchas:
+  - "Vendor lock-in is real. Pre-built components mean migrating away requires rebuilding auth UI."
+  - "No self-hosted option. Your auth depends on Clerk's infrastructure."
+  - "At 100K users, Clerk costs more than the rest of your infrastructure combined."
+  - "The DX is genuinely excellent though. Fastest path from zero to working auth."
+  - "$0.02/MAU sounds small until you do the math at scale."
+
+last_verified: "2026-03-04"

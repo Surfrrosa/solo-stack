@@ -1,0 +1,26 @@
+name: "Supabase"
+url: "https://supabase.com"
+category: "database"
+description: "Postgres database + Auth + Storage + Realtime + Edge Functions in one platform. The default BaaS for solo founders."
+
+free_tier: "500MB DB, 1GB storage, 50K auth MAUs, 500MB bandwidth"
+solo_price: "$25/mo (Pro: 8GB DB, 100GB storage)"
+pricing_url: "https://supabase.com/pricing"
+
+scale_ceiling: "Handles most solo SaaS needs. Larger workloads may need dedicated Postgres."
+graduation_to: "Dedicated Postgres (Neon, RDS, or self-hosted) if you outgrow the platform"
+
+cost_at_scale:
+  100_users: "$0"
+  1000_users: "$0"
+  10000_users: "$25/mo"
+  100000_users: "$75+/mo"
+
+gotchas:
+  - "RLS (Row Level Security) is powerful but has a real learning curve"
+  - "Vendor-specific features (Supabase Realtime, Storage) create soft lock-in"
+  - "Free tier pauses after 1 week of inactivity. Not great for side projects you touch monthly."
+  - "The dashboard is excellent. SQL editor, table viewer, and auth management in one place."
+  - "Postgres underneath means your data is portable if you leave"
+
+last_verified: "2026-03-04"

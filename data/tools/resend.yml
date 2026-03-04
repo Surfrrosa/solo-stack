@@ -1,0 +1,25 @@
+name: "Resend"
+url: "https://resend.com"
+category: "email"
+description: "Modern transactional email with React Email integration. The default choice for Next.js developers."
+
+free_tier: "3,000 emails/month, 1 domain"
+solo_price: "$20/mo (50K emails, 2 domains)"
+pricing_url: "https://resend.com/pricing"
+
+scale_ceiling: "Cost scales with volume. No major ceiling."
+graduation_to: "Amazon SES ($0.10/1K emails) if volume gets extreme and you want raw cost savings"
+
+cost_at_scale:
+  100_users: "$0"
+  1000_users: "$0"
+  10000_users: "$20/mo"
+  100000_users: "$80/mo"
+
+gotchas:
+  - "No built-in template editor. You write email templates in code (React Email)."
+  - "If you're not in the React/Next.js ecosystem, the DX advantage is smaller."
+  - "3K free emails/mo is enough for early stage but tight for apps with heavy email flows."
+  - "Developer experience is genuinely excellent. API is clean and well-documented."
+
+last_verified: "2026-03-04"
