@@ -27,7 +27,7 @@ This guide is community-maintained, has zero affiliate links, and every pricing 
 ## How to Use This Guide
 
 1. **Start here.** The [default stack](#if-you-just-want-the-answer) is the right choice for most solo founders. Use it unless you have a specific reason not to.
-2. **Got a specific question?** The [Decision Guides](#decision-guides) walk you through trade-offs for payments, auth, and hosting with flowcharts.
+2. **Got a specific question?** The [Decision Guides](#decision-guides) walk you through trade-offs for payments, auth, hosting, databases, and AI tools with flowcharts.
 3. **Want to see the numbers?** The [Cost Calculator](#cost-calculator) shows what each stack costs at 100, 1K, 10K, and 100K users.
 4. **Outgrowing a tool?** The [Graduation Guides](#graduation-guides) tell you when to leave and where to go.
 
