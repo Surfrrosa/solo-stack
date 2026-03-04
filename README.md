@@ -11,11 +11,25 @@
          pick your stack. ship your thing. grow from there.
 ```
 
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+[![No Affiliate Links](https://img.shields.io/badge/affiliate%20links-none-blue.svg)](#contributing)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Last Updated](https://img.shields.io/badge/updated-March%202026-orange.svg)](#)
+
 **Opinionated stack guide for solo founders. Real costs. Real trade-offs. No affiliate links.**
 
 You don't need another comparison article with 15 options. You need someone to tell you what works, what it actually costs, and when you'll outgrow it.
 
 This guide is community-maintained, has zero affiliate links, and every pricing number is verified with a date stamp. If something is wrong, [open a PR](CONTRIBUTING.md).
+
+---
+
+## How to Use This Guide
+
+1. **Start here.** The [default stack](#if-you-just-want-the-answer) is the right choice for most solo founders. Use it unless you have a specific reason not to.
+2. **Got a specific question?** The [Decision Guides](#decision-guides) walk you through trade-offs for payments, auth, and hosting with flowcharts.
+3. **Want to see the numbers?** The [Cost Calculator](#cost-calculator) shows what each stack costs at 100, 1K, 10K, and 100K users.
+4. **Outgrowing a tool?** The [Graduation Guides](#graduation-guides) tell you when to leave and where to go.
 
 ---
 
@@ -197,7 +211,8 @@ For detailed migration steps, see [docs/graduation-guides.md](docs/graduation-gu
 
 Every tool listed here has been used by real solo founders in production. Entries include concrete pricing, verified free tier limits, and honest gotchas.
 
-### Payments
+<details>
+<summary><strong>Payments</strong> -- Stripe, Lemon Squeezy, Paddle</summary>
 
 | Tool | Free Tier | Solo Price | Scale Ceiling | Gotchas |
 |---|---|---|---|---|
@@ -205,7 +220,10 @@ Every tool listed here has been used by real solo founders in production. Entrie
 | [Lemon Squeezy](https://lemonsqueezy.com) | No monthly fee | 5% + $0.50/tx | ~$50K MRR before fee premium hurts | Acquired by Stripe (Jul 2024). Future uncertain. Quality issues reported post-acquisition. |
 | [Paddle](https://paddle.com) | No monthly fee | 5% + $0.50/tx | Enterprise-ready | Less indie-focused. Chargeback handling criticized. |
 
-### Authentication
+</details>
+
+<details>
+<summary><strong>Authentication</strong> -- Supabase Auth, Clerk, Auth.js, Better-Auth</summary>
 
 | Tool | Free Tier | Solo Price | Scale Ceiling | Gotchas |
 |---|---|---|---|---|
@@ -214,7 +232,10 @@ Every tool listed here has been used by real solo founders in production. Entrie
 | [Auth.js](https://authjs.dev) | Unlimited (self-hosted) | $0 | None | You build the UI. More dev time upfront. Worth it at scale. |
 | [Better-Auth](https://better-auth.com) | Unlimited (self-hosted) | $0 | None | Newer project. Smaller community. Growing fast. |
 
-### Hosting
+</details>
+
+<details>
+<summary><strong>Hosting</strong> -- Vercel, Railway, Hetzner + Coolify</summary>
 
 | Tool | Free Tier | Solo Price | Scale Ceiling | Gotchas |
 |---|---|---|---|---|
@@ -222,7 +243,10 @@ Every tool listed here has been used by real solo founders in production. Entrie
 | [Railway](https://railway.app) | $5 credit/mo | ~$5-15/mo (usage) | Predictable scaling | Less edge optimization than Vercel. |
 | [Hetzner](https://hetzner.com) + [Coolify](https://coolify.io) | None | ~$4-10/mo | You control the ceiling | You manage the server. Coolify handles most DevOps. |
 
-### Database
+</details>
+
+<details>
+<summary><strong>Database</strong> -- Supabase, Neon, PocketBase</summary>
 
 | Tool | Free Tier | Solo Price | Scale Ceiling | Gotchas |
 |---|---|---|---|---|
@@ -230,14 +254,20 @@ Every tool listed here has been used by real solo founders in production. Entrie
 | [Neon](https://neon.tech) | 0.5GB storage | $19/mo | Serverless Postgres, scales to zero | Newer. Cold starts on free tier. |
 | [PocketBase](https://pocketbase.io) | Unlimited (self-hosted) | $0 + VPS cost | ~10K concurrent users | SQLite-based. Single binary. No managed cloud option. |
 
-### Email
+</details>
+
+<details>
+<summary><strong>Email</strong> -- Resend, Postmark</summary>
 
 | Tool | Free Tier | Solo Price | Scale Ceiling | Gotchas |
 |---|---|---|---|---|
 | [Resend](https://resend.com) | 3K emails/mo | $20/mo (50K emails) | Cost scales with volume | No built-in template editor. You build templates in code. |
 | [Postmark](https://postmarkapp.com) | None | $15/mo (10K emails) | Best deliverability | No free tier. More expensive at volume. |
 
-### Analytics
+</details>
+
+<details>
+<summary><strong>Analytics</strong> -- PostHog, Plausible, Umami</summary>
 
 | Tool | Free Tier | Solo Price | Scale Ceiling | Gotchas |
 |---|---|---|---|---|
@@ -245,7 +275,10 @@ Every tool listed here has been used by real solo founders in production. Entrie
 | [Plausible](https://plausible.io) | None | $9/mo | Simple, privacy-first | No product analytics (funnels, cohorts). Website traffic only. |
 | [Umami](https://umami.is) | 100K events/mo | $9/mo | Plausible alternative with free tier | Smaller ecosystem. |
 
-### Boilerplates
+</details>
+
+<details>
+<summary><strong>Boilerplates</strong> -- Open SaaS, ShipFast, Supastarter</summary>
 
 | Tool | Price | Best For | Gotchas |
 |---|---|---|---|
@@ -254,6 +287,8 @@ Every tool listed here has been used by real solo founders in production. Entrie
 | [Supastarter](https://supastarter.dev) | $349 one-time | Most complete feature set, multi-tenancy | Most expensive. Monorepo architecture. |
 
 > **Our take on boilerplates:** A boilerplate saves you 1-2 weeks of setup. That's real value. But none of them save you from understanding your own codebase. If you buy one, read every line before you ship. If you use AI coding tools heavily, you might not need one -- Claude Code or Cursor can scaffold a production-ready setup in a few hours.
+
+</details>
 
 ---
 
