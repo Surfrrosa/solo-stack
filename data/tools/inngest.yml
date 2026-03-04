@@ -3,8 +3,8 @@ url: "https://inngest.com"
 category: "background-jobs"
 description: "Event-driven background jobs and workflows. Works with Vercel, Railway, any platform. No infrastructure to manage."
 
-free_tier: "25K function runs/mo"
-solo_price: "$50/mo (100K runs)"
+free_tier: "100K executions/mo (first 50K free each month)"
+solo_price: "$75/mo (usage-based with credits)"
 pricing_url: "https://inngest.com/pricing"
 
 scale_ceiling: "Generous free tier covers most early products. Paid tier when runs increase."
@@ -13,12 +13,12 @@ graduation_to: "BullMQ + Redis (self-managed, $0)"
 cost_at_scale:
   100_users: "$0"
   1000_users: "$0"
-  10000_users: "$0-50"
-  100000_users: "$50-200"
+  10000_users: "$0-75"
+  100000_users: "$75-200"
 
 gotchas:
   - "Vendor lock-in to Inngest's event model."
-  - "Free tier is generous but runs add up with chatty events."
+  - "Free tier is generous (100K executions) but runs add up with chatty events."
   - "Debugging can be harder than local queue systems."
 
 last_verified: "2026-03-04"

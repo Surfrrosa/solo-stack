@@ -3,11 +3,11 @@ url: "https://trigger.dev"
 category: "background-jobs"
 description: "Open source background jobs for Next.js and Node.js. Long-running tasks, cron, and workflows."
 
-free_tier: "50K runs/mo, 30s max duration"
-solo_price: "$50/mo (500K runs, 5-min duration)"
+free_tier: "10K runs/mo + $5 usage credit"
+solo_price: "$50/mo (usage-based: per-second compute + per-run fees)"
 pricing_url: "https://trigger.dev/pricing"
 
-scale_ceiling: "Free tier limited by 30-second duration cap. Paid removes duration limits."
+scale_ceiling: "Free tier is small (10K runs). Pro gives $50 usage credit and higher concurrency."
 graduation_to: "Self-hosted Trigger.dev (open source) or BullMQ + Redis"
 
 cost_at_scale:
@@ -17,8 +17,9 @@ cost_at_scale:
   100000_users: "$50-200"
 
 gotchas:
-  - "Free tier has 30-second duration limit which blocks many use cases."
-  - "Open source so you can self-host."
+  - "Free tier is only 10K runs/mo. Can burn through quickly with active products."
+  - "Pricing is usage-based (compute seconds + invocation fees), not a simple bucket."
+  - "Open source so you can self-host to avoid per-run costs."
   - "Newer project, smaller community than Inngest."
 
 last_verified: "2026-03-04"

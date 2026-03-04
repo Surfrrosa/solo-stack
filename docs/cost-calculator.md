@@ -69,11 +69,11 @@ To be clear: Clerk is excellent. But you need to see this math before you commit
 
 | Component | 100 users | 1K users | 10K users | 100K users |
 |---|---|---|---|---|
-| Clerk Auth | $0 | $0 | $0 | **$1,800** |
+| Clerk Auth | $0 | $0 | $0 | **$600-1,000** |
 | Rest of Stack B | $50 | $55 | $60 | $195 |
-| **Infrastructure** | **$50** | **$55** | **$60** | **$1,995** |
+| **Infrastructure** | **$50** | **$55** | **$60** | **$795-1,195** |
 
-At 100K users, Clerk alone costs more than all other infrastructure combined. By a factor of 9.
+Clerk expanded their free tier to 50K users in Feb 2026, which is a big improvement. But at 100K users, Clerk still costs more than all other infrastructure combined.
 
 This doesn't mean you shouldn't use Clerk. It means you should **plan your graduation path** before you hit 50K users. See the [Graduation Guides](graduation-guides.md).
 
@@ -88,7 +88,7 @@ A healthy SaaS business keeps infrastructure under 10-15% of revenue.
 | $0 MVP | $0 (free tier) | $0 (but you'll outgrow it) |
 | $50 Production | $60 | $600/mo MRR |
 | $100 Scale | $50 | $500/mo MRR |
-| $50 Production + Clerk | $60 at 10K, but $1,995 at 100K | $20,000/mo MRR at 100K users |
+| $50 Production + Clerk | $60 at 10K, but $795-1,195 at 100K | $8,000-12,000/mo MRR at 100K users |
 
 The Scale Stack is paradoxically cheaper than the Production Stack at high volume because self-hosted auth eliminates the per-user cost cliff.
 

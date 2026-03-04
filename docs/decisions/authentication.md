@@ -27,12 +27,12 @@ This is the table that should scare you:
 |---|---|---|---|
 | 1,000 | $0 | $0 | $0 |
 | 10,000 | $0 | $0 | $230/mo |
-| 50,000 | $25/mo (Supabase Pro) | $800/mo | $1,750/mo |
-| 100,000 | $25/mo | $1,800/mo | $3,500/mo |
+| 50,000 | $25/mo (Supabase Pro) | $0 | $1,750/mo |
+| 100,000 | $25/mo | $600-1,000/mo | $3,500/mo |
 
-Read that again. At 100K users, Clerk costs **$1,800/month** while Supabase Auth costs **$25/month**. That's a 72x difference. Auth.js costs $0 at any scale.
+Clerk expanded their free tier to 50K users in Feb 2026 (was 10K), which is a big improvement. But at 100K users, Clerk still costs **$600-1,000/month** while Supabase Auth costs **$25/month**. Auth.js costs $0 at any scale.
 
-This doesn't mean Clerk is bad. It's excellent. The DX is the best in class. But you need to know the cost trajectory before you commit.
+This doesn't mean Clerk is bad. It's excellent, and the free tier is now genuinely generous. But you should still know the cost trajectory before you commit.
 
 ## The Trade-Off Matrix
 
@@ -40,7 +40,7 @@ This doesn't mean Clerk is bad. It's excellent. The DX is the best in class. But
 |---|---|---|---|---|
 | Time to integrate | 1-2 days | 1-2 hours | 1-2 weeks | 1-2 weeks |
 | Pre-built UI | Basic | Excellent | None (you build it) | None (you build it) |
-| Cost at 100K users | $25/mo | $1,800/mo | $0 | $0 |
+| Cost at 100K users | $25/mo | $600-1,000/mo | $0 | $0 |
 | Vendor lock-in | Medium (tied to Supabase) | High (pre-built components) | None | None |
 | SSO / Enterprise auth | No | Yes | Community plugins | Growing support |
 | Self-hosted option | No | No | Yes | Yes |
@@ -51,7 +51,7 @@ Moving auth is one of the hardest migrations in a SaaS product. Every protected 
 
 **Clerk to Auth.js:** Plan 2-4 weeks. You're rebuilding all auth UI (sign in, sign up, profile, org management). The pre-built components that made Clerk fast to integrate are the same thing that makes it hard to leave.
 
-**Supabase Auth to Clerk:** Plan 1-2 weeks. Simpler because Supabase Auth has less custom UI to replace.
+**Supabase Auth to Clerk:** Plan 1-2 weeks. Simpler because Supabase Auth has less custom UI to replace. Note: Clerk's free tier now covers 50K users, making this switch more affordable than it used to be.
 
 **Supabase Auth to Auth.js:** Plan 2-3 weeks. You're building new UI and moving session management.
 

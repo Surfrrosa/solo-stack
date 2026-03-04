@@ -33,8 +33,8 @@ Every tool has a ceiling. The smart move is knowing when you'll hit it and havin
 ## When to Leave Clerk
 
 ### Signs It's Time
-- Approaching 50K MAU and the monthly bill is becoming significant relative to revenue
-- At $0.02/MAU, 50K users = $800/mo. 100K users = $1,800/mo.
+- Past 50K users and the monthly bill is becoming significant relative to revenue
+- At $0.02/user past 50K free tier, 100K users = $600-1,000/mo (tiered pricing)
 - You don't use Clerk's advanced features (org management, SAML SSO) and are paying for pre-built UI you could replace
 
 ### Where to Go

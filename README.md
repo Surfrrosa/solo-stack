@@ -133,7 +133,7 @@ For products with 10K+ users approaching or past product-market fit.
 
 **Total: ~$50-110/month** depending on usage. But you own your infrastructure and have zero per-user cost cliffs.
 
-**Why the switch to Auth.js?** Self-managed auth costs $0 forever, regardless of user count. At 100K users, Clerk would cost $1,800/mo. Auth.js costs $0. The migration takes effort, but it removes the biggest cost cliff in the entire stack.
+**Why the switch to Auth.js?** Self-managed auth costs $0 forever, regardless of user count. At 100K users, Clerk would cost $600-1,000/mo. Auth.js costs $0. The migration takes effort, but it removes the biggest cost cliff in the entire stack.
 
 **Why Hetzner + Coolify?** A $10/mo Hetzner VPS with Coolify gives you Vercel-like DX (git push deploy, preview URLs, automatic SSL) on infrastructure you own. Teams report 50-70% savings vs Vercel/Railway.
 
@@ -178,7 +178,7 @@ What your stack actually costs as you grow. These are real numbers, not marketin
 
 > *\*Assumes $10/mo average revenue per user (typical B2C SaaS). B2B products at $50-200/mo ARPU will see 5-20x higher Stripe costs, but also 5-20x higher revenue. The ratio stays healthy.*
 
-> **The cost cliff to watch:** Infrastructure stays cheap. Payment processing scales linearly with revenue (which is fine, it means you're making money). The real surprise is **auth**. If you're on Clerk instead of Supabase Auth, add $0 / $0 / $0 / $1,800 to the auth row.
+> **The cost cliff to watch:** Infrastructure stays cheap. Payment processing scales linearly with revenue (which is fine, it means you're making money). The real surprise is **auth**. If you're on Clerk instead of Supabase Auth, add $0 / $0 / $0 / $600-1,000 to the auth row at 100K users. (Clerk expanded their free tier to 50K in Feb 2026, which helps, but costs still add up past that.)
 
 For the full breakdown with multiple stack combinations, see [docs/cost-calculator.md](docs/cost-calculator.md).
 
@@ -199,7 +199,7 @@ Every tool has a ceiling. Here's when you'll hit it and what to do.
 **Migration difficulty:** Medium. Auth migrations always touch every protected route.
 
 ### When to Leave Clerk
-**Signs:** Approaching 50K+ MAU and the per-user cost is becoming significant relative to revenue.
+**Signs:** Past 50K users (Clerk's free tier) and the per-user cost is becoming significant relative to revenue.
 **Switch to:** Auth.js or Better-Auth (self-hosted, $0 forever).
 **Migration difficulty:** High. Clerk's pre-built components mean you'll rebuild UI. Plan 2-4 weeks.
 
@@ -238,7 +238,7 @@ Every tool listed here has been used by real solo founders in production. Entrie
 | Tool | Free Tier | Solo Price | Scale Ceiling | Gotchas |
 |---|---|---|---|---|
 | [Supabase Auth](https://supabase.com/auth) | 50K MAU | $0.00325/MAU (Pro plan) | Feature-limited (no SSO, basic MFA) | Tied to Supabase ecosystem. Auth UI less polished than Clerk. |
-| [Clerk](https://clerk.com) | 10K MAU | $0.02/MAU after 10K | ~50K MAU before costly | Vendor lock-in. Pre-built components make migration hard. |
+| [Clerk](https://clerk.com) | 50K users (as of Feb 2026) | $0.02/user after 50K | ~100K+ users before costly | Vendor lock-in. Pre-built components make migration hard. |
 | [Auth.js](https://authjs.dev) | Unlimited (self-hosted) | $0 | None | You build the UI. More dev time upfront. Worth it at scale. |
 | [Better-Auth](https://better-auth.com) | Unlimited (self-hosted) | $0 | None | Newer project. Smaller community. Growing fast. |
 
@@ -316,7 +316,7 @@ Every tool listed here has been used by real solo founders in production. Entrie
 |---|---|---|---|---|
 | [Sentry](https://sentry.io) | 5K errors/mo | $29/mo (Team) | Free tier covers most solo products | Free tier has 24-hour data retention. |
 | [BetterStack](https://betterstack.com) | 10 monitors, 1-min checks | $29/mo (with logging) | Free tier handles basic uptime | Logging requires paid plan. |
-| [Highlight.io](https://highlight.io) | 500 sessions/mo | $150/mo (Essentials) | Self-hostable (open source) | Steep jump from free to paid. Best value self-hosted. |
+| [Highlight.io](https://highlight.io) | 5K sessions/mo (now LaunchDarkly) | Usage-based | Self-hostable (open source) | Acquired by LaunchDarkly Feb 2026. Old pricing no longer applies. |
 
 > **When do you need monitoring?** The moment you have paying customers, set up Sentry (free, 30 minutes). Add uptime monitoring (BetterStack free tier) when you hit 100 customers. That's it for most solo products.
 
@@ -327,8 +327,8 @@ Every tool listed here has been used by real solo founders in production. Entrie
 
 | Tool | Free Tier | Solo Price | Scale Ceiling | Gotchas |
 |---|---|---|---|---|
-| [Inngest](https://inngest.com) | 25K runs/mo | $50/mo (100K runs) | Generous free tier | Vendor lock-in to Inngest's event model. |
-| [Trigger.dev](https://trigger.dev) | 50K runs/mo | $50/mo (500K runs) | Open source, self-hostable | Free tier has 30-second duration limit. |
+| [Inngest](https://inngest.com) | 100K executions/mo | $75/mo (usage-based) | Generous free tier | Vendor lock-in to Inngest's event model. |
+| [Trigger.dev](https://trigger.dev) | 10K runs/mo | $50/mo (usage-based) | Open source, self-hostable | Free tier is small. Usage-based compute pricing. |
 | [QStash](https://upstash.com/docs/qstash) | 500 messages/day | ~$1/100K messages | Serverless, works everywhere | 500 messages/day is tight for active products. |
 
 > **Why this matters:** Vercel has no native support for long-running tasks. The moment you need a background job, cron, or anything that runs longer than 10 seconds, you need one of these. If you're on Railway or Hetzner, you can also just use BullMQ + Redis.
