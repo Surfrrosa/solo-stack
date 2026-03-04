@@ -28,7 +28,7 @@ Vercel's free tier gives you 100GB of bandwidth. That sounds like a lot. Here's 
 - 100GB / 3MB = **~33,000 pageviews per month**
 - That's about **1,100 pageviews per day**
 
-If your product gets any traction at all, you'll hit this within months. Then you're on the Pro plan at $20/month, which is fine -- but be aware.
+If your product gets any traction at all, you'll hit this within months. Then you're on the Pro plan at $20/month, which is fine. Just be aware.
 
 The real cost issue is team scaling. Vercel Pro charges **per seat**:
 - 1 developer: $20/mo

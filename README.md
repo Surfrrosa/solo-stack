@@ -66,6 +66,8 @@ This is not the only valid stack. But if you're stuck choosing, use this and sta
 
 > **Why this stack?** It's the most common combination among solo founders making $1K-10K MRR in 2025-2026. It has the deepest AI coding tool support (Cursor, Claude Code, and Copilot all understand it well). Every piece has a clear graduation path when you outgrow it.
 
+> *The maintainer of this repo builds with tools from every tier of this guide: Supabase, Vercel, Railway, Resend, Sentry, Claude Code, and more. Different projects, different stacks. The recommendations here come from real usage, not research.*
+
 ---
 
 ## Stack Recipes
@@ -174,9 +176,9 @@ What your stack actually costs as you grow. These are real numbers, not marketin
 | **Infrastructure total** | **$0** | **$0** | **$45** | **$295+** |
 | **Payment processing** | **$29** | **$290** | **$2,900** | **$29,000** |
 
-> *\*Assumes $10/mo average revenue per user (typical B2C SaaS). B2B products at $50-200/mo ARPU will see 5-20x higher Stripe costs -- but also 5-20x higher revenue. The ratio stays healthy.*
+> *\*Assumes $10/mo average revenue per user (typical B2C SaaS). B2B products at $50-200/mo ARPU will see 5-20x higher Stripe costs, but also 5-20x higher revenue. The ratio stays healthy.*
 
-> **The cost cliff to watch:** Infrastructure stays cheap. Payment processing scales linearly with revenue (which is fine -- it means you're making money). The real surprise is **auth** -- if you're on Clerk instead of Supabase Auth, add $0 / $0 / $0 / $1,800 to the auth row.
+> **The cost cliff to watch:** Infrastructure stays cheap. Payment processing scales linearly with revenue (which is fine, it means you're making money). The real surprise is **auth**. If you're on Clerk instead of Supabase Auth, add $0 / $0 / $0 / $1,800 to the auth row.
 
 For the full breakdown with multiple stack combinations, see [docs/cost-calculator.md](docs/cost-calculator.md).
 
@@ -192,7 +194,7 @@ Every tool has a ceiling. Here's when you'll hit it and what to do.
 **Migration difficulty:** Low. Next.js runs anywhere.
 
 ### When to Leave Supabase Auth
-**Signs:** Need for advanced flows (SAML SSO, organization management, custom MFA). Not really a cost issue -- Supabase Auth stays cheap.
+**Signs:** Need for advanced flows (SAML SSO, organization management, custom MFA). Not really a cost issue. Supabase Auth stays cheap.
 **Switch to:** Clerk (fast, managed) or Auth.js (free, self-managed).
 **Migration difficulty:** Medium. Auth migrations always touch every protected route.
 
@@ -220,7 +222,7 @@ For detailed migration steps, see [docs/graduation-guides.md](docs/graduation-gu
 Every tool listed here has been used by real solo founders in production. Entries include concrete pricing, verified free tier limits, and honest gotchas.
 
 <details>
-<summary><strong>Payments</strong> -- Stripe, Lemon Squeezy, Paddle</summary>
+<summary><strong>Payments</strong>: Stripe, Lemon Squeezy, Paddle</summary>
 
 | Tool | Free Tier | Solo Price | Scale Ceiling | Gotchas |
 |---|---|---|---|---|
@@ -231,7 +233,7 @@ Every tool listed here has been used by real solo founders in production. Entrie
 </details>
 
 <details>
-<summary><strong>Authentication</strong> -- Supabase Auth, Clerk, Auth.js, Better-Auth</summary>
+<summary><strong>Authentication</strong>: Supabase Auth, Clerk, Auth.js, Better-Auth</summary>
 
 | Tool | Free Tier | Solo Price | Scale Ceiling | Gotchas |
 |---|---|---|---|---|
@@ -243,7 +245,7 @@ Every tool listed here has been used by real solo founders in production. Entrie
 </details>
 
 <details>
-<summary><strong>Hosting</strong> -- Vercel, Railway, Hetzner + Coolify</summary>
+<summary><strong>Hosting</strong>: Vercel, Railway, Hetzner + Coolify</summary>
 
 | Tool | Free Tier | Solo Price | Scale Ceiling | Gotchas |
 |---|---|---|---|---|
@@ -254,7 +256,7 @@ Every tool listed here has been used by real solo founders in production. Entrie
 </details>
 
 <details>
-<summary><strong>Database</strong> -- Supabase, Neon, PocketBase</summary>
+<summary><strong>Database</strong>: Supabase, Neon, PocketBase</summary>
 
 | Tool | Free Tier | Solo Price | Scale Ceiling | Gotchas |
 |---|---|---|---|---|
@@ -265,7 +267,7 @@ Every tool listed here has been used by real solo founders in production. Entrie
 </details>
 
 <details>
-<summary><strong>Email</strong> -- Resend, Postmark</summary>
+<summary><strong>Email</strong>: Resend, Postmark</summary>
 
 | Tool | Free Tier | Solo Price | Scale Ceiling | Gotchas |
 |---|---|---|---|---|
@@ -275,7 +277,7 @@ Every tool listed here has been used by real solo founders in production. Entrie
 </details>
 
 <details>
-<summary><strong>Analytics</strong> -- PostHog, Plausible, Umami</summary>
+<summary><strong>Analytics</strong>: PostHog, Plausible, Umami</summary>
 
 | Tool | Free Tier | Solo Price | Scale Ceiling | Gotchas |
 |---|---|---|---|---|
@@ -286,7 +288,7 @@ Every tool listed here has been used by real solo founders in production. Entrie
 </details>
 
 <details>
-<summary><strong>AI / LLM Tools</strong> -- Cursor, GitHub Copilot, Claude Code, OpenAI API, Anthropic API</summary>
+<summary><strong>AI / LLM Tools</strong>: Cursor, GitHub Copilot, Claude Code, OpenAI API, Anthropic API</summary>
 
 **For building faster (AI coding assistants):**
 
@@ -308,7 +310,7 @@ Every tool listed here has been used by real solo founders in production. Entrie
 </details>
 
 <details>
-<summary><strong>Monitoring / Error Tracking</strong> -- Sentry, BetterStack, Highlight.io</summary>
+<summary><strong>Monitoring / Error Tracking</strong>: Sentry, BetterStack, Highlight.io</summary>
 
 | Tool | Free Tier | Solo Price | Scale Ceiling | Gotchas |
 |---|---|---|---|---|
@@ -321,7 +323,7 @@ Every tool listed here has been used by real solo founders in production. Entrie
 </details>
 
 <details>
-<summary><strong>Background Jobs / Cron</strong> -- Inngest, Trigger.dev, QStash</summary>
+<summary><strong>Background Jobs / Cron</strong>: Inngest, Trigger.dev, QStash</summary>
 
 | Tool | Free Tier | Solo Price | Scale Ceiling | Gotchas |
 |---|---|---|---|---|
@@ -334,7 +336,7 @@ Every tool listed here has been used by real solo founders in production. Entrie
 </details>
 
 <details>
-<summary><strong>Boilerplates</strong> -- Open SaaS, ShipFast, Supastarter</summary>
+<summary><strong>Boilerplates</strong>: Open SaaS, ShipFast, Supastarter</summary>
 
 | Tool | Price | Best For | Gotchas |
 |---|---|---|---|
@@ -342,7 +344,7 @@ Every tool listed here has been used by real solo founders in production. Entrie
 | [ShipFast](https://shipfa.st) | $199 one-time | Speed to first deploy, active community | Uses MongoDB (not ideal for relational SaaS data) |
 | [Supastarter](https://supastarter.dev) | $349 one-time | Most complete feature set, multi-tenancy | Most expensive. Monorepo architecture. |
 
-> **Our take on boilerplates:** A boilerplate saves you 1-2 weeks of setup. That's real value. But none of them save you from understanding your own codebase. If you buy one, read every line before you ship. If you use AI coding tools heavily, you might not need one -- Claude Code or Cursor can scaffold a production-ready setup in a few hours.
+> **Our take on boilerplates:** A boilerplate saves you 1-2 weeks of setup. That's real value. But none of them save you from understanding your own codebase. If you buy one, read every line before you ship. If you use AI coding tools heavily, you might not need one. Claude Code or Cursor can scaffold a production-ready setup in a few hours.
 
 </details>
 
@@ -350,16 +352,16 @@ Every tool listed here has been used by real solo founders in production. Entrie
 
 ## What This Guide Doesn't Cover (Yet)
 
-This guide focuses on the core decisions that trip up solo web SaaS founders. Here's what we don't cover yet -- and where you can help:
+This guide focuses on the core decisions that trip up solo web SaaS founders. Here's what we don't cover yet, and where you can help:
 
-- **Mobile stacks** (React Native/Expo, Flutter) -- [contribute](CONTRIBUTING.md)
-- **State management** (Redux, Zustand, Jotai) -- most solo products don't need a guide for this
-- **Testing frameworks** -- worth covering, not yet written
-- **Domain registration / DNS** -- short answer: Cloudflare for DNS, Porkbun or Namecheap for domains
-- **CMS / content management** -- Sanity, Keystatic, Payload. Relevant for content-heavy products.
-- **File storage / CDN** -- [issue #1](../../issues/1)
-- **Search** -- [issue #2](../../issues/2)
-- **Customer support** -- [issue #3](../../issues/3)
+- **Mobile stacks** (React Native/Expo, Flutter) | [contribute](CONTRIBUTING.md)
+- **State management** (Redux, Zustand, Jotai) | most solo products don't need a guide for this
+- **Testing frameworks** | worth covering, not yet written
+- **Domain registration / DNS** | short answer: Cloudflare for DNS, Porkbun or Namecheap for domains
+- **CMS / content management** | Sanity, Keystatic, Payload. Relevant for content-heavy products.
+- **File storage / CDN** | [issue #1](../../issues/1)
+- **Search** | [issue #2](../../issues/2)
+- **Customer support** | [issue #3](../../issues/3)
 
 Want to write one of these? See [CONTRIBUTING.md](CONTRIBUTING.md).
 
@@ -380,7 +382,7 @@ This guide stays useful because people like you keep it honest. See [CONTRIBUTIN
 
 ## License
 
-[MIT](LICENSE) -- Use this however you want.
+[MIT](LICENSE). Use this however you want.
 
 ---
 

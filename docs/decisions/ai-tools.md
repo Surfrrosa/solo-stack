@@ -1,11 +1,11 @@
 # How to Handle AI Tools (and What They Actually Cost)
 
-Every solo founder in 2026 uses AI tools. The question isn't whether to use them -- it's how much they'll cost you at scale, both as development tools and as product features.
+Every solo founder in 2026 uses AI tools. The question isn't whether to use them. It's how much they'll cost you at scale, both as development tools and as product features.
 
 There are two separate decisions here:
 
-1. **AI coding tools** -- what helps YOU build faster
-2. **LLM APIs in your product** -- what your USERS interact with
+1. **AI coding tools**: what helps YOU build faster
+2. **LLM APIs in your product**: what your USERS interact with
 
 ## Part 1: AI Coding Tools
 
@@ -52,7 +52,7 @@ How do you prefer to work?
 
 ## Part 2: LLM APIs in Your Product
 
-This is the 2026 version of "how much will hosting cost me?" -- and it's harder to estimate because it depends on your specific use case.
+This is the 2026 version of "how much will hosting cost me?" and it's harder to estimate because it depends on your specific use case.
 
 ### The Decision
 
@@ -126,4 +126,4 @@ Here's how to estimate your AI feature costs:
 
 ---
 
-*Pricing verified March 2026. LLM pricing changes frequently -- check provider pricing pages for current rates. [Report outdated info.](../../issues)*
+*Pricing verified March 2026. LLM pricing changes frequently. Check provider pricing pages for current rates. [Report outdated info.](../../issues)*

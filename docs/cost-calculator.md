@@ -97,7 +97,7 @@ The Scale Stack is paradoxically cheaper than the Production Stack at high volum
 ## Key Takeaways
 
 1. **Infrastructure is cheap.** You can run a real SaaS for $50-60/month.
-2. **Payment processing is your biggest cost** -- and that's fine because it scales with revenue.
+2. **Payment processing is your biggest cost**, and that's fine because it scales with revenue.
 3. **Per-user auth pricing is the hidden trap.** Plan for it or avoid it.
 4. **Self-hosting saves 50-70%** at scale but requires upfront investment in setup.
 5. **Free tiers are for validation, not production.** Graduate when you have paying customers.
