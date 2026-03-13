@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>solo-stack | pick your stack</title>
+  <meta name="description" content="Interactive stack builder for solo founders. Real costs. Real trade-offs. No affiliate links.">
+  <meta property="og:title" content="solo-stack | pick your stack">
+  <meta property="og:description" content="Opinionated stack guide for solo founders. Real costs. Real trade-offs. No affiliate links.">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="scene">
+
+    <!-- Landing -->
+    <div id="screen-landing" class="screen active">
+      <div class="crt">
+        <div class="crt-bezel">
+          <div class="crt-screen">
+            <pre class="ascii-logo">
+               _                _                 _
+              | |              | |               | |
+  ___   ___   | |  ___    ___  | |_   __ _   ___ | | __
+ / __| / _ \  | | / _ \  / __| | __| / _` | / __|| |/ /
+ \__ \| (_) | | || (_) | \__ \ | |_ | (_| || (__ |   &lt;
+ |___/ \___/  |_| \___/  |___/  \__| \__,_| \___||_|\_\</pre>
+            <p class="tagline">pick your stack. ship your thing. grow from there.</p>
+            <div class="crt-divider"></div>
+            <p class="crt-prompt">$ <span class="typing">solo-stack --interactive</span></p>
+          </div>
+        </div>
+      </div>
+      <button class="start-btn" onclick="startBuilder()">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none'%3E%3Cpath d='M7 4v16l13-8z' fill='black'/%3E%3C/svg%3E" alt="" class="btn-icon">
+        Start Building
+      </button>
+    </div>
+
+    <!-- Questions -->
+    <div id="screen-questions" class="screen">
+      <div class="windows-stack" id="windows-stack"></div>
+    </div>
+
+    <!-- Results -->
+    <div id="screen-results" class="screen">
+      <div class="crt crt-results">
+        <div class="crt-bezel">
+          <div class="crt-screen" id="results-terminal"></div>
+        </div>
+      </div>
+      <div class="results-detail" id="results-detail"></div>
+      <div class="results-footer">
+        <button class="start-btn" onclick="resetBuilder()">Start Over</button>
+        <a href="https://github.com/surfrrosa/solo-stack" class="github-link" target="_blank" rel="noopener">View full guide on GitHub</a>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="site-footer">
+    <span>No affiliate links. Real costs. Community-maintained.</span>
+    <a href="https://github.com/surfrrosa/solo-stack" target="_blank" rel="noopener">GitHub</a>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

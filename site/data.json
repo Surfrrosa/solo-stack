@@ -1,0 +1,1831 @@
+{
+  "tools": [
+    {
+      "name": "Anthropic API",
+      "url": "https://anthropic.com/api",
+      "category": "ai-tools",
+      "description": "Anthropic's API for embedding Claude in your product. Sonnet for quality, Haiku for cost-efficient volume.",
+      "free_tier": "None (pay per token)",
+      "solo_price": "Claude Sonnet ~$3/1M input, $15/1M output; Claude Haiku ~$0.80/1M input, $4/1M output",
+      "pricing_url": "https://www.anthropic.com/pricing",
+      "scale_ceiling": "Rate limits increase with usage tier. Tier upgrades based on spend history.",
+      "graduation_to": "Optimize with prompt caching (up to 90% savings on repeated context), batching, or hybrid with open-source models",
+      "cost_at_scale": {
+        "100_users": "$5-20/mo",
+        "1000_users": "$50-200/mo",
+        "10000_users": "$500-2,000/mo",
+        "100000_users": "$5,000-20,000/mo"
+      },
+      "gotchas": [
+        "Same unpredictability as OpenAI. Token costs scale with user activity, not seats.",
+        "Prompt caching can reduce costs 90% for repeated context. Use it aggressively.",
+        "Extended thinking adds cost. Only enable it for tasks that genuinely need reasoning.",
+        "Output tokens cost 5x more than input tokens. Design prompts for concise responses.",
+        "Rate limits are per-model. Spreading traffic across Sonnet and Haiku helps with throughput."
+      ],
+      "last_verified": "2026-03-04",
+      "_file": "anthropic-api"
+    },
+    {
+      "name": "Auth.js (NextAuth)",
+      "url": "https://authjs.dev",
+      "category": "authentication",
+      "description": "Self-hosted auth for Next.js. Zero vendor lock-in. Zero per-user costs. You build the UI.",
+      "free_tier": "Unlimited (self-hosted, open source)",
+      "solo_price": "$0",
+      "pricing_url": "https://authjs.dev",
+      "scale_ceiling": "None. Self-hosted scales with your infrastructure.",
+      "graduation_to": "N/A. Auth.js is the graduation destination for most.",
+      "cost_at_scale": {
+        "100_users": "$0",
+        "1000_users": "$0",
+        "10000_users": "$0",
+        "100000_users": "$0"
+      },
+      "gotchas": [
+        "You build the auth UI yourself. No pre-built components.",
+        "More development time upfront: expect 1-2 weeks vs 1-2 days with Clerk",
+        "You're responsible for security best practices",
+        "Documentation has improved significantly but still has gaps",
+        "The investment pays off at scale. $0 forever is hard to argue with."
+      ],
+      "last_verified": "2026-03-04",
+      "_file": "authjs"
+    },
+    {
+      "name": "Better-Auth",
+      "url": "https://better-auth.com",
+      "category": "authentication",
+      "description": "Open-source, self-hosted auth library. Growing fast as the modern alternative to Auth.js.",
+      "free_tier": "Unlimited (self-hosted, open source)",
+      "solo_price": "$0",
+      "pricing_url": "https://better-auth.com",
+      "scale_ceiling": "None. Self-hosted scales with your infrastructure.",
+      "graduation_to": "N/A. Self-hosted auth is the endgame.",
+      "cost_at_scale": {
+        "100_users": "$0",
+        "1000_users": "$0",
+        "10000_users": "$0",
+        "100000_users": "$0"
+      },
+      "gotchas": [
+        "Newer project with a smaller community than Auth.js",
+        "Less battle-tested in production at large scale",
+        "Growing rapidly. Worth watching.",
+        "More modern API design than Auth.js"
+      ],
+      "last_verified": "2026-03-04",
+      "_file": "better-auth"
+    },
+    {
+      "name": "BetterStack",
+      "url": "https://betterstack.com",
+      "category": "monitoring",
+      "description": "Uptime monitoring + logging in one platform. Formerly Better Uptime + Logtail.",
+      "free_tier": "10 monitors, 1-minute checks, 3 status pages",
+      "solo_price": "$29/mo (logging + more monitors)",
+      "pricing_url": "https://betterstack.com/pricing",
+      "scale_ceiling": "Free tier handles basic uptime monitoring. Pay when you need logging.",
+      "graduation_to": "Datadog or self-hosted Grafana stack",
+      "cost_at_scale": {
+        "100_users": "$0",
+        "1000_users": "$0",
+        "10000_users": "$29",
+        "100000_users": "$29-85"
+      },
+      "gotchas": [
+        "Free tier is uptime-only. Logging requires paid plan.",
+        "Incident management features limited on free tier."
+      ],
+      "last_verified": "2026-03-04",
+      "_file": "betterstack"
+    },
+    {
+      "name": "Claude Code",
+      "url": "https://claude.ai/code",
+      "category": "ai-tools",
+      "description": "Anthropic's agentic CLI for coding. Terminal-based, reads your entire codebase, and executes multi-step tasks autonomously.",
+      "free_tier": "Included with Claude Pro ($20/mo) with usage limits",
+      "solo_price": "$20/mo (Pro plan) or pay-per-token via API (~$3-15/day for heavy agentic usage)",
+      "pricing_url": "https://www.anthropic.com/pricing",
+      "scale_ceiling": "None on API billing. Usage caps on Pro plan reset daily.",
+      "graduation_to": "API billing for unlimited agentic usage (no hard caps, just cost)",
+      "cost_at_scale": {
+        "100_users": "$20/mo Pro or variable API costs (per-developer tool)",
+        "1000_users": "$20/mo",
+        "10000_users": "$20/mo",
+        "100000_users": "$20/mo"
+      },
+      "gotchas": [
+        "API billing can spike during heavy agentic sessions. A single complex task can cost $5-10 in tokens.",
+        "Pro plan has daily usage limits that reset. You will hit them during intense coding days.",
+        "Terminal-based with no GUI IDE. You need to be comfortable in the terminal.",
+        "Max mode uses more expensive models and burns through limits faster.",
+        "Per-developer tool. Cost scales with how hard you push it, not with your product's users."
+      ],
+      "last_verified": "2026-03-04",
+      "_file": "claude-code"
+    },
+    {
+      "name": "Clerk",
+      "url": "https://clerk.com",
+      "category": "authentication",
+      "description": "Drop-in auth with pre-built UI components. Fastest integration for Next.js. Beautiful out of the box.",
+      "free_tier": "50K monthly users (updated Feb 2026)",
+      "solo_price": "$0.02/user after 50K (tiered down to $0.012 at volume)",
+      "pricing_url": "https://clerk.com/pricing",
+      "scale_ceiling": "Free tier now covers most solo products. Costs kick in past 50K users.",
+      "graduation_to": "Auth.js or Better-Auth (self-hosted, $0 forever)",
+      "cost_at_scale": {
+        "100_users": "$0",
+        "1000_users": "$0",
+        "10000_users": "$0",
+        "100000_users": "$600-1,000/mo"
+      },
+      "gotchas": [
+        "Vendor lock-in is real. Pre-built components mean migrating away requires rebuilding auth UI.",
+        "No self-hosted option. Your auth depends on Clerk's infrastructure.",
+        "Free tier expanded to 50K in Feb 2026 (was 10K). Much more reasonable now.",
+        "The DX is genuinely excellent. Fastest path from zero to working auth.",
+        "Metric changed from MAU to MRU (monthly returning users). Verify how this affects your count."
+      ],
+      "last_verified": "2026-03-04",
+      "_file": "clerk"
+    },
+    {
+      "name": "Cursor",
+      "url": "https://cursor.com",
+      "category": "ai-tools",
+      "description": "AI-native code editor built as a VS Code fork. Inline completions, chat, and agentic coding in one IDE.",
+      "free_tier": "Limited (Hobby plan with basic features)",
+      "solo_price": "$20/mo (Pro, 500 premium requests/mo)",
+      "pricing_url": "https://cursor.com/pricing",
+      "scale_ceiling": "Premium request limits. Heavy agentic usage can burn through 500 requests fast.",
+      "graduation_to": "Claude Code for deeper agentic work, or API-based coding agents for unlimited usage",
+      "cost_at_scale": {
+        "100_users": "$20/mo (per-developer tool, not per-user)",
+        "1000_users": "$20/mo",
+        "10000_users": "$20/mo",
+        "100000_users": "$20/mo"
+      },
+      "gotchas": [
+        "Premium request limits reset monthly. No rollover, no burst capacity.",
+        "Background agent uses premium requests quickly. A single complex task can eat dozens of requests.",
+        "VS Code fork means some extensions may not work or may lag behind upstream updates.",
+        "Business plan at $40/mo/seat adds admin controls but same core limits.",
+        "Per-developer cost, not per-user. Scales with team size, not product usage."
+      ],
+      "last_verified": "2026-03-04",
+      "_file": "cursor"
+    },
+    {
+      "name": "GitHub Copilot",
+      "url": "https://github.com/features/copilot",
+      "category": "ai-tools",
+      "description": "AI pair programmer from GitHub. Best-in-class inline completions and chat, deeply integrated with VS Code and GitHub ecosystem.",
+      "free_tier": "Free plan with 2K completions + 50 chat messages/mo",
+      "solo_price": "$10/mo (Pro, 300 premium requests)",
+      "pricing_url": "https://github.com/features/copilot#pricing",
+      "scale_ceiling": "Premium request limits for advanced models. Free and Pro tiers have monthly caps.",
+      "graduation_to": "Cursor or Claude Code for heavier agentic refactoring work",
+      "cost_at_scale": {
+        "100_users": "$10/mo (per-developer tool, not per-user)",
+        "1000_users": "$10/mo",
+        "10000_users": "$10/mo",
+        "100000_users": "$10/mo"
+      },
+      "gotchas": [
+        "Best for completions and inline suggestions. Less capable for large refactors than Cursor or Claude Code.",
+        "Business plan at $19/mo/seat adds org-level policy controls and audit logs.",
+        "Premium request limits gate access to more capable models like Claude and GPT-4o.",
+        "Free tier is generous for light usage but chat limit of 50 messages/mo is tight.",
+        "Per-developer cost. Scales with your team, not your product's user base."
+      ],
+      "last_verified": "2026-03-04",
+      "_file": "github-copilot"
+    },
+    {
+      "name": "Hetzner + Coolify",
+      "url": "https://coolify.io",
+      "category": "hosting",
+      "description": "Self-hosted PaaS on cheap European VPS. Vercel-like DX (git push deploy, preview URLs, auto SSL) on infrastructure you own.",
+      "free_tier": "None (Hetzner starts at 3.49 EUR/mo)",
+      "solo_price": "$4-10/mo",
+      "pricing_url": "https://www.hetzner.com/cloud/",
+      "scale_ceiling": "You control the ceiling. Add more servers as needed.",
+      "graduation_to": "N/A. Self-hosted is the endgame.",
+      "cost_at_scale": {
+        "100_users": "$4-6/mo",
+        "1000_users": "$4-10/mo",
+        "10000_users": "$10-20/mo",
+        "100000_users": "$30-80/mo"
+      },
+      "gotchas": [
+        "You manage the server. Coolify handles most DevOps but you're still responsible for uptime.",
+        "Hetzner datacenters are in Europe and US. Latency to Asia/Australia is higher.",
+        "Initial setup takes 1-2 hours vs 5 minutes on Vercel",
+        "No edge network. Static assets should go through a CDN (Cloudflare free tier).",
+        "The cost savings are dramatic: teams report 50-70% less than Vercel/Railway"
+      ],
+      "last_verified": "2026-03-04",
+      "_file": "hetzner-coolify"
+    },
+    {
+      "name": "Highlight.io (now LaunchDarkly Observability)",
+      "url": "https://highlight.io",
+      "category": "monitoring",
+      "description": "Session replay + error tracking + logging. Highlight.io was acquired by LaunchDarkly in Feb 2026. The product now lives under LaunchDarkly Observability.",
+      "free_tier": "5K sessions/mo, 5K errors/mo, 10M logs/mo (Developer plan)",
+      "solo_price": "Usage-based after free tier",
+      "pricing_url": "https://highlight.io/pricing",
+      "scale_ceiling": "Free tier is much more generous than the old Highlight.io plans.",
+      "graduation_to": "Self-hosted (open source code still available) or Sentry + BetterStack",
+      "cost_at_scale": {
+        "100_users": "$0",
+        "1000_users": "$0",
+        "10000_users": "Usage-based",
+        "100000_users": "Usage-based"
+      },
+      "gotchas": [
+        "Highlight.io as an independent product was deprecated Feb 2026. Migrated to LaunchDarkly.",
+        "The open source code is still available for self-hosting.",
+        "Pricing model changed significantly. Now under LaunchDarkly's usage-based pricing."
+      ],
+      "last_verified": "2026-03-04",
+      "_file": "highlight-io"
+    },
+    {
+      "name": "Inngest",
+      "url": "https://inngest.com",
+      "category": "background-jobs",
+      "description": "Event-driven background jobs and workflows. Works with Vercel, Railway, any platform. No infrastructure to manage.",
+      "free_tier": "100K executions/mo (first 50K free each month)",
+      "solo_price": "$75/mo (usage-based with credits)",
+      "pricing_url": "https://inngest.com/pricing",
+      "scale_ceiling": "Generous free tier covers most early products. Paid tier when runs increase.",
+      "graduation_to": "BullMQ + Redis (self-managed, $0)",
+      "cost_at_scale": {
+        "100_users": "$0",
+        "1000_users": "$0",
+        "10000_users": "$0-75",
+        "100000_users": "$75-200"
+      },
+      "gotchas": [
+        "Vendor lock-in to Inngest's event model.",
+        "Free tier is generous (100K executions) but runs add up with chatty events.",
+        "Debugging can be harder than local queue systems."
+      ],
+      "last_verified": "2026-03-04",
+      "_file": "inngest"
+    },
+    {
+      "name": "Lemon Squeezy",
+      "url": "https://lemonsqueezy.com",
+      "category": "payments",
+      "description": "Merchant of Record. Handles all global tax compliance so you don't have to. Best for digital products sold globally.",
+      "free_tier": "No monthly fee",
+      "solo_price": "5% + $0.50 per transaction",
+      "pricing_url": "https://lemonsqueezy.com/pricing",
+      "scale_ceiling": "~$50K MRR before the fee premium over Stripe becomes significant",
+      "graduation_to": "Stripe + Stripe Tax when the 2% fee difference matters",
+      "cost_at_scale": {
+        "100_users": "$55 (assuming $10 avg transaction)",
+        "1000_users": "$550",
+        "10000_users": "$5,500",
+        "100000_users": "$55,000"
+      },
+      "gotchas": [
+        "Acquired by Stripe in July 2024. Still operating independently as of March 2026, but no major feature updates since acquisition. Widely expected to be folded into Stripe's own MoR offering.",
+        "Post-acquisition quality reports are mixed: some users report bugs and slower support, others say it's been stable. YMMV.",
+        "5% + $0.50 is nearly double Stripe's 2.9% + $0.30 at high volume",
+        "Less API flexibility than Stripe. Fewer integrations.",
+        "The upside is real though: zero thinking about VAT, sales tax, or compliance"
+      ],
+      "last_verified": "2026-03-04",
+      "_file": "lemon-squeezy"
+    },
+    {
+      "name": "Neon",
+      "url": "https://neon.tech",
+      "category": "database",
+      "description": "Serverless Postgres that scales to zero. Pay only when your database is active.",
+      "free_tier": "0.5GB storage, 190 compute hours/mo",
+      "solo_price": "$19/mo (Launch: 10GB storage)",
+      "pricing_url": "https://neon.tech/pricing",
+      "scale_ceiling": "Serverless means it scales up and down automatically.",
+      "graduation_to": "N/A for most use cases. Scales well.",
+      "cost_at_scale": {
+        "100_users": "$0",
+        "1000_users": "$0",
+        "10000_users": "$19/mo",
+        "100000_users": "$69+/mo"
+      },
+      "gotchas": [
+        "Cold starts on free tier can add 100-500ms to first query after inactivity",
+        "Newer than Supabase. Smaller ecosystem and fewer tutorials.",
+        "No built-in auth, storage, or realtime. It's just the database.",
+        "Branching feature is excellent for development workflows",
+        "If you only need a database (not a full BaaS), Neon is a strong choice"
+      ],
+      "last_verified": "2026-03-04",
+      "_file": "neon"
+    },
+    {
+      "name": "Open SaaS (Wasp)",
+      "url": "https://opensaas.sh",
+      "category": "boilerplate",
+      "description": "Free, open-source SaaS starter. No paid third-party dependencies. Full ownership from day one.",
+      "free_tier": "Free and open source",
+      "solo_price": "$0",
+      "pricing_url": "https://opensaas.sh",
+      "scale_ceiling": "N/A. It's a starting point.",
+      "graduation_to": "N/A. You own the code.",
+      "cost_at_scale": {
+        "100_users": "N/A (free)",
+        "1000_users": "N/A",
+        "10000_users": "N/A",
+        "100000_users": "N/A"
+      },
+      "gotchas": [
+        "Requires learning the Wasp framework (a DSL on top of React + Node)",
+        "Smaller community than ShipFast or Supastarter",
+        "10K+ GitHub stars suggest real adoption",
+        "The 'no vendor dependencies' philosophy means more DIY but total ownership",
+        "Good choice if you're philosophically opposed to paying for boilerplate"
+      ],
+      "last_verified": "2026-03-04",
+      "_file": "open-saas"
+    },
+    {
+      "name": "OpenAI API",
+      "url": "https://openai.com/api",
+      "category": "ai-tools",
+      "description": "OpenAI's API for embedding AI features in your product. GPT-4o for quality, GPT-4o-mini for cost-efficient volume.",
+      "free_tier": "None (pay per token)",
+      "solo_price": "GPT-4o ~$2.50/1M input, $10/1M output; GPT-4o-mini ~$0.15/1M input, $0.60/1M output",
+      "pricing_url": "https://openai.com/api/pricing",
+      "scale_ceiling": "Rate limits increase with usage tier. Tier upgrades are automatic based on spend history.",
+      "graduation_to": "Optimize with prompt caching, fine-tuning, or self-hosted open-source models for high-volume features",
+      "cost_at_scale": {
+        "100_users": "$5-20/mo",
+        "1000_users": "$50-200/mo",
+        "10000_users": "$500-2,000/mo",
+        "100000_users": "$5,000-20,000/mo"
+      },
+      "gotchas": [
+        "Costs hard to predict without knowing your token usage patterns. Prototype first, then estimate.",
+        "Rate limits can block burst traffic. Plan for queuing or retries in your architecture.",
+        "No fixed monthly pricing. Your bill scales directly with user activity.",
+        "GPT-4o-mini is 15-20x cheaper than GPT-4o. Use the cheapest model that meets your quality bar.",
+        "Output tokens cost 4x more than input tokens. Keep responses concise to control costs."
+      ],
+      "last_verified": "2026-03-04",
+      "_file": "openai-api"
+    },
+    {
+      "name": "Paddle",
+      "url": "https://paddle.com",
+      "category": "payments",
+      "description": "Merchant of Record with broader global tax coverage. More enterprise-oriented than Lemon Squeezy.",
+      "free_tier": "No monthly fee",
+      "solo_price": "5% + $0.50 per transaction",
+      "pricing_url": "https://paddle.com/pricing",
+      "scale_ceiling": "Enterprise-ready. No practical ceiling.",
+      "graduation_to": "N/A. Paddle scales up. Some switch to Stripe for lower fees at high volume.",
+      "cost_at_scale": {
+        "100_users": "$55 (assuming $10 avg transaction)",
+        "1000_users": "$550",
+        "10000_users": "$5,500",
+        "100000_users": "$55,000"
+      },
+      "gotchas": [
+        "Same 5% + $0.50 fee structure as Lemon Squeezy",
+        "Less indie-focused than Lemon Squeezy. Dashboard and DX feel more enterprise.",
+        "Chargeback dispute handling has been criticized by indie founders",
+        "Broader global tax coverage than Lemon Squeezy",
+        "Paddle Billing (subscription management) is solid but opinionated"
+      ],
+      "last_verified": "2026-03-04",
+      "_file": "paddle"
+    },
+    {
+      "name": "Plausible",
+      "url": "https://plausible.io",
+      "category": "analytics",
+      "description": "Simple, privacy-first web analytics. One dashboard, no complexity. The anti-Google Analytics.",
+      "free_tier": "None (30-day trial)",
+      "solo_price": "$9/mo (10K pageviews)",
+      "pricing_url": "https://plausible.io/pricing",
+      "scale_ceiling": "Scales fine. Pricing grows with pageviews.",
+      "graduation_to": "Add PostHog when you need product analytics (funnels, cohorts, session replay)",
+      "cost_at_scale": {
+        "100_users": "$9/mo",
+        "1000_users": "$9/mo",
+        "10000_users": "$19/mo",
+        "100000_users": "$69/mo"
+      },
+      "gotchas": [
+        "No free tier. You pay from day one.",
+        "Website analytics only. No product analytics (funnels, cohorts, user paths).",
+        "If you need to understand user behavior inside your app, you need PostHog too.",
+        "The simplicity is the feature. One-minute setup, sub-500ms dashboard loads.",
+        "GDPR-compliant without cookie banners. EU-hosted option available.",
+        "Self-hosted option available (free, open source)"
+      ],
+      "last_verified": "2026-03-04",
+      "_file": "plausible"
+    },
+    {
+      "name": "PocketBase",
+      "url": "https://pocketbase.io",
+      "category": "database",
+      "description": "Single-binary backend with SQLite, auth, file storage, and admin UI. Self-hosted. Zero external dependencies.",
+      "free_tier": "Unlimited (self-hosted, open source)",
+      "solo_price": "$0 + VPS cost (~$4-6/mo)",
+      "pricing_url": "https://pocketbase.io",
+      "scale_ceiling": "~10K concurrent users. SQLite is the constraint.",
+      "graduation_to": "Supabase or dedicated Postgres when you need more concurrency",
+      "cost_at_scale": {
+        "100_users": "$4-6/mo (VPS only)",
+        "1000_users": "$4-6/mo",
+        "10000_users": "$10-20/mo",
+        "100000_users": "Not recommended at this scale"
+      },
+      "gotchas": [
+        "SQLite-based. Single writer. Concurrent writes are the bottleneck.",
+        "No managed cloud option. You host it yourself.",
+        "Beloved by the 'own everything' crowd. One Go binary, zero dependencies.",
+        "Built-in admin UI is surprisingly good",
+        "Data migration to Postgres requires effort if you outgrow it"
+      ],
+      "last_verified": "2026-03-04",
+      "_file": "pocketbase"
+    },
+    {
+      "name": "PostHog",
+      "url": "https://posthog.com",
+      "category": "analytics",
+      "description": "Full product analytics suite. Analytics, session replay, feature flags, A/B tests, and surveys in one platform. Absurdly generous free tier.",
+      "free_tier": "1M events/mo, 5K session replays, 1M feature flag requests",
+      "solo_price": "Usage-based after free tier",
+      "pricing_url": "https://posthog.com/pricing",
+      "scale_ceiling": "None. Scales to enterprise.",
+      "graduation_to": "N/A. PostHog replaces what would cost $300+/mo on Mixpanel or Amplitude.",
+      "cost_at_scale": {
+        "100_users": "$0",
+        "1000_users": "$0",
+        "10000_users": "$0",
+        "100000_users": "~$50/mo"
+      },
+      "gotchas": [
+        "Overkill for simple website analytics. If you just want pageview counts, use Plausible.",
+        "The dashboard can feel overwhelming at first. There's a lot of product in here.",
+        "Self-hosted option available for privacy-sensitive deployments",
+        "1M free events/mo means most solo SaaS products never pay",
+        "The combination of analytics + session replay + feature flags is genuinely unique at this price"
+      ],
+      "last_verified": "2026-03-04",
+      "_file": "posthog"
+    },
+    {
+      "name": "Postmark",
+      "url": "https://postmarkapp.com",
+      "category": "email",
+      "description": "Transactional email with the best deliverability in the industry. Sub-2-hour support response times.",
+      "free_tier": "None",
+      "solo_price": "$15/mo (10K emails)",
+      "pricing_url": "https://postmarkapp.com/pricing",
+      "scale_ceiling": "Scales well. Deliverability stays excellent at volume.",
+      "graduation_to": "N/A. Postmark is the reliability choice at any scale.",
+      "cost_at_scale": {
+        "100_users": "$15/mo",
+        "1000_users": "$15/mo",
+        "10000_users": "$15/mo",
+        "100000_users": "$85/mo (100K emails)"
+      },
+      "gotchas": [
+        "No free tier. You're paying from day one.",
+        "More expensive per email than Resend at volume",
+        "The deliverability and support quality justify the premium for mission-critical email",
+        "Template system is solid but not React-based",
+        "If your emails absolutely must arrive in the inbox, not spam, this is the choice"
+      ],
+      "last_verified": "2026-03-04",
+      "_file": "postmark"
+    },
+    {
+      "name": "Railway",
+      "url": "https://railway.app",
+      "category": "hosting",
+      "description": "Full-stack hosting in one place. Frontend, backend, database, and workers with predictable usage-based pricing.",
+      "free_tier": "$5 credit/mo (no credit card required)",
+      "solo_price": "~$5-15/mo for a typical Next.js app",
+      "pricing_url": "https://railway.app/pricing",
+      "scale_ceiling": "Scales well. No per-seat pricing gotchas.",
+      "graduation_to": "Hetzner + Coolify for maximum cost control",
+      "cost_at_scale": {
+        "100_users": "$5/mo",
+        "1000_users": "$8-15/mo",
+        "10000_users": "$15-30/mo",
+        "100000_users": "$50-100/mo"
+      },
+      "gotchas": [
+        "Less edge optimization than Vercel. If you need global edge, Vercel or Cloudflare is better.",
+        "Usage-based pricing means costs are predictable but not fixed",
+        "Smaller community than Vercel. Fewer tutorials and guides.",
+        "Git push deploy, preview URLs, and managed databases all work well",
+        "Teams report 50-70% savings compared to Vercel at scale"
+      ],
+      "last_verified": "2026-03-04",
+      "_file": "railway"
+    },
+    {
+      "name": "Resend",
+      "url": "https://resend.com",
+      "category": "email",
+      "description": "Modern transactional email with React Email integration. The default choice for Next.js developers.",
+      "free_tier": "3,000 emails/month, 1 domain",
+      "solo_price": "$20/mo (50K emails, 2 domains)",
+      "pricing_url": "https://resend.com/pricing",
+      "scale_ceiling": "Cost scales with volume. No major ceiling.",
+      "graduation_to": "Amazon SES ($0.10/1K emails) if volume gets extreme and you want raw cost savings",
+      "cost_at_scale": {
+        "100_users": "$0",
+        "1000_users": "$0",
+        "10000_users": "$20/mo",
+        "100000_users": "$80/mo"
+      },
+      "gotchas": [
+        "No built-in template editor. You write email templates in code (React Email).",
+        "If you're not in the React/Next.js ecosystem, the DX advantage is smaller.",
+        "3K free emails/mo is enough for early stage but tight for apps with heavy email flows.",
+        "Developer experience is genuinely excellent. API is clean and well-documented."
+      ],
+      "last_verified": "2026-03-04",
+      "_file": "resend"
+    },
+    {
+      "name": "Sentry",
+      "url": "https://sentry.io",
+      "category": "monitoring",
+      "description": "Error tracking and performance monitoring. The industry standard for catching bugs in production.",
+      "free_tier": "5K errors/month, 10K performance transactions",
+      "solo_price": "$29/mo (Team plan: 50K errors, 100K transactions)",
+      "pricing_url": "https://sentry.io/pricing",
+      "scale_ceiling": "Free tier covers most solo products. Team plan if you need more volume.",
+      "graduation_to": "Self-hosted Sentry (free, open source)",
+      "cost_at_scale": {
+        "100_users": "$0",
+        "1000_users": "$0",
+        "10000_users": "$0-29",
+        "100000_users": "$29-80"
+      },
+      "gotchas": [
+        "Free tier is generous but has 24-hour data retention. Team plan has 90-day retention.",
+        "SDK can add bundle size if not tree-shaken."
+      ],
+      "last_verified": "2026-03-04",
+      "_file": "sentry"
+    },
+    {
+      "name": "ShipFast",
+      "url": "https://shipfa.st",
+      "category": "boilerplate",
+      "description": "Next.js SaaS boilerplate with active Discord community. Fastest path from idea to deployed product.",
+      "free_tier": "None",
+      "solo_price": "$199 one-time",
+      "pricing_url": "https://shipfa.st",
+      "scale_ceiling": "N/A. It's a starting point, not a dependency.",
+      "graduation_to": "N/A. You own the code.",
+      "cost_at_scale": {
+        "100_users": "N/A (one-time purchase)",
+        "1000_users": "N/A",
+        "10000_users": "N/A",
+        "100000_users": "N/A"
+      },
+      "gotchas": [
+        "Uses MongoDB by default. Not ideal for relational SaaS data. Can be changed.",
+        "The Discord community is a genuine advantage for getting unstuck fast",
+        "You still need to understand the code. Don't ship what you can't debug.",
+        "At $199 it saves you 1-2 weeks of boilerplate setup. That's the real value.",
+        "AI coding tools (Claude Code, Cursor) can scaffold similar setups in hours now"
+      ],
+      "last_verified": "2026-03-04",
+      "_file": "shipfast"
+    },
+    {
+      "name": "Stripe",
+      "url": "https://stripe.com",
+      "category": "payments",
+      "description": "Industry-standard payment processing. Maximum control and flexibility. You handle tax compliance.",
+      "free_tier": "No monthly fee",
+      "solo_price": "2.9% + $0.30 per transaction",
+      "pricing_url": "https://stripe.com/pricing",
+      "scale_ceiling": "None. Stripe scales to any size.",
+      "graduation_to": "N/A. Stripe is the graduation destination.",
+      "cost_at_scale": {
+        "100_users": "$29 (assuming $10 avg transaction)",
+        "1000_users": "$290",
+        "10000_users": "$2,900",
+        "100000_users": "$29,000"
+      },
+      "gotchas": [
+        "You are responsible for sales tax / VAT compliance in every jurisdiction you sell to",
+        "Tax compliance outside the US is non-trivial. Most solo founders underestimate this.",
+        "Stripe Tax add-on costs 0.5% per transaction on top of processing fees",
+        "Account can be frozen with funds held if Stripe flags your business as high-risk",
+        "Requires more integration work than Merchant of Record solutions"
+      ],
+      "last_verified": "2026-03-04",
+      "_file": "stripe"
+    },
+    {
+      "name": "Supabase Auth",
+      "url": "https://supabase.com/auth",
+      "category": "authentication",
+      "description": "Auth included with Supabase. Postgres-backed. Cheapest per-user auth if you're already using Supabase.",
+      "free_tier": "50K MAU",
+      "solo_price": "$0.00325/MAU (included in Supabase Pro at $25/mo)",
+      "pricing_url": "https://supabase.com/pricing",
+      "scale_ceiling": "Feature-limited. No SSO, basic MFA, limited customization compared to Clerk.",
+      "graduation_to": "Clerk (if you need features) or Auth.js (if you need control)",
+      "cost_at_scale": {
+        "100_users": "$0",
+        "1000_users": "$0",
+        "10000_users": "$0 (within free tier)",
+        "100000_users": "$25/mo (Supabase Pro covers it)"
+      },
+      "gotchas": [
+        "Tied to the Supabase ecosystem. If you leave Supabase DB, you likely leave Supabase Auth.",
+        "Auth UI components are less polished than Clerk's pre-built components",
+        "50K free MAU is extremely generous. Most solo SaaS never exceeds this.",
+        "RLS (Row Level Security) integration is powerful but has a learning curve",
+        "At 100K users, this costs $25/mo while Clerk costs $1,800/mo. That's not a typo."
+      ],
+      "last_verified": "2026-03-04",
+      "_file": "supabase-auth"
+    },
+    {
+      "name": "Supabase",
+      "url": "https://supabase.com",
+      "category": "database",
+      "description": "Postgres database + Auth + Storage + Realtime + Edge Functions in one platform. The default BaaS for solo founders.",
+      "free_tier": "500MB DB, 1GB storage, 50K auth MAUs, 500MB bandwidth",
+      "solo_price": "$25/mo (Pro: 8GB DB, 100GB storage)",
+      "pricing_url": "https://supabase.com/pricing",
+      "scale_ceiling": "Handles most solo SaaS needs. Larger workloads may need dedicated Postgres.",
+      "graduation_to": "Dedicated Postgres (Neon, RDS, or self-hosted) if you outgrow the platform",
+      "cost_at_scale": {
+        "100_users": "$0",
+        "1000_users": "$0",
+        "10000_users": "$25/mo",
+        "100000_users": "$75+/mo"
+      },
+      "gotchas": [
+        "RLS (Row Level Security) is powerful but has a real learning curve",
+        "Vendor-specific features (Supabase Realtime, Storage) create soft lock-in",
+        "Free tier pauses after 1 week of inactivity. Not great for side projects you touch monthly.",
+        "The dashboard is excellent. SQL editor, table viewer, and auth management in one place.",
+        "Postgres underneath means your data is portable if you leave"
+      ],
+      "last_verified": "2026-03-04",
+      "_file": "supabase"
+    },
+    {
+      "name": "Supastarter",
+      "url": "https://supastarter.dev",
+      "category": "boilerplate",
+      "description": "Most feature-complete SaaS boilerplate. Multi-tenancy, i18n, monorepo architecture. For serious projects.",
+      "free_tier": "None",
+      "solo_price": "$349 one-time",
+      "pricing_url": "https://supastarter.dev/pricing",
+      "scale_ceiling": "N/A. It's a starting point.",
+      "graduation_to": "N/A. You own the code.",
+      "cost_at_scale": {
+        "100_users": "N/A (one-time purchase)",
+        "1000_users": "N/A",
+        "10000_users": "N/A",
+        "100000_users": "N/A"
+      },
+      "gotchas": [
+        "Most expensive of the major boilerplates",
+        "Monorepo architecture has a learning curve if you're not familiar",
+        "The multi-tenancy and i18n support is genuinely hard to build from scratch",
+        "Available for both Next.js and Nuxt",
+        "Worth it if you're building a B2B SaaS with organization/team features"
+      ],
+      "last_verified": "2026-03-04",
+      "_file": "supastarter"
+    },
+    {
+      "name": "Trigger.dev",
+      "url": "https://trigger.dev",
+      "category": "background-jobs",
+      "description": "Open source background jobs for Next.js and Node.js. Long-running tasks, cron, and workflows.",
+      "free_tier": "10K runs/mo + $5 usage credit",
+      "solo_price": "$50/mo (usage-based: per-second compute + per-run fees)",
+      "pricing_url": "https://trigger.dev/pricing",
+      "scale_ceiling": "Free tier is small (10K runs). Pro gives $50 usage credit and higher concurrency.",
+      "graduation_to": "Self-hosted Trigger.dev (open source) or BullMQ + Redis",
+      "cost_at_scale": {
+        "100_users": "$0",
+        "1000_users": "$0",
+        "10000_users": "$0-50",
+        "100000_users": "$50-200"
+      },
+      "gotchas": [
+        "Free tier is only 10K runs/mo. Can burn through quickly with active products.",
+        "Pricing is usage-based (compute seconds + invocation fees), not a simple bucket.",
+        "Open source so you can self-host to avoid per-run costs.",
+        "Newer project, smaller community than Inngest."
+      ],
+      "last_verified": "2026-03-04",
+      "_file": "trigger-dev"
+    },
+    {
+      "name": "Umami",
+      "url": "https://umami.is",
+      "category": "analytics",
+      "description": "Privacy-first web analytics with a free tier. Like Plausible but with a free option.",
+      "free_tier": "100K events/mo",
+      "solo_price": "$9/mo (1M events)",
+      "pricing_url": "https://umami.is/pricing",
+      "scale_ceiling": "Scales fine. Similar trajectory to Plausible.",
+      "graduation_to": "Add PostHog for product analytics if needed",
+      "cost_at_scale": {
+        "100_users": "$0",
+        "1000_users": "$0",
+        "10000_users": "$0-9/mo",
+        "100000_users": "$19/mo"
+      },
+      "gotchas": [
+        "Smaller ecosystem and community than Plausible or PostHog",
+        "100K free events/mo is generous for early-stage products",
+        "Self-hosted option available (open source)",
+        "A solid choice if you want Plausible-style simplicity with a free tier"
+      ],
+      "last_verified": "2026-03-04",
+      "_file": "umami"
+    },
+    {
+      "name": "QStash (Upstash)",
+      "url": "https://upstash.com/docs/qstash",
+      "category": "background-jobs",
+      "description": "Serverless message queue and task scheduler. Perfect for Vercel where you can't run persistent workers.",
+      "free_tier": "500 messages/day",
+      "solo_price": "$1/100K messages",
+      "pricing_url": "https://upstash.com/pricing/qstash",
+      "scale_ceiling": "Usage-based pricing stays cheap. No per-seat costs.",
+      "graduation_to": "BullMQ + Redis on Railway/Hetzner",
+      "cost_at_scale": {
+        "100_users": "$0",
+        "1000_users": "$0-1",
+        "10000_users": "$1-10",
+        "100000_users": "$10-50"
+      },
+      "gotchas": [
+        "500 messages/day on free tier is tight for active products.",
+        "Serverless model means no persistent connections.",
+        "Best paired with Upstash Redis for state."
+      ],
+      "last_verified": "2026-03-04",
+      "_file": "upstash-qstash"
+    },
+    {
+      "name": "Vercel",
+      "url": "https://vercel.com",
+      "category": "hosting",
+      "description": "Best-in-class Next.js hosting. Incredible DX with preview deploys and edge functions. Free tier has a bandwidth ceiling.",
+      "free_tier": "100GB bandwidth, 100 deployments/day",
+      "solo_price": "$20/mo (Pro)",
+      "pricing_url": "https://vercel.com/pricing",
+      "scale_ceiling": "~33K pageviews/mo with images on free tier (100GB bandwidth). Pro adds more but per-seat pricing hurts teams.",
+      "graduation_to": "Railway (managed) or Hetzner + Coolify (self-hosted)",
+      "cost_at_scale": {
+        "100_users": "$0",
+        "1000_users": "$0",
+        "10000_users": "$20/mo",
+        "100000_users": "$150+/mo (bandwidth overage)"
+      },
+      "gotchas": [
+        "100GB bandwidth sounds like a lot until you serve images. A 3MB page load burns through it at ~33K views.",
+        "Each team member costs $20/mo on Pro. A team of 3 is $60/mo before bandwidth.",
+        "Serverless function cold starts can affect API response times",
+        "No built-in support for long-running background jobs",
+        "Vendor-specific features (Edge Config, KV) create soft lock-in",
+        "The DX is genuinely best-in-class. Hard to leave once you're used to it."
+      ],
+      "last_verified": "2026-03-04",
+      "_file": "vercel"
+    }
+  ],
+  "toolsByCategory": {
+    "ai-tools": [
+      {
+        "name": "Anthropic API",
+        "url": "https://anthropic.com/api",
+        "category": "ai-tools",
+        "description": "Anthropic's API for embedding Claude in your product. Sonnet for quality, Haiku for cost-efficient volume.",
+        "free_tier": "None (pay per token)",
+        "solo_price": "Claude Sonnet ~$3/1M input, $15/1M output; Claude Haiku ~$0.80/1M input, $4/1M output",
+        "pricing_url": "https://www.anthropic.com/pricing",
+        "scale_ceiling": "Rate limits increase with usage tier. Tier upgrades based on spend history.",
+        "graduation_to": "Optimize with prompt caching (up to 90% savings on repeated context), batching, or hybrid with open-source models",
+        "cost_at_scale": {
+          "100_users": "$5-20/mo",
+          "1000_users": "$50-200/mo",
+          "10000_users": "$500-2,000/mo",
+          "100000_users": "$5,000-20,000/mo"
+        },
+        "gotchas": [
+          "Same unpredictability as OpenAI. Token costs scale with user activity, not seats.",
+          "Prompt caching can reduce costs 90% for repeated context. Use it aggressively.",
+          "Extended thinking adds cost. Only enable it for tasks that genuinely need reasoning.",
+          "Output tokens cost 5x more than input tokens. Design prompts for concise responses.",
+          "Rate limits are per-model. Spreading traffic across Sonnet and Haiku helps with throughput."
+        ],
+        "last_verified": "2026-03-04",
+        "_file": "anthropic-api"
+      },
+      {
+        "name": "Claude Code",
+        "url": "https://claude.ai/code",
+        "category": "ai-tools",
+        "description": "Anthropic's agentic CLI for coding. Terminal-based, reads your entire codebase, and executes multi-step tasks autonomously.",
+        "free_tier": "Included with Claude Pro ($20/mo) with usage limits",
+        "solo_price": "$20/mo (Pro plan) or pay-per-token via API (~$3-15/day for heavy agentic usage)",
+        "pricing_url": "https://www.anthropic.com/pricing",
+        "scale_ceiling": "None on API billing. Usage caps on Pro plan reset daily.",
+        "graduation_to": "API billing for unlimited agentic usage (no hard caps, just cost)",
+        "cost_at_scale": {
+          "100_users": "$20/mo Pro or variable API costs (per-developer tool)",
+          "1000_users": "$20/mo",
+          "10000_users": "$20/mo",
+          "100000_users": "$20/mo"
+        },
+        "gotchas": [
+          "API billing can spike during heavy agentic sessions. A single complex task can cost $5-10 in tokens.",
+          "Pro plan has daily usage limits that reset. You will hit them during intense coding days.",
+          "Terminal-based with no GUI IDE. You need to be comfortable in the terminal.",
+          "Max mode uses more expensive models and burns through limits faster.",
+          "Per-developer tool. Cost scales with how hard you push it, not with your product's users."
+        ],
+        "last_verified": "2026-03-04",
+        "_file": "claude-code"
+      },
+      {
+        "name": "Cursor",
+        "url": "https://cursor.com",
+        "category": "ai-tools",
+        "description": "AI-native code editor built as a VS Code fork. Inline completions, chat, and agentic coding in one IDE.",
+        "free_tier": "Limited (Hobby plan with basic features)",
+        "solo_price": "$20/mo (Pro, 500 premium requests/mo)",
+        "pricing_url": "https://cursor.com/pricing",
+        "scale_ceiling": "Premium request limits. Heavy agentic usage can burn through 500 requests fast.",
+        "graduation_to": "Claude Code for deeper agentic work, or API-based coding agents for unlimited usage",
+        "cost_at_scale": {
+          "100_users": "$20/mo (per-developer tool, not per-user)",
+          "1000_users": "$20/mo",
+          "10000_users": "$20/mo",
+          "100000_users": "$20/mo"
+        },
+        "gotchas": [
+          "Premium request limits reset monthly. No rollover, no burst capacity.",
+          "Background agent uses premium requests quickly. A single complex task can eat dozens of requests.",
+          "VS Code fork means some extensions may not work or may lag behind upstream updates.",
+          "Business plan at $40/mo/seat adds admin controls but same core limits.",
+          "Per-developer cost, not per-user. Scales with team size, not product usage."
+        ],
+        "last_verified": "2026-03-04",
+        "_file": "cursor"
+      },
+      {
+        "name": "GitHub Copilot",
+        "url": "https://github.com/features/copilot",
+        "category": "ai-tools",
+        "description": "AI pair programmer from GitHub. Best-in-class inline completions and chat, deeply integrated with VS Code and GitHub ecosystem.",
+        "free_tier": "Free plan with 2K completions + 50 chat messages/mo",
+        "solo_price": "$10/mo (Pro, 300 premium requests)",
+        "pricing_url": "https://github.com/features/copilot#pricing",
+        "scale_ceiling": "Premium request limits for advanced models. Free and Pro tiers have monthly caps.",
+        "graduation_to": "Cursor or Claude Code for heavier agentic refactoring work",
+        "cost_at_scale": {
+          "100_users": "$10/mo (per-developer tool, not per-user)",
+          "1000_users": "$10/mo",
+          "10000_users": "$10/mo",
+          "100000_users": "$10/mo"
+        },
+        "gotchas": [
+          "Best for completions and inline suggestions. Less capable for large refactors than Cursor or Claude Code.",
+          "Business plan at $19/mo/seat adds org-level policy controls and audit logs.",
+          "Premium request limits gate access to more capable models like Claude and GPT-4o.",
+          "Free tier is generous for light usage but chat limit of 50 messages/mo is tight.",
+          "Per-developer cost. Scales with your team, not your product's user base."
+        ],
+        "last_verified": "2026-03-04",
+        "_file": "github-copilot"
+      },
+      {
+        "name": "OpenAI API",
+        "url": "https://openai.com/api",
+        "category": "ai-tools",
+        "description": "OpenAI's API for embedding AI features in your product. GPT-4o for quality, GPT-4o-mini for cost-efficient volume.",
+        "free_tier": "None (pay per token)",
+        "solo_price": "GPT-4o ~$2.50/1M input, $10/1M output; GPT-4o-mini ~$0.15/1M input, $0.60/1M output",
+        "pricing_url": "https://openai.com/api/pricing",
+        "scale_ceiling": "Rate limits increase with usage tier. Tier upgrades are automatic based on spend history.",
+        "graduation_to": "Optimize with prompt caching, fine-tuning, or self-hosted open-source models for high-volume features",
+        "cost_at_scale": {
+          "100_users": "$5-20/mo",
+          "1000_users": "$50-200/mo",
+          "10000_users": "$500-2,000/mo",
+          "100000_users": "$5,000-20,000/mo"
+        },
+        "gotchas": [
+          "Costs hard to predict without knowing your token usage patterns. Prototype first, then estimate.",
+          "Rate limits can block burst traffic. Plan for queuing or retries in your architecture.",
+          "No fixed monthly pricing. Your bill scales directly with user activity.",
+          "GPT-4o-mini is 15-20x cheaper than GPT-4o. Use the cheapest model that meets your quality bar.",
+          "Output tokens cost 4x more than input tokens. Keep responses concise to control costs."
+        ],
+        "last_verified": "2026-03-04",
+        "_file": "openai-api"
+      }
+    ],
+    "authentication": [
+      {
+        "name": "Auth.js (NextAuth)",
+        "url": "https://authjs.dev",
+        "category": "authentication",
+        "description": "Self-hosted auth for Next.js. Zero vendor lock-in. Zero per-user costs. You build the UI.",
+        "free_tier": "Unlimited (self-hosted, open source)",
+        "solo_price": "$0",
+        "pricing_url": "https://authjs.dev",
+        "scale_ceiling": "None. Self-hosted scales with your infrastructure.",
+        "graduation_to": "N/A. Auth.js is the graduation destination for most.",
+        "cost_at_scale": {
+          "100_users": "$0",
+          "1000_users": "$0",
+          "10000_users": "$0",
+          "100000_users": "$0"
+        },
+        "gotchas": [
+          "You build the auth UI yourself. No pre-built components.",
+          "More development time upfront: expect 1-2 weeks vs 1-2 days with Clerk",
+          "You're responsible for security best practices",
+          "Documentation has improved significantly but still has gaps",
+          "The investment pays off at scale. $0 forever is hard to argue with."
+        ],
+        "last_verified": "2026-03-04",
+        "_file": "authjs"
+      },
+      {
+        "name": "Better-Auth",
+        "url": "https://better-auth.com",
+        "category": "authentication",
+        "description": "Open-source, self-hosted auth library. Growing fast as the modern alternative to Auth.js.",
+        "free_tier": "Unlimited (self-hosted, open source)",
+        "solo_price": "$0",
+        "pricing_url": "https://better-auth.com",
+        "scale_ceiling": "None. Self-hosted scales with your infrastructure.",
+        "graduation_to": "N/A. Self-hosted auth is the endgame.",
+        "cost_at_scale": {
+          "100_users": "$0",
+          "1000_users": "$0",
+          "10000_users": "$0",
+          "100000_users": "$0"
+        },
+        "gotchas": [
+          "Newer project with a smaller community than Auth.js",
+          "Less battle-tested in production at large scale",
+          "Growing rapidly. Worth watching.",
+          "More modern API design than Auth.js"
+        ],
+        "last_verified": "2026-03-04",
+        "_file": "better-auth"
+      },
+      {
+        "name": "Clerk",
+        "url": "https://clerk.com",
+        "category": "authentication",
+        "description": "Drop-in auth with pre-built UI components. Fastest integration for Next.js. Beautiful out of the box.",
+        "free_tier": "50K monthly users (updated Feb 2026)",
+        "solo_price": "$0.02/user after 50K (tiered down to $0.012 at volume)",
+        "pricing_url": "https://clerk.com/pricing",
+        "scale_ceiling": "Free tier now covers most solo products. Costs kick in past 50K users.",
+        "graduation_to": "Auth.js or Better-Auth (self-hosted, $0 forever)",
+        "cost_at_scale": {
+          "100_users": "$0",
+          "1000_users": "$0",
+          "10000_users": "$0",
+          "100000_users": "$600-1,000/mo"
+        },
+        "gotchas": [
+          "Vendor lock-in is real. Pre-built components mean migrating away requires rebuilding auth UI.",
+          "No self-hosted option. Your auth depends on Clerk's infrastructure.",
+          "Free tier expanded to 50K in Feb 2026 (was 10K). Much more reasonable now.",
+          "The DX is genuinely excellent. Fastest path from zero to working auth.",
+          "Metric changed from MAU to MRU (monthly returning users). Verify how this affects your count."
+        ],
+        "last_verified": "2026-03-04",
+        "_file": "clerk"
+      },
+      {
+        "name": "Supabase Auth",
+        "url": "https://supabase.com/auth",
+        "category": "authentication",
+        "description": "Auth included with Supabase. Postgres-backed. Cheapest per-user auth if you're already using Supabase.",
+        "free_tier": "50K MAU",
+        "solo_price": "$0.00325/MAU (included in Supabase Pro at $25/mo)",
+        "pricing_url": "https://supabase.com/pricing",
+        "scale_ceiling": "Feature-limited. No SSO, basic MFA, limited customization compared to Clerk.",
+        "graduation_to": "Clerk (if you need features) or Auth.js (if you need control)",
+        "cost_at_scale": {
+          "100_users": "$0",
+          "1000_users": "$0",
+          "10000_users": "$0 (within free tier)",
+          "100000_users": "$25/mo (Supabase Pro covers it)"
+        },
+        "gotchas": [
+          "Tied to the Supabase ecosystem. If you leave Supabase DB, you likely leave Supabase Auth.",
+          "Auth UI components are less polished than Clerk's pre-built components",
+          "50K free MAU is extremely generous. Most solo SaaS never exceeds this.",
+          "RLS (Row Level Security) integration is powerful but has a learning curve",
+          "At 100K users, this costs $25/mo while Clerk costs $1,800/mo. That's not a typo."
+        ],
+        "last_verified": "2026-03-04",
+        "_file": "supabase-auth"
+      }
+    ],
+    "monitoring": [
+      {
+        "name": "BetterStack",
+        "url": "https://betterstack.com",
+        "category": "monitoring",
+        "description": "Uptime monitoring + logging in one platform. Formerly Better Uptime + Logtail.",
+        "free_tier": "10 monitors, 1-minute checks, 3 status pages",
+        "solo_price": "$29/mo (logging + more monitors)",
+        "pricing_url": "https://betterstack.com/pricing",
+        "scale_ceiling": "Free tier handles basic uptime monitoring. Pay when you need logging.",
+        "graduation_to": "Datadog or self-hosted Grafana stack",
+        "cost_at_scale": {
+          "100_users": "$0",
+          "1000_users": "$0",
+          "10000_users": "$29",
+          "100000_users": "$29-85"
+        },
+        "gotchas": [
+          "Free tier is uptime-only. Logging requires paid plan.",
+          "Incident management features limited on free tier."
+        ],
+        "last_verified": "2026-03-04",
+        "_file": "betterstack"
+      },
+      {
+        "name": "Highlight.io (now LaunchDarkly Observability)",
+        "url": "https://highlight.io",
+        "category": "monitoring",
+        "description": "Session replay + error tracking + logging. Highlight.io was acquired by LaunchDarkly in Feb 2026. The product now lives under LaunchDarkly Observability.",
+        "free_tier": "5K sessions/mo, 5K errors/mo, 10M logs/mo (Developer plan)",
+        "solo_price": "Usage-based after free tier",
+        "pricing_url": "https://highlight.io/pricing",
+        "scale_ceiling": "Free tier is much more generous than the old Highlight.io plans.",
+        "graduation_to": "Self-hosted (open source code still available) or Sentry + BetterStack",
+        "cost_at_scale": {
+          "100_users": "$0",
+          "1000_users": "$0",
+          "10000_users": "Usage-based",
+          "100000_users": "Usage-based"
+        },
+        "gotchas": [
+          "Highlight.io as an independent product was deprecated Feb 2026. Migrated to LaunchDarkly.",
+          "The open source code is still available for self-hosting.",
+          "Pricing model changed significantly. Now under LaunchDarkly's usage-based pricing."
+        ],
+        "last_verified": "2026-03-04",
+        "_file": "highlight-io"
+      },
+      {
+        "name": "Sentry",
+        "url": "https://sentry.io",
+        "category": "monitoring",
+        "description": "Error tracking and performance monitoring. The industry standard for catching bugs in production.",
+        "free_tier": "5K errors/month, 10K performance transactions",
+        "solo_price": "$29/mo (Team plan: 50K errors, 100K transactions)",
+        "pricing_url": "https://sentry.io/pricing",
+        "scale_ceiling": "Free tier covers most solo products. Team plan if you need more volume.",
+        "graduation_to": "Self-hosted Sentry (free, open source)",
+        "cost_at_scale": {
+          "100_users": "$0",
+          "1000_users": "$0",
+          "10000_users": "$0-29",
+          "100000_users": "$29-80"
+        },
+        "gotchas": [
+          "Free tier is generous but has 24-hour data retention. Team plan has 90-day retention.",
+          "SDK can add bundle size if not tree-shaken."
+        ],
+        "last_verified": "2026-03-04",
+        "_file": "sentry"
+      }
+    ],
+    "hosting": [
+      {
+        "name": "Hetzner + Coolify",
+        "url": "https://coolify.io",
+        "category": "hosting",
+        "description": "Self-hosted PaaS on cheap European VPS. Vercel-like DX (git push deploy, preview URLs, auto SSL) on infrastructure you own.",
+        "free_tier": "None (Hetzner starts at 3.49 EUR/mo)",
+        "solo_price": "$4-10/mo",
+        "pricing_url": "https://www.hetzner.com/cloud/",
+        "scale_ceiling": "You control the ceiling. Add more servers as needed.",
+        "graduation_to": "N/A. Self-hosted is the endgame.",
+        "cost_at_scale": {
+          "100_users": "$4-6/mo",
+          "1000_users": "$4-10/mo",
+          "10000_users": "$10-20/mo",
+          "100000_users": "$30-80/mo"
+        },
+        "gotchas": [
+          "You manage the server. Coolify handles most DevOps but you're still responsible for uptime.",
+          "Hetzner datacenters are in Europe and US. Latency to Asia/Australia is higher.",
+          "Initial setup takes 1-2 hours vs 5 minutes on Vercel",
+          "No edge network. Static assets should go through a CDN (Cloudflare free tier).",
+          "The cost savings are dramatic: teams report 50-70% less than Vercel/Railway"
+        ],
+        "last_verified": "2026-03-04",
+        "_file": "hetzner-coolify"
+      },
+      {
+        "name": "Railway",
+        "url": "https://railway.app",
+        "category": "hosting",
+        "description": "Full-stack hosting in one place. Frontend, backend, database, and workers with predictable usage-based pricing.",
+        "free_tier": "$5 credit/mo (no credit card required)",
+        "solo_price": "~$5-15/mo for a typical Next.js app",
+        "pricing_url": "https://railway.app/pricing",
+        "scale_ceiling": "Scales well. No per-seat pricing gotchas.",
+        "graduation_to": "Hetzner + Coolify for maximum cost control",
+        "cost_at_scale": {
+          "100_users": "$5/mo",
+          "1000_users": "$8-15/mo",
+          "10000_users": "$15-30/mo",
+          "100000_users": "$50-100/mo"
+        },
+        "gotchas": [
+          "Less edge optimization than Vercel. If you need global edge, Vercel or Cloudflare is better.",
+          "Usage-based pricing means costs are predictable but not fixed",
+          "Smaller community than Vercel. Fewer tutorials and guides.",
+          "Git push deploy, preview URLs, and managed databases all work well",
+          "Teams report 50-70% savings compared to Vercel at scale"
+        ],
+        "last_verified": "2026-03-04",
+        "_file": "railway"
+      },
+      {
+        "name": "Vercel",
+        "url": "https://vercel.com",
+        "category": "hosting",
+        "description": "Best-in-class Next.js hosting. Incredible DX with preview deploys and edge functions. Free tier has a bandwidth ceiling.",
+        "free_tier": "100GB bandwidth, 100 deployments/day",
+        "solo_price": "$20/mo (Pro)",
+        "pricing_url": "https://vercel.com/pricing",
+        "scale_ceiling": "~33K pageviews/mo with images on free tier (100GB bandwidth). Pro adds more but per-seat pricing hurts teams.",
+        "graduation_to": "Railway (managed) or Hetzner + Coolify (self-hosted)",
+        "cost_at_scale": {
+          "100_users": "$0",
+          "1000_users": "$0",
+          "10000_users": "$20/mo",
+          "100000_users": "$150+/mo (bandwidth overage)"
+        },
+        "gotchas": [
+          "100GB bandwidth sounds like a lot until you serve images. A 3MB page load burns through it at ~33K views.",
+          "Each team member costs $20/mo on Pro. A team of 3 is $60/mo before bandwidth.",
+          "Serverless function cold starts can affect API response times",
+          "No built-in support for long-running background jobs",
+          "Vendor-specific features (Edge Config, KV) create soft lock-in",
+          "The DX is genuinely best-in-class. Hard to leave once you're used to it."
+        ],
+        "last_verified": "2026-03-04",
+        "_file": "vercel"
+      }
+    ],
+    "background-jobs": [
+      {
+        "name": "Inngest",
+        "url": "https://inngest.com",
+        "category": "background-jobs",
+        "description": "Event-driven background jobs and workflows. Works with Vercel, Railway, any platform. No infrastructure to manage.",
+        "free_tier": "100K executions/mo (first 50K free each month)",
+        "solo_price": "$75/mo (usage-based with credits)",
+        "pricing_url": "https://inngest.com/pricing",
+        "scale_ceiling": "Generous free tier covers most early products. Paid tier when runs increase.",
+        "graduation_to": "BullMQ + Redis (self-managed, $0)",
+        "cost_at_scale": {
+          "100_users": "$0",
+          "1000_users": "$0",
+          "10000_users": "$0-75",
+          "100000_users": "$75-200"
+        },
+        "gotchas": [
+          "Vendor lock-in to Inngest's event model.",
+          "Free tier is generous (100K executions) but runs add up with chatty events.",
+          "Debugging can be harder than local queue systems."
+        ],
+        "last_verified": "2026-03-04",
+        "_file": "inngest"
+      },
+      {
+        "name": "Trigger.dev",
+        "url": "https://trigger.dev",
+        "category": "background-jobs",
+        "description": "Open source background jobs for Next.js and Node.js. Long-running tasks, cron, and workflows.",
+        "free_tier": "10K runs/mo + $5 usage credit",
+        "solo_price": "$50/mo (usage-based: per-second compute + per-run fees)",
+        "pricing_url": "https://trigger.dev/pricing",
+        "scale_ceiling": "Free tier is small (10K runs). Pro gives $50 usage credit and higher concurrency.",
+        "graduation_to": "Self-hosted Trigger.dev (open source) or BullMQ + Redis",
+        "cost_at_scale": {
+          "100_users": "$0",
+          "1000_users": "$0",
+          "10000_users": "$0-50",
+          "100000_users": "$50-200"
+        },
+        "gotchas": [
+          "Free tier is only 10K runs/mo. Can burn through quickly with active products.",
+          "Pricing is usage-based (compute seconds + invocation fees), not a simple bucket.",
+          "Open source so you can self-host to avoid per-run costs.",
+          "Newer project, smaller community than Inngest."
+        ],
+        "last_verified": "2026-03-04",
+        "_file": "trigger-dev"
+      },
+      {
+        "name": "QStash (Upstash)",
+        "url": "https://upstash.com/docs/qstash",
+        "category": "background-jobs",
+        "description": "Serverless message queue and task scheduler. Perfect for Vercel where you can't run persistent workers.",
+        "free_tier": "500 messages/day",
+        "solo_price": "$1/100K messages",
+        "pricing_url": "https://upstash.com/pricing/qstash",
+        "scale_ceiling": "Usage-based pricing stays cheap. No per-seat costs.",
+        "graduation_to": "BullMQ + Redis on Railway/Hetzner",
+        "cost_at_scale": {
+          "100_users": "$0",
+          "1000_users": "$0-1",
+          "10000_users": "$1-10",
+          "100000_users": "$10-50"
+        },
+        "gotchas": [
+          "500 messages/day on free tier is tight for active products.",
+          "Serverless model means no persistent connections.",
+          "Best paired with Upstash Redis for state."
+        ],
+        "last_verified": "2026-03-04",
+        "_file": "upstash-qstash"
+      }
+    ],
+    "payments": [
+      {
+        "name": "Lemon Squeezy",
+        "url": "https://lemonsqueezy.com",
+        "category": "payments",
+        "description": "Merchant of Record. Handles all global tax compliance so you don't have to. Best for digital products sold globally.",
+        "free_tier": "No monthly fee",
+        "solo_price": "5% + $0.50 per transaction",
+        "pricing_url": "https://lemonsqueezy.com/pricing",
+        "scale_ceiling": "~$50K MRR before the fee premium over Stripe becomes significant",
+        "graduation_to": "Stripe + Stripe Tax when the 2% fee difference matters",
+        "cost_at_scale": {
+          "100_users": "$55 (assuming $10 avg transaction)",
+          "1000_users": "$550",
+          "10000_users": "$5,500",
+          "100000_users": "$55,000"
+        },
+        "gotchas": [
+          "Acquired by Stripe in July 2024. Still operating independently as of March 2026, but no major feature updates since acquisition. Widely expected to be folded into Stripe's own MoR offering.",
+          "Post-acquisition quality reports are mixed: some users report bugs and slower support, others say it's been stable. YMMV.",
+          "5% + $0.50 is nearly double Stripe's 2.9% + $0.30 at high volume",
+          "Less API flexibility than Stripe. Fewer integrations.",
+          "The upside is real though: zero thinking about VAT, sales tax, or compliance"
+        ],
+        "last_verified": "2026-03-04",
+        "_file": "lemon-squeezy"
+      },
+      {
+        "name": "Paddle",
+        "url": "https://paddle.com",
+        "category": "payments",
+        "description": "Merchant of Record with broader global tax coverage. More enterprise-oriented than Lemon Squeezy.",
+        "free_tier": "No monthly fee",
+        "solo_price": "5% + $0.50 per transaction",
+        "pricing_url": "https://paddle.com/pricing",
+        "scale_ceiling": "Enterprise-ready. No practical ceiling.",
+        "graduation_to": "N/A. Paddle scales up. Some switch to Stripe for lower fees at high volume.",
+        "cost_at_scale": {
+          "100_users": "$55 (assuming $10 avg transaction)",
+          "1000_users": "$550",
+          "10000_users": "$5,500",
+          "100000_users": "$55,000"
+        },
+        "gotchas": [
+          "Same 5% + $0.50 fee structure as Lemon Squeezy",
+          "Less indie-focused than Lemon Squeezy. Dashboard and DX feel more enterprise.",
+          "Chargeback dispute handling has been criticized by indie founders",
+          "Broader global tax coverage than Lemon Squeezy",
+          "Paddle Billing (subscription management) is solid but opinionated"
+        ],
+        "last_verified": "2026-03-04",
+        "_file": "paddle"
+      },
+      {
+        "name": "Stripe",
+        "url": "https://stripe.com",
+        "category": "payments",
+        "description": "Industry-standard payment processing. Maximum control and flexibility. You handle tax compliance.",
+        "free_tier": "No monthly fee",
+        "solo_price": "2.9% + $0.30 per transaction",
+        "pricing_url": "https://stripe.com/pricing",
+        "scale_ceiling": "None. Stripe scales to any size.",
+        "graduation_to": "N/A. Stripe is the graduation destination.",
+        "cost_at_scale": {
+          "100_users": "$29 (assuming $10 avg transaction)",
+          "1000_users": "$290",
+          "10000_users": "$2,900",
+          "100000_users": "$29,000"
+        },
+        "gotchas": [
+          "You are responsible for sales tax / VAT compliance in every jurisdiction you sell to",
+          "Tax compliance outside the US is non-trivial. Most solo founders underestimate this.",
+          "Stripe Tax add-on costs 0.5% per transaction on top of processing fees",
+          "Account can be frozen with funds held if Stripe flags your business as high-risk",
+          "Requires more integration work than Merchant of Record solutions"
+        ],
+        "last_verified": "2026-03-04",
+        "_file": "stripe"
+      }
+    ],
+    "database": [
+      {
+        "name": "Neon",
+        "url": "https://neon.tech",
+        "category": "database",
+        "description": "Serverless Postgres that scales to zero. Pay only when your database is active.",
+        "free_tier": "0.5GB storage, 190 compute hours/mo",
+        "solo_price": "$19/mo (Launch: 10GB storage)",
+        "pricing_url": "https://neon.tech/pricing",
+        "scale_ceiling": "Serverless means it scales up and down automatically.",
+        "graduation_to": "N/A for most use cases. Scales well.",
+        "cost_at_scale": {
+          "100_users": "$0",
+          "1000_users": "$0",
+          "10000_users": "$19/mo",
+          "100000_users": "$69+/mo"
+        },
+        "gotchas": [
+          "Cold starts on free tier can add 100-500ms to first query after inactivity",
+          "Newer than Supabase. Smaller ecosystem and fewer tutorials.",
+          "No built-in auth, storage, or realtime. It's just the database.",
+          "Branching feature is excellent for development workflows",
+          "If you only need a database (not a full BaaS), Neon is a strong choice"
+        ],
+        "last_verified": "2026-03-04",
+        "_file": "neon"
+      },
+      {
+        "name": "PocketBase",
+        "url": "https://pocketbase.io",
+        "category": "database",
+        "description": "Single-binary backend with SQLite, auth, file storage, and admin UI. Self-hosted. Zero external dependencies.",
+        "free_tier": "Unlimited (self-hosted, open source)",
+        "solo_price": "$0 + VPS cost (~$4-6/mo)",
+        "pricing_url": "https://pocketbase.io",
+        "scale_ceiling": "~10K concurrent users. SQLite is the constraint.",
+        "graduation_to": "Supabase or dedicated Postgres when you need more concurrency",
+        "cost_at_scale": {
+          "100_users": "$4-6/mo (VPS only)",
+          "1000_users": "$4-6/mo",
+          "10000_users": "$10-20/mo",
+          "100000_users": "Not recommended at this scale"
+        },
+        "gotchas": [
+          "SQLite-based. Single writer. Concurrent writes are the bottleneck.",
+          "No managed cloud option. You host it yourself.",
+          "Beloved by the 'own everything' crowd. One Go binary, zero dependencies.",
+          "Built-in admin UI is surprisingly good",
+          "Data migration to Postgres requires effort if you outgrow it"
+        ],
+        "last_verified": "2026-03-04",
+        "_file": "pocketbase"
+      },
+      {
+        "name": "Supabase",
+        "url": "https://supabase.com",
+        "category": "database",
+        "description": "Postgres database + Auth + Storage + Realtime + Edge Functions in one platform. The default BaaS for solo founders.",
+        "free_tier": "500MB DB, 1GB storage, 50K auth MAUs, 500MB bandwidth",
+        "solo_price": "$25/mo (Pro: 8GB DB, 100GB storage)",
+        "pricing_url": "https://supabase.com/pricing",
+        "scale_ceiling": "Handles most solo SaaS needs. Larger workloads may need dedicated Postgres.",
+        "graduation_to": "Dedicated Postgres (Neon, RDS, or self-hosted) if you outgrow the platform",
+        "cost_at_scale": {
+          "100_users": "$0",
+          "1000_users": "$0",
+          "10000_users": "$25/mo",
+          "100000_users": "$75+/mo"
+        },
+        "gotchas": [
+          "RLS (Row Level Security) is powerful but has a real learning curve",
+          "Vendor-specific features (Supabase Realtime, Storage) create soft lock-in",
+          "Free tier pauses after 1 week of inactivity. Not great for side projects you touch monthly.",
+          "The dashboard is excellent. SQL editor, table viewer, and auth management in one place.",
+          "Postgres underneath means your data is portable if you leave"
+        ],
+        "last_verified": "2026-03-04",
+        "_file": "supabase"
+      }
+    ],
+    "boilerplate": [
+      {
+        "name": "Open SaaS (Wasp)",
+        "url": "https://opensaas.sh",
+        "category": "boilerplate",
+        "description": "Free, open-source SaaS starter. No paid third-party dependencies. Full ownership from day one.",
+        "free_tier": "Free and open source",
+        "solo_price": "$0",
+        "pricing_url": "https://opensaas.sh",
+        "scale_ceiling": "N/A. It's a starting point.",
+        "graduation_to": "N/A. You own the code.",
+        "cost_at_scale": {
+          "100_users": "N/A (free)",
+          "1000_users": "N/A",
+          "10000_users": "N/A",
+          "100000_users": "N/A"
+        },
+        "gotchas": [
+          "Requires learning the Wasp framework (a DSL on top of React + Node)",
+          "Smaller community than ShipFast or Supastarter",
+          "10K+ GitHub stars suggest real adoption",
+          "The 'no vendor dependencies' philosophy means more DIY but total ownership",
+          "Good choice if you're philosophically opposed to paying for boilerplate"
+        ],
+        "last_verified": "2026-03-04",
+        "_file": "open-saas"
+      },
+      {
+        "name": "ShipFast",
+        "url": "https://shipfa.st",
+        "category": "boilerplate",
+        "description": "Next.js SaaS boilerplate with active Discord community. Fastest path from idea to deployed product.",
+        "free_tier": "None",
+        "solo_price": "$199 one-time",
+        "pricing_url": "https://shipfa.st",
+        "scale_ceiling": "N/A. It's a starting point, not a dependency.",
+        "graduation_to": "N/A. You own the code.",
+        "cost_at_scale": {
+          "100_users": "N/A (one-time purchase)",
+          "1000_users": "N/A",
+          "10000_users": "N/A",
+          "100000_users": "N/A"
+        },
+        "gotchas": [
+          "Uses MongoDB by default. Not ideal for relational SaaS data. Can be changed.",
+          "The Discord community is a genuine advantage for getting unstuck fast",
+          "You still need to understand the code. Don't ship what you can't debug.",
+          "At $199 it saves you 1-2 weeks of boilerplate setup. That's the real value.",
+          "AI coding tools (Claude Code, Cursor) can scaffold similar setups in hours now"
+        ],
+        "last_verified": "2026-03-04",
+        "_file": "shipfast"
+      },
+      {
+        "name": "Supastarter",
+        "url": "https://supastarter.dev",
+        "category": "boilerplate",
+        "description": "Most feature-complete SaaS boilerplate. Multi-tenancy, i18n, monorepo architecture. For serious projects.",
+        "free_tier": "None",
+        "solo_price": "$349 one-time",
+        "pricing_url": "https://supastarter.dev/pricing",
+        "scale_ceiling": "N/A. It's a starting point.",
+        "graduation_to": "N/A. You own the code.",
+        "cost_at_scale": {
+          "100_users": "N/A (one-time purchase)",
+          "1000_users": "N/A",
+          "10000_users": "N/A",
+          "100000_users": "N/A"
+        },
+        "gotchas": [
+          "Most expensive of the major boilerplates",
+          "Monorepo architecture has a learning curve if you're not familiar",
+          "The multi-tenancy and i18n support is genuinely hard to build from scratch",
+          "Available for both Next.js and Nuxt",
+          "Worth it if you're building a B2B SaaS with organization/team features"
+        ],
+        "last_verified": "2026-03-04",
+        "_file": "supastarter"
+      }
+    ],
+    "analytics": [
+      {
+        "name": "Plausible",
+        "url": "https://plausible.io",
+        "category": "analytics",
+        "description": "Simple, privacy-first web analytics. One dashboard, no complexity. The anti-Google Analytics.",
+        "free_tier": "None (30-day trial)",
+        "solo_price": "$9/mo (10K pageviews)",
+        "pricing_url": "https://plausible.io/pricing",
+        "scale_ceiling": "Scales fine. Pricing grows with pageviews.",
+        "graduation_to": "Add PostHog when you need product analytics (funnels, cohorts, session replay)",
+        "cost_at_scale": {
+          "100_users": "$9/mo",
+          "1000_users": "$9/mo",
+          "10000_users": "$19/mo",
+          "100000_users": "$69/mo"
+        },
+        "gotchas": [
+          "No free tier. You pay from day one.",
+          "Website analytics only. No product analytics (funnels, cohorts, user paths).",
+          "If you need to understand user behavior inside your app, you need PostHog too.",
+          "The simplicity is the feature. One-minute setup, sub-500ms dashboard loads.",
+          "GDPR-compliant without cookie banners. EU-hosted option available.",
+          "Self-hosted option available (free, open source)"
+        ],
+        "last_verified": "2026-03-04",
+        "_file": "plausible"
+      },
+      {
+        "name": "PostHog",
+        "url": "https://posthog.com",
+        "category": "analytics",
+        "description": "Full product analytics suite. Analytics, session replay, feature flags, A/B tests, and surveys in one platform. Absurdly generous free tier.",
+        "free_tier": "1M events/mo, 5K session replays, 1M feature flag requests",
+        "solo_price": "Usage-based after free tier",
+        "pricing_url": "https://posthog.com/pricing",
+        "scale_ceiling": "None. Scales to enterprise.",
+        "graduation_to": "N/A. PostHog replaces what would cost $300+/mo on Mixpanel or Amplitude.",
+        "cost_at_scale": {
+          "100_users": "$0",
+          "1000_users": "$0",
+          "10000_users": "$0",
+          "100000_users": "~$50/mo"
+        },
+        "gotchas": [
+          "Overkill for simple website analytics. If you just want pageview counts, use Plausible.",
+          "The dashboard can feel overwhelming at first. There's a lot of product in here.",
+          "Self-hosted option available for privacy-sensitive deployments",
+          "1M free events/mo means most solo SaaS products never pay",
+          "The combination of analytics + session replay + feature flags is genuinely unique at this price"
+        ],
+        "last_verified": "2026-03-04",
+        "_file": "posthog"
+      },
+      {
+        "name": "Umami",
+        "url": "https://umami.is",
+        "category": "analytics",
+        "description": "Privacy-first web analytics with a free tier. Like Plausible but with a free option.",
+        "free_tier": "100K events/mo",
+        "solo_price": "$9/mo (1M events)",
+        "pricing_url": "https://umami.is/pricing",
+        "scale_ceiling": "Scales fine. Similar trajectory to Plausible.",
+        "graduation_to": "Add PostHog for product analytics if needed",
+        "cost_at_scale": {
+          "100_users": "$0",
+          "1000_users": "$0",
+          "10000_users": "$0-9/mo",
+          "100000_users": "$19/mo"
+        },
+        "gotchas": [
+          "Smaller ecosystem and community than Plausible or PostHog",
+          "100K free events/mo is generous for early-stage products",
+          "Self-hosted option available (open source)",
+          "A solid choice if you want Plausible-style simplicity with a free tier"
+        ],
+        "last_verified": "2026-03-04",
+        "_file": "umami"
+      }
+    ],
+    "email": [
+      {
+        "name": "Postmark",
+        "url": "https://postmarkapp.com",
+        "category": "email",
+        "description": "Transactional email with the best deliverability in the industry. Sub-2-hour support response times.",
+        "free_tier": "None",
+        "solo_price": "$15/mo (10K emails)",
+        "pricing_url": "https://postmarkapp.com/pricing",
+        "scale_ceiling": "Scales well. Deliverability stays excellent at volume.",
+        "graduation_to": "N/A. Postmark is the reliability choice at any scale.",
+        "cost_at_scale": {
+          "100_users": "$15/mo",
+          "1000_users": "$15/mo",
+          "10000_users": "$15/mo",
+          "100000_users": "$85/mo (100K emails)"
+        },
+        "gotchas": [
+          "No free tier. You're paying from day one.",
+          "More expensive per email than Resend at volume",
+          "The deliverability and support quality justify the premium for mission-critical email",
+          "Template system is solid but not React-based",
+          "If your emails absolutely must arrive in the inbox, not spam, this is the choice"
+        ],
+        "last_verified": "2026-03-04",
+        "_file": "postmark"
+      },
+      {
+        "name": "Resend",
+        "url": "https://resend.com",
+        "category": "email",
+        "description": "Modern transactional email with React Email integration. The default choice for Next.js developers.",
+        "free_tier": "3,000 emails/month, 1 domain",
+        "solo_price": "$20/mo (50K emails, 2 domains)",
+        "pricing_url": "https://resend.com/pricing",
+        "scale_ceiling": "Cost scales with volume. No major ceiling.",
+        "graduation_to": "Amazon SES ($0.10/1K emails) if volume gets extreme and you want raw cost savings",
+        "cost_at_scale": {
+          "100_users": "$0",
+          "1000_users": "$0",
+          "10000_users": "$20/mo",
+          "100000_users": "$80/mo"
+        },
+        "gotchas": [
+          "No built-in template editor. You write email templates in code (React Email).",
+          "If you're not in the React/Next.js ecosystem, the DX advantage is smaller.",
+          "3K free emails/mo is enough for early stage but tight for apps with heavy email flows.",
+          "Developer experience is genuinely excellent. API is clean and well-documented."
+        ],
+        "last_verified": "2026-03-04",
+        "_file": "resend"
+      }
+    ]
+  },
+  "stacks": [
+    {
+      "name": "The ~$50/month Production Stack",
+      "description": "For launched products with paying customers. Optimized for solo founders making $500-5K MRR.",
+      "total_cost": "~$50-60/mo",
+      "when_to_use": "You have paying customers. You need reliability, better support, and room to grow.",
+      "when_to_graduate": "When you need advanced auth features (SSO, org management), your infrastructure costs exceed $150/mo, or you want to own your hosting.",
+      "components": {
+        "framework": {
+          "tool": "Next.js + TypeScript + Tailwind + shadcn/ui",
+          "cost": "$0 (open source)",
+          "why": "Same framework. Don't change what works."
+        },
+        "database": {
+          "tool": "Supabase",
+          "plan": "Pro",
+          "cost": "$25/mo",
+          "limits": "8GB DB, 100GB storage, daily backups",
+          "why": "Pro plan removes the inactivity pause and adds daily backups. Essential for paying customers."
+        },
+        "auth": {
+          "tool": "Supabase Auth",
+          "plan": "Included with Supabase Pro",
+          "cost": "$0 (included)",
+          "limits": "Unlimited MAU on Pro (you pay for Supabase, auth is included)",
+          "why": "Still the cheapest path. Auth is free as long as you're on Supabase."
+        },
+        "payments": {
+          "tool": "Lemon Squeezy",
+          "cost": "5% + $0.50 per transaction",
+          "why": "Handles all global tax compliance. At <$50K MRR, the fee premium over Stripe is worth the peace of mind."
+        },
+        "hosting": {
+          "tool": "Railway",
+          "cost": "~$5-15/mo",
+          "limits": "Usage-based, predictable",
+          "why": "Frontend + backend + database + workers in one place. No per-seat pricing surprises."
+        },
+        "email": {
+          "tool": "Resend",
+          "plan": "Pro",
+          "cost": "$20/mo",
+          "limits": "50K emails/month",
+          "why": "Upgraded for higher volume. Still great DX."
+        },
+        "analytics": {
+          "tool": "PostHog",
+          "plan": "Free",
+          "cost": "$0",
+          "limits": "1M events/month",
+          "why": "Free tier still covers most solo products at this stage."
+        }
+      },
+      "_file": "production-50"
+    },
+    {
+      "name": "The ~$100/month Scale Stack",
+      "description": "For products with 10K+ users approaching product-market fit. Optimized for cost control and zero per-user cliffs.",
+      "total_cost": "~$50-110/mo (depending on usage)",
+      "when_to_use": "You have product-market fit. You want to own your infrastructure and eliminate per-user pricing that scales against you.",
+      "when_to_graduate": "You probably don't need to. This stack handles most solo SaaS products through $50K+ MRR.",
+      "components": {
+        "framework": {
+          "tool": "Next.js + TypeScript + Tailwind + shadcn/ui",
+          "cost": "$0 (open source)",
+          "why": "Same framework. Consistency is a feature."
+        },
+        "database": {
+          "tool": "Supabase",
+          "plan": "Pro",
+          "cost": "$25/mo",
+          "limits": "8GB DB, 100GB storage",
+          "why": "Supabase Pro handles most solo SaaS workloads. Switch to dedicated Postgres only if you hit real limits."
+        },
+        "auth": {
+          "tool": "Auth.js (self-managed)",
+          "cost": "$0",
+          "limits": "Unlimited",
+          "why": "Self-managed auth costs $0 forever. At 100K users, this saves $1,800/mo vs Clerk. The migration takes effort but eliminates the biggest cost cliff in the stack."
+        },
+        "payments": {
+          "tool": "Stripe + Stripe Tax",
+          "cost": "2.9% + $0.30 + 0.5% tax automation",
+          "why": "At $50K+ MRR, the 2% savings over Lemon Squeezy covers the Stripe Tax cost and then some."
+        },
+        "hosting": {
+          "tool": "Hetzner VPS + Coolify",
+          "cost": "~$10-20/mo",
+          "limits": "You control the ceiling",
+          "why": "Vercel-like DX on infrastructure you own. 50-70% cheaper than managed platforms."
+        },
+        "email": {
+          "tool": "Postmark",
+          "cost": "$15/mo",
+          "limits": "10K emails/month",
+          "why": "Best deliverability. When your customers are paying, their emails must arrive."
+        },
+        "analytics": {
+          "tool": "PostHog",
+          "plan": "Free or usage-based",
+          "cost": "$0-50/mo",
+          "limits": "1M events free, then usage-based",
+          "why": "Still the best value. Session replay alone is worth it for debugging customer issues."
+        },
+        "monitoring": {
+          "tool": "Sentry",
+          "cost": "$0",
+          "limits": "5K errors/month, 10K replays",
+          "why": "Error tracking for production. Free tier is enough for most solo products."
+        }
+      },
+      "_file": "scale-100"
+    },
+    {
+      "name": "The $0/month MVP Stack",
+      "description": "Ship your first version without spending a dollar. Every component has a free tier generous enough for your first 100 users.",
+      "total_cost": "$0/mo",
+      "when_to_use": "Validating an idea. Pre-revenue. Getting your first 100 users. You have more time than money.",
+      "when_to_graduate": "When you hit Vercel's 100GB bandwidth cap (~33K pageviews/mo with images), need team features, or want better support SLAs.",
+      "components": {
+        "framework": {
+          "tool": "Next.js + TypeScript + Tailwind + shadcn/ui",
+          "cost": "$0 (open source)",
+          "why": "Most AI training data, largest ecosystem, one language front-to-back"
+        },
+        "database": {
+          "tool": "Supabase",
+          "plan": "Free",
+          "cost": "$0",
+          "limits": "500MB DB, 1GB storage, 50K auth MAUs",
+          "why": "Postgres + Auth + Storage + Realtime in one platform. Free tier covers most MVPs."
+        },
+        "auth": {
+          "tool": "Supabase Auth",
+          "plan": "Free (included with Supabase)",
+          "cost": "$0",
+          "limits": "50K MAU",
+          "why": "Already included. No additional service to manage."
+        },
+        "payments": {
+          "tool": "Stripe",
+          "cost": "2.9% + $0.30 per transaction (no monthly fee)",
+          "why": "Industry standard. At low volume, the fee difference vs MoR platforms is negligible."
+        },
+        "hosting": {
+          "tool": "Vercel",
+          "plan": "Hobby",
+          "cost": "$0",
+          "limits": "100GB bandwidth, 100 deployments/day",
+          "why": "Best Next.js DX. Git push to deploy."
+        },
+        "email": {
+          "tool": "Resend",
+          "plan": "Free",
+          "cost": "$0",
+          "limits": "3,000 emails/month, 1 domain",
+          "why": "Clean API, React Email integration. 3K emails is enough for early stage."
+        },
+        "analytics": {
+          "tool": "PostHog",
+          "plan": "Free",
+          "cost": "$0",
+          "limits": "1M events/month, 5K session replays",
+          "why": "Product analytics + session replay + feature flags. All free. Overkill in the best way."
+        }
+      },
+      "_file": "zero-cost-mvp"
+    }
+  ]
+}
