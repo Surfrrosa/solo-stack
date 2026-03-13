@@ -1,15 +1,37 @@
 {
   "name": "solo-stack",
   "version": "1.0.0",
-  "private": true,
-  "description": "Opinionated stack guide for solo founders",
+  "description": "Opinionated stack guide for solo founders. Real costs. Real trade-offs. No affiliate links.",
+  "bin": {
+    "solo-stack": "./cli/index.js"
+  },
+  "files": [
+    "cli/",
+    "data/"
+  ],
   "scripts": {
     "validate": "node scripts/validate-yaml.js",
     "check:stale": "node scripts/check-stale.js",
     "check:pricing": "node scripts/check-pricing.js",
-    "check:community": "node scripts/check-community.js"
+    "check:community": "node scripts/check-community.js",
+    "build:site": "node scripts/build-site.js"
+  },
+  "keywords": [
+    "saas",
+    "stack",
+    "solo-founder",
+    "indie-hacker",
+    "cli",
+    "startup"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/surfrrosa/solo-stack"
   },
   "dependencies": {
+    "chalk": "^4.1.2",
+    "inquirer": "^8.2.7",
     "js-yaml": "^4.1.0"
   },
   "devDependencies": {
