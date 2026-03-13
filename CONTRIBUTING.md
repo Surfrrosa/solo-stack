@@ -100,6 +100,54 @@ Decision guides live in `docs/decisions/`. They follow a flowchart structure:
 4. Include concrete cost comparisons
 5. Be honest about trade-offs -- no tool is perfect
 
+## How to Share a Graduation Story
+
+Graduation stories are real migration experiences from real founders. They live in `docs/stories/`.
+
+1. Copy `docs/stories/TEMPLATE.md` to a new file (e.g., `docs/stories/vercel-to-hetzner-coolify.md`)
+2. Fill in every section honestly. Concrete numbers required.
+3. Open a PR.
+
+A good graduation story includes:
+- What you migrated from and to
+- How long it actually took (not how long you estimated)
+- Before and after costs from real invoices
+- What surprised you or went wrong
+- Whether you'd do it again
+
+These are the highest-value content in the entire guide. If you've been through a migration, your experience helps hundreds of founders make better decisions.
+
+## How to Share What You Actually Pay
+
+We're collecting real invoice data from solo founders. This is not marketing pricing -- it's what you actually see on your bill.
+
+Open an issue with the "What I Actually Pay" label, or submit a YAML file to `data/reports/` following this format:
+
+```yaml
+submitted_by: "github-username"  # or "anonymous"
+date: "2026-03-13"
+product_type: "B2C SaaS"
+user_count: "~2,000 MAU"
+mrr: "~$3,000"
+
+stack:
+  - tool: "Supabase Pro"
+    monthly_cost: "$25"
+    notes: "Using about 2GB of 8GB DB"
+  - tool: "Vercel Pro"
+    monthly_cost: "$20"
+    notes: "Hitting ~60GB of 1TB bandwidth"
+  - tool: "Stripe"
+    monthly_cost: "$87"
+    notes: "2.9% + $0.30 on ~$3K revenue"
+  - tool: "Resend"
+    monthly_cost: "$0"
+    notes: "Still under free tier at ~1,200 emails/mo"
+
+total_monthly: "$132"
+surprise: "Stripe processing fees are 65% of my infrastructure bill. Infrastructure itself is cheap."
+```
+
 ## Quality Standards
 
 Your PR will be reviewed for:

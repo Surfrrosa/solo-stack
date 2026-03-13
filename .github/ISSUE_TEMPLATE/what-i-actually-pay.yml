@@ -1,0 +1,53 @@
+name: What I Actually Pay
+description: Share your real monthly infrastructure costs as a solo founder
+title: "[Cost Report] "
+labels: ["what-i-actually-pay"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for sharing your real costs. This helps other founders plan better than any pricing page ever could.
+  - type: input
+    id: product-type
+    attributes:
+      label: Product type
+      description: "e.g., B2C SaaS, B2B SaaS, marketplace, API product"
+      placeholder: "B2C SaaS"
+    validations:
+      required: true
+  - type: input
+    id: user-count
+    attributes:
+      label: Approximate user count
+      placeholder: "~2,000 MAU"
+    validations:
+      required: true
+  - type: input
+    id: mrr
+    attributes:
+      label: Approximate MRR (optional, but very helpful for context)
+      placeholder: "~$3,000"
+  - type: textarea
+    id: stack-costs
+    attributes:
+      label: Your stack and what you pay
+      description: "List each tool, your plan, and the actual amount on your invoice."
+      placeholder: |
+        - Supabase Pro: $25/mo (using ~2GB of 8GB)
+        - Vercel Pro: $20/mo
+        - Stripe: ~$87/mo in processing fees
+        - Resend: $0 (still under free tier)
+    validations:
+      required: true
+  - type: input
+    id: total
+    attributes:
+      label: Total monthly infrastructure cost
+      placeholder: "$132/mo"
+    validations:
+      required: true
+  - type: textarea
+    id: surprise
+    attributes:
+      label: What surprised you about your costs?
+      placeholder: "Stripe processing fees are 65% of my total bill. Infrastructure itself is cheap."

@@ -22,14 +22,24 @@ You don't need another comparison article with 15 options. You need someone to t
 
 This guide is community-maintained, has zero affiliate links, and every pricing number is verified with a date stamp. If something is wrong, [open a PR](CONTRIBUTING.md).
 
+### Try the interactive stack builder
+
+**[Web version](https://surfrrosa.github.io/solo-stack/)** -- answer 5 questions, get a personalized stack with real cost projections.
+
+**CLI version** -- same thing, in your terminal:
+```bash
+npx solo-stack
+```
+
 ---
 
 ## How to Use This Guide
 
-1. **Start here.** The [default stack](#if-you-just-want-the-answer) is the right choice for most solo founders. Use it unless you have a specific reason not to.
+1. **Start here.** Try the [interactive stack builder](https://surfrrosa.github.io/solo-stack/) or read the [default stack](#if-you-just-want-the-answer) below.
 2. **Got a specific question?** The [Decision Guides](#decision-guides) walk you through trade-offs for payments, auth, hosting, databases, and AI tools with flowcharts.
 3. **Want to see the numbers?** The [Cost Calculator](#cost-calculator) shows what each stack costs at 100, 1K, 10K, and 100K users.
 4. **Outgrowing a tool?** The [Graduation Guides](#graduation-guides) tell you when to leave and where to go.
+5. **Been through a migration?** Share your [Graduation Story](#graduation-stories) to help other founders.
 
 ---
 
@@ -41,6 +51,8 @@ This guide is community-maintained, has zero affiliate links, and every pricing 
 - [Cost Calculator](#cost-calculator)
 - [Graduation Guides](#graduation-guides)
 - [Tool Directory](#tool-directory)
+- [Graduation Stories](#graduation-stories)
+- [What I Actually Pay](#what-i-actually-pay)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -347,6 +359,30 @@ Every tool listed here has been used by real solo founders in production. Entrie
 > **Our take on boilerplates:** A boilerplate saves you 1-2 weeks of setup. That's real value. But none of them save you from understanding your own codebase. If you buy one, read every line before you ship. If you use AI coding tools heavily, you might not need one. Claude Code or Cursor can scaffold a production-ready setup in a few hours.
 
 </details>
+
+---
+
+## Graduation Stories
+
+Real founders sharing real migration experiences. The numbers, the timelines, and the things they wish they knew before starting.
+
+*No stories yet. Be the first.* Share yours by [opening a PR](CONTRIBUTING.md#how-to-share-a-graduation-story) with a markdown file in `docs/stories/`.
+
+We want to know:
+- What you migrated from and to
+- How long it actually took
+- What it cost before and after
+- What surprised you
+
+---
+
+## What I Actually Pay
+
+Marketing pricing pages lie by omission. We want to know what solo founders actually see on their invoices.
+
+*Coming soon.* We're building a structured way for founders to submit their real monthly bills. Not marketing pricing -- the actual number on your invoice at your actual scale.
+
+If you want to share yours now, [open an issue](../../issues) with the "What I Actually Pay" label.
 
 ---
 
