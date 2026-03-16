@@ -22,7 +22,6 @@ jobs:
             --accept 200,204,301,302,307,308
             --timeout 30
             --max-retries 3
-            --exclude-mail
             '**/*.md'
           fail: true
 
@@ -35,6 +34,5 @@ jobs:
             --accept 200,204,301,302,307,308
             --timeout 30
             --max-retries 3
-            --exclude-mail
             '**/*.yml'
           fail: true
