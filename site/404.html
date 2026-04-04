@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 | solo-stack</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Courier New', Courier, monospace;
+      background: #0a0a0a;
+      color: #33ff33;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    .terminal {
+      max-width: 500px;
+      border: 2px solid #333;
+      border-radius: 8px;
+      padding: 2rem;
+      box-shadow: inset 0 0 60px rgba(51, 255, 51, 0.03);
+    }
+    .prompt { opacity: 0.6; font-size: 0.75rem; margin-bottom: 0.5rem; }
+    .code { font-size: 2.5rem; font-weight: bold; margin-bottom: 0.5rem; }
+    .msg { opacity: 0.7; font-size: 0.875rem; margin-bottom: 1.5rem; line-height: 1.5; }
+    a {
+      color: #33ff33;
+      border: 1px solid #33ff33;
+      padding: 0.5rem 1.25rem;
+      text-decoration: none;
+      font-size: 0.875rem;
+    }
+    a:hover { background: #33ff33; color: #0a0a0a; }
+  </style>
+</head>
+<body>
+  <div class="terminal">
+    <div class="prompt">$ solo-stack find --page</div>
+    <div class="code">404</div>
+    <div class="msg">Page not found. Maybe it shipped already.</div>
+    <a href="./">Back to solo-stack</a>
+  </div>
+</body>
+</html>
