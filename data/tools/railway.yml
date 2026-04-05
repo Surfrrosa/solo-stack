@@ -1,11 +1,11 @@
 name: "Railway"
-url: "https://railway.app"
+url: "https://railway.com"
 category: "hosting"
 description: "Full-stack hosting in one place. Frontend, backend, database, and workers with predictable usage-based pricing."
 
-free_tier: "$5 credit/mo (no credit card required)"
-solo_price: "~$5-15/mo for a typical Next.js app"
-pricing_url: "https://railway.app/pricing"
+free_tier: "One-time $5 trial credit (expires in 30 days)"
+solo_price: "$5/mo (Hobby, includes $5 usage credit) or ~$5-15/mo typical usage"
+pricing_url: "https://railway.com/pricing"
 
 scale_ceiling: "Scales well. No per-seat pricing gotchas."
 graduation_to: "Hetzner + Coolify for maximum cost control"
@@ -23,4 +23,4 @@ gotchas:
   - "Git push deploy, preview URLs, and managed databases all work well"
   - "Teams report 50-70% savings compared to Vercel at scale"
 
-last_verified: "2026-03-04"
+last_verified: "2026-04-04"

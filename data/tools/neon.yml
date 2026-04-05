@@ -1,26 +1,27 @@
 name: "Neon"
-url: "https://neon.tech"
+url: "https://neon.com"
 category: "database"
 description: "Serverless Postgres that scales to zero. Pay only when your database is active."
 
-free_tier: "0.5GB storage, 190 compute hours/mo"
-solo_price: "$19/mo (Launch: 10GB storage)"
-pricing_url: "https://neon.tech/pricing"
+free_tier: "0.5GB storage, 100 compute hours/mo"
+solo_price: "Usage-based (Launch plan: ~$0.106/compute-hour + $0.35/GB-month storage, no fixed fee)"
+pricing_url: "https://neon.com/pricing"
 
 scale_ceiling: "Serverless means it scales up and down automatically."
 graduation_to: "N/A for most use cases. Scales well."
 
 cost_at_scale:
   100_users: "$0"
-  1000_users: "$0"
-  10000_users: "$19/mo"
-  100000_users: "$69+/mo"
+  1000_users: "$0-5/mo"
+  10000_users: "$10-25/mo"
+  100000_users: "$50+/mo"
 
 gotchas:
   - "Cold starts on free tier can add 100-500ms to first query after inactivity"
-  - "Newer than Supabase. Smaller ecosystem and fewer tutorials."
+  - "Switched to pure usage-based pricing in 2026. No more flat monthly tiers."
+  - "Free compute dropped from 190 to 100 hours/mo. Still enough for most MVPs."
   - "No built-in auth, storage, or realtime. It's just the database."
   - "Branching feature is excellent for development workflows"
   - "If you only need a database (not a full BaaS), Neon is a strong choice"
 
-last_verified: "2026-03-04"
+last_verified: "2026-04-04"

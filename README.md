@@ -239,7 +239,7 @@ Every tool listed here has been used by real solo founders in production. Entrie
 | Tool | Free Tier | Solo Price | Scale Ceiling | Gotchas |
 |---|---|---|---|---|
 | [Stripe](https://stripe.com) | No monthly fee | 2.9% + $0.30/tx | None | You handle tax compliance. Non-trivial outside the US. |
-| [Lemon Squeezy](https://lemonsqueezy.com) | No monthly fee | 5% + $0.50/tx | ~$50K MRR before fee premium hurts | Acquired by Stripe (Jul 2024). Still operating as of Mar 2026 but no major updates since. Expected to fold into Stripe's MoR. |
+| [Lemon Squeezy](https://lemonsqueezy.com) | No monthly fee | 5% + $0.50/tx | ~$50K MRR before fee premium hurts | Acquired by Stripe (late 2024). Still operating as of Apr 2026 but no major updates since. Expected to fold into Stripe's MoR. |
 | [Paddle](https://paddle.com) | No monthly fee | 5% + $0.50/tx | Enterprise-ready | Less indie-focused. Chargeback handling criticized. |
 
 </details>
@@ -262,8 +262,8 @@ Every tool listed here has been used by real solo founders in production. Entrie
 | Tool | Free Tier | Solo Price | Scale Ceiling | Gotchas |
 |---|---|---|---|---|
 | [Vercel](https://vercel.com) | 100GB bandwidth | $20/mo (Pro) | ~33K pageviews with images on free tier | Bandwidth overages add up. Each team member is $20/mo. |
-| [Railway](https://railway.app) | $5 credit/mo | ~$5-15/mo (usage) | Predictable scaling | Less edge optimization than Vercel. |
-| [Hetzner](https://hetzner.com) + [Coolify](https://coolify.io) | None | ~$4-10/mo | You control the ceiling | You manage the server. Coolify handles most DevOps. |
+| [Railway](https://railway.com) | $5 one-time trial | $5/mo (Hobby) or ~$5-15/mo usage | Predictable scaling | Less edge optimization than Vercel. |
+| [Hetzner](https://hetzner.com) + [Coolify](https://coolify.io) | None | ~$5-10/mo | You control the ceiling | You manage the server. Coolify handles most DevOps. |
 
 </details>
 
@@ -273,7 +273,7 @@ Every tool listed here has been used by real solo founders in production. Entrie
 | Tool | Free Tier | Solo Price | Scale Ceiling | Gotchas |
 |---|---|---|---|---|
 | [Supabase](https://supabase.com) | 500MB DB, 1GB storage | $25/mo (Pro) | Handles most solo SaaS needs | RLS learning curve. Vendor-specific features. |
-| [Neon](https://neon.tech) | 0.5GB storage | $19/mo | Serverless Postgres, scales to zero | Newer. Cold starts on free tier. |
+| [Neon](https://neon.com) | 0.5GB storage, 100 compute hrs | Usage-based | Serverless Postgres, scales to zero | Newer. Cold starts on free tier. |
 | [PocketBase](https://pocketbase.io) | Unlimited (self-hosted) | $0 + VPS cost | ~10K concurrent users | SQLite-based. Single binary. No managed cloud option. |
 
 </details>
@@ -284,7 +284,7 @@ Every tool listed here has been used by real solo founders in production. Entrie
 | Tool | Free Tier | Solo Price | Scale Ceiling | Gotchas |
 |---|---|---|---|---|
 | [Resend](https://resend.com) | 3K emails/mo | $20/mo (50K emails) | Cost scales with volume | No built-in template editor. You build templates in code. |
-| [Postmark](https://postmarkapp.com) | None | $15/mo (10K emails) | Best deliverability | No free tier. More expensive at volume. |
+| [Postmark](https://postmarkapp.com) | 100 emails/mo | $15/mo (10K emails) | Best deliverability | Free tier is test-only. More expensive at volume. |
 
 </details>
 
@@ -306,16 +306,16 @@ Every tool listed here has been used by real solo founders in production. Entrie
 
 | Tool | Free Tier | Solo Price | Best For | Gotchas |
 |---|---|---|---|---|
-| [GitHub Copilot](https://github.com/features/copilot) | 2K completions + 50 chats/mo | $10/mo (Pro) | Inline completions, lowest cost | Less capable for large refactors. |
-| [Cursor](https://cursor.com) | Limited (Hobby plan) | $20/mo (Pro) | Multi-file editing, codebase-aware | 500 premium requests/mo burn fast on complex tasks. |
-| [Claude Code](https://claude.ai/code) | Included with Claude Pro ($20/mo) | $20/mo or API billing | Agentic multi-step tasks, terminal-native | API billing can spike during heavy sessions. Pro has daily caps. |
+| [GitHub Copilot](https://github.com/features/copilot) | 2K completions + 50 chats/mo | $20/mo (Pro) | Inline completions, GitHub-native | Less capable for large refactors. Price doubled from $10 in 2025. |
+| [Cursor](https://cursor.com) | Limited (Hobby plan) | $20/mo (Pro) | Multi-file editing, codebase-aware | Also Pro+ ($60) and Ultra ($200) for heavier usage. |
+| [Claude Code](https://claude.ai/code) | Included with Claude Pro ($20/mo) | $20/mo or API billing | Agentic multi-step tasks | CLI, desktop, web, and IDE extensions. API billing can spike. |
 
 **For your product's AI features (LLM APIs):**
 
 | Provider | Cheapest Model | Mid-Tier Model | Cost at 1K Users | Cost at 100K Users |
 |---|---|---|---|---|
 | [OpenAI](https://openai.com/api) | GPT-4o-mini ($0.15/1M in) | GPT-4o ($2.50/1M in) | ~$50-200/mo | ~$5K-20K/mo |
-| [Anthropic](https://anthropic.com/api) | Claude Haiku ($0.80/1M in) | Claude Sonnet ($3/1M in) | ~$50-200/mo | ~$5K-20K/mo |
+| [Anthropic](https://anthropic.com/api) | Claude Haiku 4.5 ($1/1M in) | Claude Sonnet 4.6 ($3/1M in) | ~$50-200/mo | ~$5K-20K/mo |
 
 > **The meta-recommendation:** Use the smallest model that works. GPT-4o-mini and Claude Haiku handle 80% of use cases at 1/20th the cost of frontier models. See the [full AI tools decision guide](docs/decisions/ai-tools.md) for cost estimation formulas.
 
@@ -326,7 +326,7 @@ Every tool listed here has been used by real solo founders in production. Entrie
 
 | Tool | Free Tier | Solo Price | Scale Ceiling | Gotchas |
 |---|---|---|---|---|
-| [Sentry](https://sentry.io) | 5K errors/mo | $29/mo (Team) | Free tier covers most solo products | Free tier has 24-hour data retention. |
+| [Sentry](https://sentry.io) | 5K errors/mo | $26/mo (Team, annual) | Free tier covers most solo products | Free tier has 24-hour data retention. |
 | [BetterStack](https://betterstack.com) | 10 monitors, 1-min checks | $29/mo (with logging) | Free tier handles basic uptime | Logging requires paid plan. |
 | [Highlight.io](https://highlight.io) | 5K sessions/mo (now LaunchDarkly) | Usage-based | Self-hostable (open source) | Acquired by LaunchDarkly Feb 2026. Old pricing no longer applies. |
 
@@ -339,9 +339,9 @@ Every tool listed here has been used by real solo founders in production. Entrie
 
 | Tool | Free Tier | Solo Price | Scale Ceiling | Gotchas |
 |---|---|---|---|---|
-| [Inngest](https://inngest.com) | 100K executions/mo | $75/mo (usage-based) | Generous free tier | Vendor lock-in to Inngest's event model. |
-| [Trigger.dev](https://trigger.dev) | 10K runs/mo | $50/mo (usage-based) | Open source, self-hostable | Free tier is small. Usage-based compute pricing. |
-| [QStash](https://upstash.com/docs/qstash) | 500 messages/day | ~$1/100K messages | Serverless, works everywhere | 500 messages/day is tight for active products. |
+| [Inngest](https://inngest.com) | 50K executions/mo | $75/mo (usage-based) | Free tier covers early products | Vendor lock-in to Inngest's event model. |
+| [Trigger.dev](https://trigger.dev) | $5 credit/mo | $10/mo (Hobby) or $50/mo (Pro) | Open source, self-hostable | Usage-based compute pricing. |
+| [QStash](https://upstash.com/docs/qstash) | 1,000 messages/day | ~$1/100K messages | Serverless, works everywhere | Free tier is reasonable for most early products. |
 
 > **Why this matters:** Vercel has no native support for long-running tasks. The moment you need a background job, cron, or anything that runs longer than 10 seconds, you need one of these. If you're on Railway or Hetzner, you can also just use BullMQ + Redis.
 
@@ -422,4 +422,4 @@ This guide stays useful because people like you keep it honest. See [CONTRIBUTIN
 
 ---
 
-*All pricing data verified as of March 2026. If you find something outdated, [open an issue](../../issues) or submit a PR.*
+*All pricing data verified as of April 2026. If you find something outdated, [open an issue](../../issues) or submit a PR.*

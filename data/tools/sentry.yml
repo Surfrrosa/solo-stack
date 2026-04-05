@@ -4,7 +4,7 @@ category: "monitoring"
 description: "Error tracking and performance monitoring. The industry standard for catching bugs in production."
 
 free_tier: "5K errors/month, 10K performance transactions"
-solo_price: "$29/mo (Team plan: 50K errors, 100K transactions)"
+solo_price: "$26/mo (Team plan, billed annually: 50K errors, 100K transactions)"
 pricing_url: "https://sentry.io/pricing"
 
 scale_ceiling: "Free tier covers most solo products. Team plan if you need more volume."
@@ -13,11 +13,11 @@ graduation_to: "Self-hosted Sentry (free, open source)"
 cost_at_scale:
   100_users: "$0"
   1000_users: "$0"
-  10000_users: "$0-29"
-  100000_users: "$29-80"
+  10000_users: "$0-26"
+  100000_users: "$26-80"
 
 gotchas:
   - "Free tier is generous but has 24-hour data retention. Team plan has 90-day retention."
   - "SDK can add bundle size if not tree-shaken."
 
-last_verified: "2026-03-04"
+last_verified: "2026-04-04"

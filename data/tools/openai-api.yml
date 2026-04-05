@@ -23,4 +23,4 @@ gotchas:
   - "GPT-4o-mini is 15-20x cheaper than GPT-4o. Use the cheapest model that meets your quality bar."
   - "Output tokens cost 4x more than input tokens. Keep responses concise to control costs."
 
-last_verified: "2026-03-04"
+last_verified: "2026-04-04"

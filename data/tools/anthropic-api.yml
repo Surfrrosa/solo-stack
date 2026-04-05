@@ -1,10 +1,10 @@
 name: "Anthropic API"
 url: "https://anthropic.com/api"
 category: "ai-tools"
-description: "Anthropic's API for embedding Claude in your product. Sonnet for quality, Haiku for cost-efficient volume."
+description: "Anthropic's API for embedding Claude in your product. Sonnet 4.6 for quality, Haiku 4.5 for cost-efficient volume."
 
 free_tier: "None (pay per token)"
-solo_price: "Claude Sonnet ~$3/1M input, $15/1M output; Claude Haiku ~$0.80/1M input, $4/1M output"
+solo_price: "Claude Sonnet 4.6 ~$3/1M input, $15/1M output; Claude Haiku 4.5 ~$1/1M input, $5/1M output"
 pricing_url: "https://www.anthropic.com/pricing"
 
 scale_ceiling: "Rate limits increase with usage tier. Tier upgrades based on spend history."
@@ -23,4 +23,4 @@ gotchas:
   - "Output tokens cost 5x more than input tokens. Design prompts for concise responses."
   - "Rate limits are per-model. Spreading traffic across Sonnet and Haiku helps with throughput."
 
-last_verified: "2026-03-04"
+last_verified: "2026-04-04"

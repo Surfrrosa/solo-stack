@@ -3,7 +3,7 @@ url: "https://postmarkapp.com"
 category: "email"
 description: "Transactional email with the best deliverability in the industry. Sub-2-hour support response times."
 
-free_tier: "None"
+free_tier: "100 emails/mo (test tier, never expires)"
 solo_price: "$15/mo (10K emails)"
 pricing_url: "https://postmarkapp.com/pricing"
 
@@ -17,10 +17,10 @@ cost_at_scale:
   100000_users: "$85/mo (100K emails)"
 
 gotchas:
-  - "No free tier. You're paying from day one."
+  - "Free tier exists (100 emails/mo) but is really just for testing. You'll need paid for production."
   - "More expensive per email than Resend at volume"
   - "The deliverability and support quality justify the premium for mission-critical email"
   - "Template system is solid but not React-based"
   - "If your emails absolutely must arrive in the inbox, not spam, this is the choice"
 
-last_verified: "2026-03-04"
+last_verified: "2026-04-04"

@@ -23,4 +23,4 @@ gotchas:
   - "Built-in admin UI is surprisingly good"
   - "Data migration to Postgres requires effort if you outgrow it"
 
-last_verified: "2026-03-04"
+last_verified: "2026-04-04"
