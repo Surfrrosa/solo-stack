@@ -389,12 +389,50 @@ h1 { margin: 0; padding: 0; }
   padding: 0.125rem 0;
 }
 
+/* --- Tool links in detail cards --- */
+.tool-link {
+  color: var(--black);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-color: var(--green-dark);
+}
+
+.tool-link:hover {
+  color: var(--window-title);
+  text-decoration-color: var(--window-title);
+}
+
 /* --- Results footer --- */
 .results-footer {
   display: flex;
   align-items: center;
   gap: 1.5rem;
   margin-top: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.share-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.share-btn {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  background: var(--white);
+  color: var(--black);
+  border: 2px solid var(--gray-light);
+  border-right-color: var(--gray-dark);
+  border-bottom-color: var(--gray-dark);
+  padding: 0.4rem 0.75rem;
+  cursor: pointer;
+  transition: background 0.1s;
+}
+
+.share-btn:hover {
+  background: var(--window-title);
+  color: var(--white);
 }
 
 .github-link {

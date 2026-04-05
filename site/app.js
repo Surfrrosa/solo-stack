@@ -66,9 +66,32 @@ const QUESTIONS = [
 async function init() {
   const res = await fetch('data.json');
   DATA = await res.json();
+  restoreFromHash();
 }
 
 init();
+
+// --- URL Hash (shareable results) ---
+function encodeAnswersToHash() {
+  const params = new URLSearchParams(answers);
+  return '#' + params.toString();
+}
+
+function restoreFromHash() {
+  const hash = window.location.hash.slice(1);
+  if (!hash) return;
+  const params = new URLSearchParams(hash);
+  const validKeys = QUESTIONS.map(q => q.id);
+  const restored = {};
+  for (const key of validKeys) {
+    if (params.has(key)) restored[key] = params.get(key);
+  }
+  if (Object.keys(restored).length === validKeys.length) {
+    answers = restored;
+    currentStep = QUESTIONS.length;
+    showResults();
+  }
+}
 
 // --- Navigation ---
 function showScreen(id) {
@@ -86,6 +109,7 @@ function startBuilder() {
 function resetBuilder() {
   currentStep = 0;
   answers = {};
+  history.replaceState(null, '', window.location.pathname);
   showScreen('screen-landing');
 }
 
@@ -401,7 +425,7 @@ function showResults() {
         </div>
       </div>
       <div class="window-body">
-        <div class="detail-tool-name">${comp.tool}</div>
+        <div class="detail-tool-name">${toolData && toolData.url ? `<a href="${toolData.url}" target="_blank" rel="noopener" class="tool-link">${comp.tool}</a>` : comp.tool}</div>
         <div class="detail-meta">${comp.cost}${comp.limits ? ' | ' + comp.limits : ''}</div>
         <div>${comp.why}</div>
         ${gotchas}
@@ -411,9 +435,31 @@ function showResults() {
     detail.appendChild(card);
   }
 
+  // Update URL hash for sharing
+  window.location.hash = encodeAnswersToHash().slice(1);
+
   showScreen('screen-results');
+}
+
+// --- Sharing ---
+function copyLink() {
+  const url = window.location.href;
+  navigator.clipboard.writeText(url).then(() => {
+    const btn = document.getElementById('copy-link-btn');
+    const original = btn.textContent;
+    btn.textContent = 'Copied!';
+    setTimeout(() => { btn.textContent = original; }, 2000);
+  });
+}
+
+function shareOnX() {
+  const url = encodeURIComponent(window.location.href);
+  const text = encodeURIComponent('Just built my SaaS stack with solo-stack. Real costs, no affiliate links.');
+  window.open('https://x.com/intent/tweet?text=' + text + '&url=' + url, '_blank');
 }
 
 // Make functions available globally
 window.startBuilder = startBuilder;
 window.resetBuilder = resetBuilder;
+window.copyLink = copyLink;
+window.shareOnX = shareOnX;
