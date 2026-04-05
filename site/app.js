@@ -129,6 +129,11 @@ function renderQuestion() {
     `<button class="option-btn" onclick="selectOption('${q.id}', '${o.value}')">${o.label}</button>`
   ).join('');
 
+  // Back button (not on first question)
+  const backBtn = currentStep > 0
+    ? `<button class="back-btn" onclick="goBack()">Back</button>`
+    : '';
+
   // Create window
   const win = document.createElement('div');
   win.className = 'retro-window';
@@ -145,6 +150,7 @@ function renderQuestion() {
       <div class="progress-bar">${dots}</div>
       <p>${q.question}</p>
       <div class="options">${opts}</div>
+      ${backBtn}
     </div>
   `;
 
@@ -162,6 +168,21 @@ function renderQuestion() {
 
   stack.appendChild(win);
   win.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+function goBack() {
+  if (currentStep <= 0) return;
+  const stack = document.getElementById('windows-stack');
+  // Remove current window
+  stack.removeChild(stack.lastElementChild);
+  currentStep--;
+  // Remove previous answer
+  delete answers[QUESTIONS[currentStep].id];
+  // Re-enable the previous window (un-dim it)
+  if (stack.lastElementChild) {
+    stack.removeChild(stack.lastElementChild);
+  }
+  renderQuestion();
 }
 
 function selectOption(questionId, value) {
@@ -463,3 +484,4 @@ window.startBuilder = startBuilder;
 window.resetBuilder = resetBuilder;
 window.copyLink = copyLink;
 window.shareOnX = shareOnX;
+window.goBack = goBack;

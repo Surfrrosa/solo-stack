@@ -257,6 +257,23 @@ h1 { margin: 0; padding: 0; }
   border-color: var(--window-title);
 }
 
+/* --- Back button --- */
+.back-btn {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  background: transparent;
+  color: var(--gray-mid);
+  border: none;
+  padding: 0.5rem 0 0 0;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.back-btn:hover {
+  color: var(--black);
+}
+
 /* --- Progress indicator --- */
 .progress-bar {
   display: flex;
@@ -460,10 +477,23 @@ h1 { margin: 0; padding: 0; }
 
 /* --- Responsive --- */
 @media (max-width: 640px) {
-  body { padding: 1rem 0.75rem; }
-  .ascii-logo { font-size: 0.45rem; }
-  .crt-bezel { padding: 1rem; }
-  .window-body { padding: 1rem; }
-  .result-row { font-size: 0.75rem; }
-  .results-footer { flex-direction: column; gap: 1rem; }
+  body { padding: 1rem 0.5rem; }
+  .ascii-logo { font-size: 0.5rem; overflow-x: auto; }
+  .crt-bezel { padding: 0.75rem; }
+  .window-body { padding: 0.75rem; }
+  .option-btn { font-size: 0.75rem; padding: 0.5rem 0.625rem; }
+  .result-row { font-size: 0.7rem; }
+  .result-stack-name { font-size: 0.95rem; }
+  .results-footer { flex-direction: column; gap: 0.75rem; }
+  .share-buttons { width: 100%; justify-content: center; }
+  .share-btn { flex: 1; text-align: center; }
+  .detail-card .window-body { padding: 0.75rem; }
+  .start-btn { font-size: 0.875rem; padding: 0.625rem 1.5rem; }
+  .tagline { font-size: 0.7rem; }
+  .site-footer { flex-direction: column; gap: 0.5rem; text-align: center; }
+}
+
+@media (max-width: 380px) {
+  .ascii-logo { font-size: 0.4rem; }
+  .crt-bezel { padding: 0.5rem; }
 }

@@ -86,7 +86,8 @@ async function main() {
 
   // Display
   console.log(formatResult(rec));
-  console.log(chalk.dim('  Full guide: https://github.com/surfrrosa/solo-stack'));
+  console.log(chalk.dim('  Web version: https://surfrrosa.github.io/solo-stack/'));
+  console.log(chalk.dim('  Full guide:  https://github.com/surfrrosa/solo-stack'));
   console.log('');
 }
 
