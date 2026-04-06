@@ -416,7 +416,7 @@
       "description": "Simple, privacy-first web analytics. One dashboard, no complexity. The anti-Google Analytics.",
       "free_tier": "None (30-day trial)",
       "solo_price": "$9/mo (10K pageviews)",
-      "pricing_url": "https://plausible.io/pricing",
+      "pricing_url": "https://plausible.io/#pricing",
       "scale_ceiling": "Scales fine. Pricing grows with pageviews.",
       "graduation_to": "Add PostHog when you need product analytics (funnels, cohorts, session replay)",
       "cost_at_scale": {
@@ -699,7 +699,7 @@
       "description": "Most feature-complete SaaS boilerplate. Multi-tenancy, i18n, monorepo architecture. For serious projects.",
       "free_tier": "None",
       "solo_price": "$349 one-time",
-      "pricing_url": "https://supastarter.dev/pricing",
+      "pricing_url": "https://supastarter.dev/#pricing",
       "scale_ceiling": "N/A. It's a starting point.",
       "graduation_to": "N/A. You own the code.",
       "cost_at_scale": {
@@ -1507,7 +1507,7 @@
         "description": "Most feature-complete SaaS boilerplate. Multi-tenancy, i18n, monorepo architecture. For serious projects.",
         "free_tier": "None",
         "solo_price": "$349 one-time",
-        "pricing_url": "https://supastarter.dev/pricing",
+        "pricing_url": "https://supastarter.dev/#pricing",
         "scale_ceiling": "N/A. It's a starting point.",
         "graduation_to": "N/A. You own the code.",
         "cost_at_scale": {
@@ -1535,7 +1535,7 @@
         "description": "Simple, privacy-first web analytics. One dashboard, no complexity. The anti-Google Analytics.",
         "free_tier": "None (30-day trial)",
         "solo_price": "$9/mo (10K pageviews)",
-        "pricing_url": "https://plausible.io/pricing",
+        "pricing_url": "https://plausible.io/#pricing",
         "scale_ceiling": "Scales fine. Pricing grows with pageviews.",
         "graduation_to": "Add PostHog when you need product analytics (funnels, cohorts, session replay)",
         "cost_at_scale": {

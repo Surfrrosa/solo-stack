@@ -5,7 +5,7 @@ description: "Simple, privacy-first web analytics. One dashboard, no complexity.
 
 free_tier: "None (30-day trial)"
 solo_price: "$9/mo (10K pageviews)"
-pricing_url: "https://plausible.io/pricing"
+pricing_url: "https://plausible.io/#pricing"
 
 scale_ceiling: "Scales fine. Pricing grows with pageviews."
 graduation_to: "Add PostHog when you need product analytics (funnels, cohorts, session replay)"

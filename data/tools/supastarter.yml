@@ -5,7 +5,7 @@ description: "Most feature-complete SaaS boilerplate. Multi-tenancy, i18n, monor
 
 free_tier: "None"
 solo_price: "$349 one-time"
-pricing_url: "https://supastarter.dev/pricing"
+pricing_url: "https://supastarter.dev/#pricing"
 
 scale_ceiling: "N/A. It's a starting point."
 graduation_to: "N/A. You own the code."
