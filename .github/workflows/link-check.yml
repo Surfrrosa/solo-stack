@@ -23,8 +23,7 @@ jobs:
             --timeout 30
             --max-retries 3
             --exclude-path node_modules
-            --exclude '^\.\./\.\./issues'
-            --exclude '^\.\./\.\./pulls'
+            --scheme https
             '**/*.md'
           fail: true
 
