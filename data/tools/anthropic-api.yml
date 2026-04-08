@@ -19,7 +19,7 @@ cost_at_scale:
 gotchas:
   - "Same unpredictability as OpenAI. Token costs scale with user activity, not seats."
   - "Prompt caching can reduce costs 90% for repeated context. Use it aggressively."
-  - "Extended thinking adds cost. Only enable it for tasks that genuinely need reasoning."
+  - "Extended thinking adds cost. Only enable it for tasks that actually need reasoning."
   - "Output tokens cost 5x more than input tokens. Design prompts for concise responses."
   - "Rate limits are per-model. Spreading traffic across Sonnet and Haiku helps with throughput."
 

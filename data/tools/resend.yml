@@ -20,6 +20,6 @@ gotchas:
   - "No built-in template editor. You write email templates in code (React Email)."
   - "If you're not in the React/Next.js ecosystem, the DX advantage is smaller."
   - "3K free emails/mo is enough for early stage but tight for apps with heavy email flows."
-  - "Developer experience is genuinely excellent. API is clean and well-documented."
+  - "Developer experience is excellent. API is clean and well-documented."
 
 last_verified: "2026-04-04"

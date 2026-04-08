@@ -1,7 +1,7 @@
 name: "Clerk"
 url: "https://clerk.com"
 category: "authentication"
-description: "Drop-in auth with pre-built UI components. Fastest integration for Next.js. Beautiful out of the box."
+description: "Drop-in auth with pre-built UI components. Fastest integration for Next.js. Pre-styled, works without custom CSS."
 
 free_tier: "50K monthly users (updated Feb 2026)"
 solo_price: "$0.02/user after 50K (tiered down to $0.012 at volume)"
@@ -20,7 +20,7 @@ gotchas:
   - "Vendor lock-in is real. Pre-built components mean migrating away requires rebuilding auth UI."
   - "No self-hosted option. Your auth depends on Clerk's infrastructure."
   - "Free tier expanded to 50K in Feb 2026 (was 10K). Much more reasonable now."
-  - "The DX is genuinely excellent. Fastest path from zero to working auth."
+  - "The DX is excellent. Fastest path from zero to working auth."
   - "Metric changed from MAU to MRU (monthly returning users). Verify how this affects your count."
 
 last_verified: "2026-04-04"

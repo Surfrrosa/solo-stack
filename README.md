@@ -14,7 +14,7 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![No Affiliate Links](https://img.shields.io/badge/affiliate%20links-none-blue.svg)](#contributing)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Last Updated](https://img.shields.io/badge/updated-March%202026-orange.svg)](#)
+[![Last Updated](https://img.shields.io/badge/updated-April%202026-orange.svg)](#)
 
 **Opinionated stack guide for solo founders. Real costs. Real trade-offs. No affiliate links.**
 
@@ -306,7 +306,7 @@ Every tool listed here has been used by real solo founders in production. Entrie
 
 | Tool | Free Tier | Solo Price | Best For | Gotchas |
 |---|---|---|---|---|
-| [GitHub Copilot](https://github.com/features/copilot) | 2K completions + 50 chats/mo | $20/mo (Pro) | Inline completions, GitHub-native | Less capable for large refactors. Price doubled from $10 in 2025. |
+| [GitHub Copilot](https://github.com/features/copilot) | 2K completions + 50 chats/mo | $10/mo (Pro) | Inline completions, GitHub-native | Less capable for large refactors. Also Pro+ ($39/mo) for heavier usage. |
 | [Cursor](https://cursor.com) | Limited (Hobby plan) | $20/mo (Pro) | Multi-file editing, codebase-aware | Also Pro+ ($60) and Ultra ($200) for heavier usage. |
 | [Claude Code](https://claude.ai/code) | Included with Claude Pro ($20/mo) | $20/mo or API billing | Agentic multi-step tasks | CLI, desktop, web, and IDE extensions. API billing can spike. |
 
@@ -380,9 +380,7 @@ We want to know:
 
 Marketing pricing pages lie by omission. We want to know what solo founders actually see on their invoices.
 
-*Coming soon.* We're building a structured way for founders to submit their real monthly bills. Not marketing pricing -- the actual number on your invoice at your actual scale.
-
-If you want to share yours now, [open an issue](../../issues) with the "What I Actually Pay" label.
+No reports submitted yet. Be the first: [open an issue](../../issues) with the "What I Actually Pay" label, or submit a YAML file following the format in [CONTRIBUTING.md](CONTRIBUTING.md#how-to-share-what-you-actually-pay).
 
 ---
 
@@ -412,7 +410,7 @@ This guide stays useful because people like you keep it honest. See [CONTRIBUTIN
 - Share a production gotcha or graduation story
 - Fix something that's wrong
 
-**Our promise:** No affiliate links. No sponsored placements. No marketing language. Every tool earns its spot by being genuinely useful to solo founders.
+**Our promise:** No affiliate links. No sponsored placements. No marketing language. Every tool earns its spot by being useful to solo founders.
 
 ---
 

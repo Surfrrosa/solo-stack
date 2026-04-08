@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for suggesting a tool! We include tools that are genuinely useful to solo founders in production.
+        Thanks for suggesting a tool! We include tools that are useful to solo founders in production.
   - type: input
     id: tool-name
     attributes:

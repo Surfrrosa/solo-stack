@@ -1,7 +1,7 @@
 name: "PostHog"
 url: "https://posthog.com"
 category: "analytics"
-description: "Full product analytics suite. Analytics, session replay, feature flags, A/B tests, and surveys in one platform. Absurdly generous free tier."
+description: "Product analytics, session replay, feature flags, A/B tests, and surveys in one platform. 1M free events/mo."
 
 free_tier: "1M events/mo, 5K session replays, 1M feature flag requests"
 solo_price: "Usage-based after free tier"
@@ -21,6 +21,6 @@ gotchas:
   - "The dashboard can feel overwhelming at first. There's a lot of product in here."
   - "Self-hosted option available for privacy-sensitive deployments"
   - "1M free events/mo means most solo SaaS products never pay"
-  - "The combination of analytics + session replay + feature flags is genuinely unique at this price"
+  - "The combination of analytics + session replay + feature flags is unique at this price"
 
 last_verified: "2026-04-04"

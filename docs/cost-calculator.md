@@ -104,4 +104,4 @@ The Scale Stack is paradoxically cheaper than the Production Stack at high volum
 
 ---
 
-*All pricing verified March 2026. [Report outdated info.](../../issues)*
+*All pricing verified April 2026. [Report outdated info.](../../issues)*

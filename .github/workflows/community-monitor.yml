@@ -50,6 +50,6 @@ jobs:
                 repo: context.repo.repo,
                 title: `[Community] ${count} relevant posts found (week of ${today})`,
                 labels: ['community'],
-                body: `The community monitor found **${count} relevant posts** this week across Reddit.\n\nCheck the digest at \`data/community-digest.md\` for the full list with links.\n\nThese are engagement opportunities -- places where solo-stack can genuinely help people who are asking the exact questions we answer.\n\n*This issue was created automatically by the community monitor.*`
+                body: `The community monitor found **${count} relevant posts** this week across Reddit.\n\nCheck the digest at \`data/community-digest.md\` for the full list with links.\n\nThese are engagement opportunities -- places where solo-stack can help people who are asking the exact questions we answer.\n\n*This issue was created automatically by the community monitor.*`
               });
             }

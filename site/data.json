@@ -19,7 +19,7 @@
       "gotchas": [
         "Same unpredictability as OpenAI. Token costs scale with user activity, not seats.",
         "Prompt caching can reduce costs 90% for repeated context. Use it aggressively.",
-        "Extended thinking adds cost. Only enable it for tasks that genuinely need reasoning.",
+        "Extended thinking adds cost. Only enable it for tasks that actually need reasoning.",
         "Output tokens cost 5x more than input tokens. Design prompts for concise responses.",
         "Rate limits are per-model. Spreading traffic across Sonnet and Haiku helps with throughput."
       ],
@@ -130,7 +130,7 @@
       "name": "Clerk",
       "url": "https://clerk.com",
       "category": "authentication",
-      "description": "Drop-in auth with pre-built UI components. Fastest integration for Next.js. Beautiful out of the box.",
+      "description": "Drop-in auth with pre-built UI components. Fastest integration for Next.js. Pre-styled, works without custom CSS.",
       "free_tier": "50K monthly users (updated Feb 2026)",
       "solo_price": "$0.02/user after 50K (tiered down to $0.012 at volume)",
       "pricing_url": "https://clerk.com/pricing",
@@ -146,7 +146,7 @@
         "Vendor lock-in is real. Pre-built components mean migrating away requires rebuilding auth UI.",
         "No self-hosted option. Your auth depends on Clerk's infrastructure.",
         "Free tier expanded to 50K in Feb 2026 (was 10K). Much more reasonable now.",
-        "The DX is genuinely excellent. Fastest path from zero to working auth.",
+        "The DX is excellent. Fastest path from zero to working auth.",
         "Metric changed from MAU to MRU (monthly returning users). Verify how this affects your count."
       ],
       "last_verified": "2026-04-04",
@@ -466,7 +466,7 @@
       "name": "PostHog",
       "url": "https://posthog.com",
       "category": "analytics",
-      "description": "Full product analytics suite. Analytics, session replay, feature flags, A/B tests, and surveys in one platform. Absurdly generous free tier.",
+      "description": "Product analytics, session replay, feature flags, A/B tests, and surveys in one platform. 1M free events/mo.",
       "free_tier": "1M events/mo, 5K session replays, 1M feature flag requests",
       "solo_price": "Usage-based after free tier",
       "pricing_url": "https://posthog.com/pricing",
@@ -483,7 +483,7 @@
         "The dashboard can feel overwhelming at first. There's a lot of product in here.",
         "Self-hosted option available for privacy-sensitive deployments",
         "1M free events/mo means most solo SaaS products never pay",
-        "The combination of analytics + session replay + feature flags is genuinely unique at this price"
+        "The combination of analytics + session replay + feature flags is unique at this price"
       ],
       "last_verified": "2026-04-04",
       "_file": "posthog"
@@ -560,7 +560,7 @@
         "No built-in template editor. You write email templates in code (React Email).",
         "If you're not in the React/Next.js ecosystem, the DX advantage is smaller.",
         "3K free emails/mo is enough for early stage but tight for apps with heavy email flows.",
-        "Developer experience is genuinely excellent. API is clean and well-documented."
+        "Developer experience is excellent. API is clean and well-documented."
       ],
       "last_verified": "2026-04-04",
       "_file": "resend"
@@ -592,7 +592,7 @@
       "name": "ShipFast",
       "url": "https://shipfa.st",
       "category": "boilerplate",
-      "description": "Next.js SaaS boilerplate with active Discord community. Fastest path from idea to deployed product.",
+      "description": "Next.js SaaS boilerplate with active Discord community. Saves 1-2 weeks of setup.",
       "free_tier": "None",
       "solo_price": "$199 one-time",
       "pricing_url": "https://shipfa.st",
@@ -696,7 +696,7 @@
       "name": "Supastarter",
       "url": "https://supastarter.dev",
       "category": "boilerplate",
-      "description": "Most feature-complete SaaS boilerplate. Multi-tenancy, i18n, monorepo architecture. For serious projects.",
+      "description": "Most feature-complete SaaS boilerplate. Multi-tenancy, i18n, monorepo architecture.",
       "free_tier": "None",
       "solo_price": "$349 one-time",
       "pricing_url": "https://supastarter.dev/#pricing",
@@ -711,7 +711,7 @@
       "gotchas": [
         "Most expensive of the major boilerplates",
         "Monorepo architecture has a learning curve if you're not familiar",
-        "The multi-tenancy and i18n support is genuinely hard to build from scratch",
+        "The multi-tenancy and i18n support is hard to build from scratch",
         "Available for both Next.js and Nuxt",
         "Worth it if you're building a B2B SaaS with organization/team features"
       ],
@@ -796,7 +796,7 @@
       "name": "Vercel",
       "url": "https://vercel.com",
       "category": "hosting",
-      "description": "Best-in-class Next.js hosting. Incredible DX with preview deploys and edge functions. Free tier has a bandwidth ceiling.",
+      "description": "Best Next.js hosting DX. Preview deploys and edge functions. Free tier has a bandwidth ceiling.",
       "free_tier": "100GB bandwidth, 100 deployments/day",
       "solo_price": "$20/mo (Pro)",
       "pricing_url": "https://vercel.com/pricing",
@@ -814,7 +814,7 @@
         "Serverless function cold starts can affect API response times",
         "No built-in support for long-running background jobs",
         "Vendor-specific features (Edge Config, KV) create soft lock-in",
-        "The DX is genuinely best-in-class. Hard to leave once you're used to it."
+        "The DX is hard to beat. Hard to leave once you're used to it."
       ],
       "last_verified": "2026-04-04",
       "_file": "vercel"
@@ -841,7 +841,7 @@
         "gotchas": [
           "Same unpredictability as OpenAI. Token costs scale with user activity, not seats.",
           "Prompt caching can reduce costs 90% for repeated context. Use it aggressively.",
-          "Extended thinking adds cost. Only enable it for tasks that genuinely need reasoning.",
+          "Extended thinking adds cost. Only enable it for tasks that actually need reasoning.",
           "Output tokens cost 5x more than input tokens. Design prompts for concise responses.",
           "Rate limits are per-model. Spreading traffic across Sonnet and Haiku helps with throughput."
         ],
@@ -1009,7 +1009,7 @@
         "name": "Clerk",
         "url": "https://clerk.com",
         "category": "authentication",
-        "description": "Drop-in auth with pre-built UI components. Fastest integration for Next.js. Beautiful out of the box.",
+        "description": "Drop-in auth with pre-built UI components. Fastest integration for Next.js. Pre-styled, works without custom CSS.",
         "free_tier": "50K monthly users (updated Feb 2026)",
         "solo_price": "$0.02/user after 50K (tiered down to $0.012 at volume)",
         "pricing_url": "https://clerk.com/pricing",
@@ -1025,7 +1025,7 @@
           "Vendor lock-in is real. Pre-built components mean migrating away requires rebuilding auth UI.",
           "No self-hosted option. Your auth depends on Clerk's infrastructure.",
           "Free tier expanded to 50K in Feb 2026 (was 10K). Much more reasonable now.",
-          "The DX is genuinely excellent. Fastest path from zero to working auth.",
+          "The DX is excellent. Fastest path from zero to working auth.",
           "Metric changed from MAU to MRU (monthly returning users). Verify how this affects your count."
         ],
         "last_verified": "2026-04-04",
@@ -1187,7 +1187,7 @@
         "name": "Vercel",
         "url": "https://vercel.com",
         "category": "hosting",
-        "description": "Best-in-class Next.js hosting. Incredible DX with preview deploys and edge functions. Free tier has a bandwidth ceiling.",
+        "description": "Best Next.js hosting DX. Preview deploys and edge functions. Free tier has a bandwidth ceiling.",
         "free_tier": "100GB bandwidth, 100 deployments/day",
         "solo_price": "$20/mo (Pro)",
         "pricing_url": "https://vercel.com/pricing",
@@ -1205,7 +1205,7 @@
           "Serverless function cold starts can affect API response times",
           "No built-in support for long-running background jobs",
           "Vendor-specific features (Edge Config, KV) create soft lock-in",
-          "The DX is genuinely best-in-class. Hard to leave once you're used to it."
+          "The DX is hard to beat. Hard to leave once you're used to it."
         ],
         "last_verified": "2026-04-04",
         "_file": "vercel"
@@ -1478,7 +1478,7 @@
         "name": "ShipFast",
         "url": "https://shipfa.st",
         "category": "boilerplate",
-        "description": "Next.js SaaS boilerplate with active Discord community. Fastest path from idea to deployed product.",
+        "description": "Next.js SaaS boilerplate with active Discord community. Saves 1-2 weeks of setup.",
         "free_tier": "None",
         "solo_price": "$199 one-time",
         "pricing_url": "https://shipfa.st",
@@ -1504,7 +1504,7 @@
         "name": "Supastarter",
         "url": "https://supastarter.dev",
         "category": "boilerplate",
-        "description": "Most feature-complete SaaS boilerplate. Multi-tenancy, i18n, monorepo architecture. For serious projects.",
+        "description": "Most feature-complete SaaS boilerplate. Multi-tenancy, i18n, monorepo architecture.",
         "free_tier": "None",
         "solo_price": "$349 one-time",
         "pricing_url": "https://supastarter.dev/#pricing",
@@ -1519,7 +1519,7 @@
         "gotchas": [
           "Most expensive of the major boilerplates",
           "Monorepo architecture has a learning curve if you're not familiar",
-          "The multi-tenancy and i18n support is genuinely hard to build from scratch",
+          "The multi-tenancy and i18n support is hard to build from scratch",
           "Available for both Next.js and Nuxt",
           "Worth it if you're building a B2B SaaS with organization/team features"
         ],
@@ -1559,7 +1559,7 @@
         "name": "PostHog",
         "url": "https://posthog.com",
         "category": "analytics",
-        "description": "Full product analytics suite. Analytics, session replay, feature flags, A/B tests, and surveys in one platform. Absurdly generous free tier.",
+        "description": "Product analytics, session replay, feature flags, A/B tests, and surveys in one platform. 1M free events/mo.",
         "free_tier": "1M events/mo, 5K session replays, 1M feature flag requests",
         "solo_price": "Usage-based after free tier",
         "pricing_url": "https://posthog.com/pricing",
@@ -1576,7 +1576,7 @@
           "The dashboard can feel overwhelming at first. There's a lot of product in here.",
           "Self-hosted option available for privacy-sensitive deployments",
           "1M free events/mo means most solo SaaS products never pay",
-          "The combination of analytics + session replay + feature flags is genuinely unique at this price"
+          "The combination of analytics + session replay + feature flags is unique at this price"
         ],
         "last_verified": "2026-04-04",
         "_file": "posthog"
@@ -1654,7 +1654,7 @@
           "No built-in template editor. You write email templates in code (React Email).",
           "If you're not in the React/Next.js ecosystem, the DX advantage is smaller.",
           "3K free emails/mo is enough for early stage but tight for apps with heavy email flows.",
-          "Developer experience is genuinely excellent. API is clean and well-documented."
+          "Developer experience is excellent. API is clean and well-documented."
         ],
         "last_verified": "2026-04-04",
         "_file": "resend"

@@ -5,7 +5,7 @@ Thanks for helping keep this guide honest and useful. Here's how to contribute.
 ## Our Values
 
 1. **No affiliate links. Ever.** If your PR contains an affiliate link, it will be closed.
-2. **No sponsored placements.** Tools earn their spot by being genuinely useful, not by paying.
+2. **No sponsored placements.** Tools earn their spot by being useful, not by paying.
 3. **Concrete numbers required.** "Affordable pricing" is not acceptable. "$25/month for 8GB storage" is.
 4. **Honest about trade-offs.** Every tool has downsides. Include them.
 5. **Verified data.** Include the date you verified pricing. Link to the pricing page.
@@ -121,7 +121,7 @@ These are the highest-value content in the entire guide. If you've been through 
 
 We're collecting real invoice data from solo founders. This is not marketing pricing -- it's what you actually see on your bill.
 
-Open an issue with the "What I Actually Pay" label, or submit a YAML file to `data/reports/` following this format:
+Open an issue with the "What I Actually Pay" label following this format:
 
 ```yaml
 submitted_by: "github-username"  # or "anonymous"
@@ -155,7 +155,7 @@ Your PR will be reviewed for:
 - [ ] **Specificity**: Concrete numbers, not vague descriptions
 - [ ] **Honesty**: Trade-offs included, not just benefits
 - [ ] **Verification**: Pricing data has a date and links to source
-- [ ] **Relevance**: The tool is genuinely useful to solo founders (not enterprise-only)
+- [ ] **Relevance**: The tool is useful to solo founders (not enterprise-only)
 - [ ] **No marketing language**: Write like a developer, not a sales page
 - [ ] **No affiliate links**: This is non-negotiable
 

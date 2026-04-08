@@ -1,7 +1,7 @@
 name: "Vercel"
 url: "https://vercel.com"
 category: "hosting"
-description: "Best-in-class Next.js hosting. Incredible DX with preview deploys and edge functions. Free tier has a bandwidth ceiling."
+description: "Best Next.js hosting DX. Preview deploys and edge functions. Free tier has a bandwidth ceiling."
 
 free_tier: "100GB bandwidth, 100 deployments/day"
 solo_price: "$20/mo (Pro)"
@@ -22,6 +22,6 @@ gotchas:
   - "Serverless function cold starts can affect API response times"
   - "No built-in support for long-running background jobs"
   - "Vendor-specific features (Edge Config, KV) create soft lock-in"
-  - "The DX is genuinely best-in-class. Hard to leave once you're used to it."
+  - "The DX is hard to beat. Hard to leave once you're used to it."
 
 last_verified: "2026-04-04"

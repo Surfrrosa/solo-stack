@@ -32,7 +32,7 @@ This is the table that should scare you:
 
 Clerk expanded their free tier to 50K users in Feb 2026 (was 10K), which is a big improvement. But at 100K users, Clerk still costs **$600-1,000/month** while Supabase Auth costs **$25/month**. Auth.js costs $0 at any scale.
 
-This doesn't mean Clerk is bad. It's excellent, and the free tier is now genuinely generous. But you should still know the cost trajectory before you commit.
+This doesn't mean Clerk is bad. It's excellent, and the free tier is now generous. But you should still know the cost trajectory before you commit.
 
 ## The Trade-Off Matrix
 

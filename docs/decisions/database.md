@@ -56,7 +56,7 @@ Do you need relational data (users, subscriptions, invoices, etc.)?
 
 **What it is:** An open-source backend in a single binary. SQLite database + auth + file storage + realtime. Download it, run it, done.
 
-**Why it's interesting:** Zero external dependencies. No cloud account needed. Deploy it on a $4/mo VPS and you have a complete backend. The admin UI is built in. It's genuinely delightful for small projects.
+**Why it's interesting:** Zero external dependencies. No cloud account needed. Deploy it on a $4/mo VPS and you have a complete backend. The admin UI is built in. It's delightful for small projects.
 
 **The trade-off:** SQLite doesn't do concurrent writes well. One server, one database file. No horizontal scaling. No managed cloud option (you run it yourself). If your product grows past ~10K concurrent users, you'll need to migrate to Postgres.
 
