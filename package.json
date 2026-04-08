@@ -32,9 +32,7 @@
   "dependencies": {
     "chalk": "^4.1.2",
     "inquirer": "^8.2.7",
-    "js-yaml": "^4.1.0"
-  },
-  "devDependencies": {
+    "js-yaml": "^4.1.0",
     "playwright": "^1.50.0"
   }
 }

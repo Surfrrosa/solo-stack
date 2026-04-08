@@ -2,39 +2,30 @@
 
 /**
  * Reads YAML tool and stack data, outputs site/data.json for the static site.
+ * Also copies shared modules (recommend.js) to site/ for browser use.
  */
 
 const fs = require('fs');
 const path = require('path');
-const yaml = require('js-yaml');
+const { loadData } = require('../cli/data');
 
 const ROOT = path.resolve(__dirname, '..');
-const TOOLS_DIR = path.join(ROOT, 'data', 'tools');
-const STACKS_DIR = path.join(ROOT, 'data', 'stacks');
 const OUT = path.join(ROOT, 'site', 'data.json');
 
-function readYamlDir(dir) {
-  return fs.readdirSync(dir)
-    .filter(f => f.endsWith('.yml') || f.endsWith('.yaml'))
-    .map(f => {
-      const raw = fs.readFileSync(path.join(dir, f), 'utf8');
-      return { ...yaml.load(raw), _file: f.replace(/\.ya?ml$/, '') };
-    });
-}
+const { tools, toolsByCategory, stacks } = loadData();
 
-const tools = readYamlDir(TOOLS_DIR);
-const stacks = readYamlDir(STACKS_DIR);
+const questions = require('../shared/questions.json');
+const labels = require('../shared/labels.json');
 
-// Group tools by category
-const toolsByCategory = {};
-for (const tool of tools) {
-  const cat = tool.category || 'other';
-  if (!toolsByCategory[cat]) toolsByCategory[cat] = [];
-  toolsByCategory[cat].push(tool);
-}
-
-const data = { tools, toolsByCategory, stacks };
+const data = { tools, toolsByCategory, stacks, questions, labels };
 
 fs.mkdirSync(path.dirname(OUT), { recursive: true });
 fs.writeFileSync(OUT, JSON.stringify(data, null, 2));
+
+fs.copyFileSync(
+  path.join(ROOT, 'shared', 'recommend.js'),
+  path.join(ROOT, 'site', 'recommend.js')
+);
+
 console.log(`Built site/data.json (${tools.length} tools, ${stacks.length} stacks)`);
+console.log('Copied shared/recommend.js to site/recommend.js');

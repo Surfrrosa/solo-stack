@@ -5,6 +5,7 @@ const inquirer = require('inquirer');
 const { loadData } = require('./data');
 const { QUESTIONS } = require('./questions');
 const { buildRecommendation } = require('./recommend');
+const LAYER_LABELS = require('../shared/labels.json');
 
 const LOGO = `
                _                _                 _
@@ -14,18 +15,6 @@ const LOGO = `
  \\__ \\| (_) | | || (_) | \\__ \\ | |_ | (_| || (__ |   <
  |___/ \\___/  |_| \\___/  |___/  \\__| \\__,_| \\___||_|\\_\\
 `;
-
-const LAYER_LABELS = {
-  framework: 'Framework',
-  database: 'Database',
-  auth: 'Auth',
-  payments: 'Payments',
-  hosting: 'Hosting',
-  email: 'Email',
-  analytics: 'Analytics',
-  monitoring: 'Monitoring',
-  ai: 'AI',
-};
 
 function formatResult(rec) {
   const lines = [];
@@ -54,7 +43,6 @@ function formatResult(rec) {
   lines.push(chalk.green.bold(totalLabel) + chalk.green(totalDots) + chalk.green.bold(rec.totalCost));
   lines.push('');
 
-  // Why each choice
   lines.push(chalk.green.dim('\u2500'.repeat(totalWidth)));
   lines.push('');
 
@@ -69,22 +57,15 @@ function formatResult(rec) {
 }
 
 async function main() {
-  // Header
   console.log(chalk.green.bold(LOGO));
   console.log(chalk.green.dim('  pick your stack. ship your thing. grow from there.'));
   console.log(chalk.green.dim('  no affiliate links. real costs. community-maintained.'));
   console.log('');
 
-  // Load data
   const data = loadData();
-
-  // Ask questions
   const answers = await inquirer.prompt(QUESTIONS);
-
-  // Build recommendation
   const rec = buildRecommendation(answers, data);
 
-  // Display
   console.log(formatResult(rec));
   console.log(chalk.dim('  Web version: https://surfrrosa.github.io/solo-stack/'));
   console.log(chalk.dim('  Full guide:  https://github.com/surfrrosa/solo-stack'));

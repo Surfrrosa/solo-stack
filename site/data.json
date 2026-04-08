@@ -1829,5 +1829,116 @@
       },
       "_file": "zero-cost-mvp"
     }
-  ]
+  ],
+  "questions": [
+    {
+      "id": "stage",
+      "question": "What stage is your project at?",
+      "options": [
+        {
+          "value": "idea",
+          "label": "Idea / pre-revenue -- validate without spending money"
+        },
+        {
+          "value": "launched",
+          "label": "Launched with paying customers -- need reliability"
+        },
+        {
+          "value": "scaling",
+          "label": "Scaling (10K+ users) -- need cost control"
+        }
+      ]
+    },
+    {
+      "id": "auth",
+      "question": "Do you need user authentication?",
+      "options": [
+        {
+          "value": "yes-fast",
+          "label": "Yes, and I want it working in an hour (managed)"
+        },
+        {
+          "value": "yes-cheap",
+          "label": "Yes, and I want it free forever (self-managed)"
+        },
+        {
+          "value": "yes-default",
+          "label": "Yes, just give me the default"
+        },
+        {
+          "value": "no",
+          "label": "No, this is a public tool / landing page"
+        }
+      ]
+    },
+    {
+      "id": "payments",
+      "question": "Are you selling something?",
+      "options": [
+        {
+          "value": "not-yet",
+          "label": "Not yet"
+        },
+        {
+          "value": "global",
+          "label": "Yes, selling globally (don't want to think about taxes)"
+        },
+        {
+          "value": "us",
+          "label": "Yes, primarily US customers"
+        },
+        {
+          "value": "high-volume",
+          "label": "Yes, processing $50K+ MRR"
+        }
+      ]
+    },
+    {
+      "id": "hosting",
+      "question": "How do you feel about infrastructure?",
+      "options": [
+        {
+          "value": "easy",
+          "label": "Git push and forget. I'll pay for convenience."
+        },
+        {
+          "value": "balanced",
+          "label": "Good DX but predictable pricing"
+        },
+        {
+          "value": "own",
+          "label": "Own my infrastructure, minimize costs"
+        }
+      ]
+    },
+    {
+      "id": "ai",
+      "question": "Does your product have AI features?",
+      "options": [
+        {
+          "value": "no",
+          "label": "No"
+        },
+        {
+          "value": "cheap",
+          "label": "Yes, cost-efficiency matters most"
+        },
+        {
+          "value": "quality",
+          "label": "Yes, need the best model quality"
+        }
+      ]
+    }
+  ],
+  "labels": {
+    "framework": "Framework",
+    "database": "Database",
+    "auth": "Auth",
+    "payments": "Payments",
+    "hosting": "Hosting",
+    "email": "Email",
+    "analytics": "Analytics",
+    "monitoring": "Monitoring",
+    "ai": "AI"
+  }
 }

@@ -1,0 +1,11 @@
+{
+  "framework": "Framework",
+  "database": "Database",
+  "auth": "Auth",
+  "payments": "Payments",
+  "hosting": "Hosting",
+  "email": "Email",
+  "analytics": "Analytics",
+  "monitoring": "Monitoring",
+  "ai": "AI"
+}
